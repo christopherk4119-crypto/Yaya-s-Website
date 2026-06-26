@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
+const FORMSPREE = "https://formspree.io/f/mjgqynvj";
+
 export default function PopupForm() {
   const [visible, setVisible] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -14,14 +16,18 @@ export default function PopupForm() {
 
   const close = () => {
     setVisible(false);
-    // Reappear after 2 minutes if still on page
     setTimeout(() => {
       if (!submitted) setVisible(true);
     }, 120000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    await fetch(FORMSPREE, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ ...form, _subject: `[Popup] New Quote Request — ${form.name}`, message: `[Popup Form] ${form.message}` }),
+    });
     setSubmitted(true);
   };
 

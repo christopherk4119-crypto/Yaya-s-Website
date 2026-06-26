@@ -12,26 +12,21 @@ interface BookingFormProps {
 const getTimeSlots = (date: string): string[] => {
   if (!date) return [];
   const d = new Date(date);
-  const day = d.getDay(); // 0=Sun, 6=Sat
+  const day = d.getDay();
 
   const slots: string[] = [];
-
   if (day === 0 || day === 6) {
-    // Sat & Sun: 12am – 11pm in 1h slots
     for (let h = 0; h < 23; h++) {
       const hour = h % 12 === 0 ? 12 : h % 12;
       const ampm = h < 12 ? "AM" : "PM";
       slots.push(`${hour}:00 ${ampm}`);
     }
   } else {
-    // Mon-Fri: 4:30 PM – 6:00 AM next day
-    const starts = [
+    slots.push(
       "4:30 PM","5:00 PM","6:00 PM","7:00 PM","8:00 PM","9:00 PM","10:00 PM","11:00 PM",
-      "12:00 AM","1:00 AM","2:00 AM","3:00 AM","4:00 AM","5:00 AM","6:00 AM",
-    ];
-    slots.push(...starts);
+      "12:00 AM","1:00 AM","2:00 AM","3:00 AM","4:00 AM","5:00 AM","6:00 AM"
+    );
   }
-
   return slots;
 };
 
@@ -47,21 +42,17 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "taken">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
-  // Fetch already booked slots when date changes
   useEffect(() => {
     if (!form.appointment_date) return;
-
     const fetchBooked = async () => {
       const { data } = await supabase
         .from("appointments")
         .select("appointment_time")
         .eq("appointment_date", form.appointment_date)
         .neq("status", "cancelled");
-
       setBookedSlots(data?.map((r) => r.appointment_time) ?? []);
       setForm((f) => ({ ...f, appointment_time: "" }));
     };
-
     fetchBooked();
   }, [form.appointment_date]);
 
@@ -71,28 +62,25 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
     e.preventDefault();
     setStatus("loading");
 
-    // Double-booking check
-    const { data: existing } = await supabase
-      .from("appointments")
-      .select("id")
-      .eq("appointment_date", form.appointment_date)
-      .eq("appointment_time", form.appointment_time)
-      .neq("status", "cancelled")
-      .limit(1);
+    const res = await fetch("/api/book", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
 
-    if (existing && existing.length > 0) {
+    if (res.status === 409) {
       setStatus("taken");
       return;
     }
 
-    const { error } = await supabase.from("appointments").insert([{ ...form, status: "pending" }]);
-
-    if (error) {
+    if (!res.ok) {
+      const data = await res.json();
       setStatus("error");
-      setErrorMsg(error.message);
-    } else {
-      setStatus("success");
+      setErrorMsg(data.error || "Something went wrong.");
+      return;
     }
+
+    setStatus("success");
   };
 
   if (status === "success") {
@@ -100,7 +88,11 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
       <div className="text-center py-16">
         <CheckCircle size={64} className="mx-auto mb-4" style={{ color: "#FFD700" }} />
         <h3 className="text-3xl font-black text-white mb-2">Appointment Booked!</h3>
-        <p className="text-gray-300 text-lg">Abayneh will confirm shortly at <span style={{ color: "#FFD700" }}>(403) 400-3055</span>.</p>
+        <p className="text-gray-300 text-lg">
+          Abayneh will confirm shortly at <span style={{ color: "#FFD700" }}>(403) 400-3055</span>.
+          <br />
+          <span className="text-sm text-gray-500 mt-1 block">A confirmation email is on its way to you.</span>
+        </p>
       </div>
     );
   }
@@ -120,16 +112,15 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
             required
             value={form[f.name as keyof typeof form]}
             onChange={(e) => setForm({ ...form, [f.name]: e.target.value })}
-            className="px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm outline-none col-span-1"
+            className="px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm"
             style={{ background: "#1a1a1a", border: "1px solid #333" }}
           />
         ))}
-
         <select
           required
           value={form.service_type}
           onChange={(e) => setForm({ ...form, service_type: e.target.value as ServiceType })}
-          className="px-4 py-3 rounded-lg text-white text-sm outline-none"
+          className="px-4 py-3 rounded-lg text-white text-sm"
           style={{ background: "#1a1a1a", border: "1px solid #333" }}
         >
           {["Electrical", "Plumbing", "Appliance"].map((s) => (
@@ -138,7 +129,6 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
         </select>
       </div>
 
-      {/* Date Picker */}
       <div className="flex items-center gap-3">
         <Calendar size={18} style={{ color: "#FFD700" }} />
         <input
@@ -147,12 +137,11 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
           min={new Date().toISOString().split("T")[0]}
           value={form.appointment_date}
           onChange={(e) => setForm({ ...form, appointment_date: e.target.value })}
-          className="flex-1 px-4 py-3 rounded-lg text-white text-sm outline-none"
+          className="flex-1 px-4 py-3 rounded-lg text-white text-sm"
           style={{ background: "#1a1a1a", border: "1px solid #333", colorScheme: "dark" }}
         />
       </div>
 
-      {/* Time Slots */}
       {form.appointment_date && (
         <div>
           <div className="flex items-center gap-2 mb-3">
@@ -174,7 +163,7 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
                   type="button"
                   disabled={taken}
                   onClick={() => !taken && setForm({ ...form, appointment_time: slot })}
-                  className="py-2 px-2 rounded-lg text-xs font-bold transition-all duration-150"
+                  className="py-2 px-2 rounded-lg text-xs font-bold transition-all duration-150 cursor-pointer"
                   style={{
                     background: taken ? "#1a1a1a" : selected ? "#FFD700" : "#222",
                     color: taken ? "#555" : selected ? "#000" : "#fff",
@@ -195,7 +184,7 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
         rows={3}
         value={form.notes}
         onChange={(e) => setForm({ ...form, notes: e.target.value })}
-        className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm outline-none resize-none"
+        className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm resize-none"
         style={{ background: "#1a1a1a", border: "1px solid #333" }}
       />
 

@@ -1,11 +1,13 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import BookingForm from "@/components/ui/booking-form";
+import Gallery, { GalleryPhoto } from "@/components/ui/gallery";
 
 interface ServiceItem {
   title: string;
   desc: string;
   bg: string;
+  alt?: string;
 }
 
 interface ServicePageLayoutProps {
@@ -14,6 +16,7 @@ interface ServicePageLayoutProps {
   heroCta: string;
   serviceType: "Electrical" | "Plumbing" | "Appliance";
   services: ServiceItem[];
+  galleryPhotos: GalleryPhoto[];
 }
 
 function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
@@ -37,6 +40,7 @@ export default function ServicePageLayout({
   heroCta,
   serviceType,
   services,
+  galleryPhotos,
 }: ServicePageLayoutProps) {
   return (
     <>
@@ -94,8 +98,23 @@ export default function ServicePageLayout({
         </div>
       </section>
 
+      {/* MINI GALLERY */}
+      {galleryPhotos.length > 0 && (
+        <section className="section" style={{ background: "#0d0d0d" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <FadeIn>
+              <h2 className="section-heading">Real <span>Work</span></h2>
+              <p className="section-subheading">Photos straight from the job site — Calgary homes and businesses.</p>
+            </FadeIn>
+            <FadeIn delay={100}>
+              <Gallery photos={galleryPhotos} columns={3} />
+            </FadeIn>
+          </div>
+        </section>
+      )}
+
       {/* BOOKING */}
-      <section className="section" id="booking" style={{ background: "#0d0d0d" }}>
+      <section className="section" id="booking" style={{ background: galleryPhotos.length > 0 ? "#111" : "#0d0d0d" }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <h2 className="section-heading">Book Your <span>Appointment</span></h2>

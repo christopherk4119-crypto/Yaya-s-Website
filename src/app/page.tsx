@@ -3,7 +3,10 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import AnimatedShaderHero from "@/components/ui/animated-shader-hero";
 import Gallery from "@/components/ui/gallery";
+import BookingForm from "@/components/ui/booking-form";
 import { Phone, Mail, Clock, Zap, Wrench, Settings, Shield, CheckCircle } from "lucide-react";
+
+const FORMSPREE = "https://formspree.io/f/mjgqynvj";
 
 const services = [
   {
@@ -57,6 +60,20 @@ const socials = [
   },
 ];
 
+const homeGallery = [
+  { src: "/images/gallery/electrical/calgary-electrician-ceiling-light-installation-abayneh-1.jpg", alt: "Certified Calgary electrician Abayneh installing ceiling light fixture" },
+  { src: "/images/gallery/electrical/calgary-electrician-ceiling-light-fixture-install-2.jpg", alt: "Calgary electrician Abayneh smiling while completing ceiling light installation" },
+  { src: "/images/gallery/electrical/calgary-electrician-hexagon-led-ceiling-completed-5.jpg", alt: "Completed hexagon LED ceiling light installation by Calgary electrician" },
+  { src: "/images/gallery/electrical/calgary-electrician-breaker-panel-upgrade-before-6.jpg", alt: "Electrical breaker panel upgrade in Calgary home" },
+  { src: "/images/gallery/plumbing/calgary-plumber-bathtub-faucet-shower-valve-replacement-3.jpg", alt: "Calgary plumber replacing bathtub faucet and shower valve" },
+  { src: "/images/gallery/plumbing/calgary-plumber-rough-in-copper-pvc-pipe-wall-4.jpg", alt: "Rough-in copper and PVC pipe installation by Calgary plumber" },
+  { src: "/images/gallery/plumbing/calgary-plumber-pool-filter-tank-pipe-system-6.jpg", alt: "Pool filter tank and pipe system installed by Calgary plumber" },
+  { src: "/images/gallery/appliance/calgary-appliance-repair-dishwasher-installation-1.jpg", alt: "Dishwasher installation by Calgary appliance repair technician" },
+  { src: "/images/gallery/appliance/calgary-appliance-repair-stove-heating-element-burner-8.jpg", alt: "Stove heating element replacement by Calgary appliance repair specialist" },
+  { src: "/images/gallery/appliance/calgary-appliance-repair-furnace-control-board-replacement-11.jpg", alt: "HVAC furnace control board replacement by Calgary appliance technician" },
+  { src: "/images/gallery/appliance/calgary-appliance-repair-commercial-oven-us-range-13.jpg", alt: "Commercial US Range oven serviced by Calgary appliance repair specialist" },
+];
+
 function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -75,6 +92,20 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 function ContactForm() {
   const [form, setForm] = React.useState({ name: "", phone: "", email: "", service: "", message: "" });
   const [done, setDone] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    await fetch(FORMSPREE, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ ...form, _subject: `New Contact — ${form.name} — ${form.service}` }),
+    });
+    setLoading(false);
+    setDone(true);
+  };
+
   return done ? (
     <div className="text-center py-12">
       <CheckCircle size={56} className="mx-auto mb-4" style={{ color: "#FFD700" }} />
@@ -82,7 +113,7 @@ function ContactForm() {
       <p className="text-gray-400 mt-2">Abayneh will be in touch shortly.</p>
     </div>
   ) : (
-    <form onSubmit={(e) => { e.preventDefault(); setDone(true); }} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       {[
         { name: "name", placeholder: "Your Name", type: "text" },
         { name: "phone", placeholder: "Phone Number", type: "tel" },
@@ -106,9 +137,9 @@ function ContactForm() {
         onChange={(e) => setForm({ ...form, message: e.target.value })}
         className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm resize-none"
         style={{ background: "#1a1a1a", border: "1px solid #2a2a2a" }} />
-      <button type="submit" className="w-full py-4 rounded-full font-black text-black text-lg hover:scale-105 transition-transform duration-200"
+      <button type="submit" disabled={loading} className="w-full py-4 rounded-full font-black text-black text-lg hover:scale-105 transition-transform duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
         style={{ background: "linear-gradient(135deg, #FFD700, #FFA500)" }}>
-        Send Message
+        {loading ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
@@ -122,10 +153,22 @@ export default function HomePage() {
         headline={{ line1: "Calgary's All-In-One", line2: "Contractor" }}
         subtitle="Electrical • Plumbing • Appliance — One call, one expert, zero extra fees after hours."
         buttons={{
-          primary: { text: "Book an Appointment", onClick: () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }) },
+          primary: { text: "Book an Appointment", onClick: () => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" }) },
           secondary: { text: "Call (403) 400-3055", onClick: () => { window.location.href = "tel:4034003055"; } },
         }}
       />
+
+      {/* SEO: visually hidden h1 and NAP */}
+      <div className="sr-only" aria-hidden="false">
+        <h1>YAYA General Contractor Inc. — Calgary Electrician, Plumber &amp; Appliance Repair</h1>
+        <p>Certified electrician, licensed plumber and appliance technician serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available Monday to Friday 4:30 PM to 6:00 AM and 24 hours on Saturday and Sunday.</p>
+        <address>
+          <span itemProp="name">YAYA General Contractor Inc.</span><br />
+          <span itemProp="addressLocality">Calgary</span>, <span itemProp="addressRegion">AB</span>, <span itemProp="addressCountry">Canada</span><br />
+          Phone: <a href="tel:+14034003055" itemProp="telephone">(403) 400-3055</a><br />
+          Email: <a href="mailto:electricianyaya@gmail.com" itemProp="email">electricianyaya@gmail.com</a>
+        </address>
+      </div>
 
       {/* TRUST BAR */}
       <div style={{ background: "#111", borderTop: "1px solid rgba(255,215,0,0.15)", borderBottom: "1px solid rgba(255,215,0,0.15)" }}>
@@ -190,19 +233,87 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GALLERY */}
+      {/* ABOUT ABAYNEH */}
       <section className="section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <FadeIn>
+              <div className="relative">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://www.jotform.com/uploads/christopherk4119/261745599595074/6582251096326467221/20260519_192400.jpg"
+                  alt="Abayneh — owner of YAYA General Contractor Inc. Calgary"
+                  className="w-full rounded-2xl object-cover"
+                  style={{ maxHeight: "560px", border: "2px solid rgba(255,215,0,0.2)" }}
+                />
+                <div className="absolute -bottom-4 -right-4 px-6 py-3 rounded-xl font-black text-black text-sm"
+                  style={{ background: "linear-gradient(135deg, #FFD700, #FFA500)" }}>
+                  Since 2007
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={150}>
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6"
+                  style={{ background: "rgba(255,215,0,0.1)", border: "1px solid rgba(255,215,0,0.3)", color: "#FFD700" }}>
+                  About Abayneh
+                </div>
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                  Meet the Man Behind <span style={{ color: "#FFD700" }}>Yaya</span>
+                </h2>
+                <div className="space-y-5 text-gray-300 leading-relaxed">
+                  <p>
+                    Abayneh has been one of Calgary&apos;s most trusted tradespeople since earning his Electrician certification in 2007.
+                    In 2011 he upgraded with automation technology training, then added licensed plumbing and appliance repair —
+                    becoming truly all-in-one.
+                  </p>
+                  <p>
+                    What sets Abayneh apart isn&apos;t just his range of skills — it&apos;s his character. He picks up the phone. He shows up on time.
+                    He never charges extra for after-hours or emergency calls. When you call, you&apos;ll hear:
+                    <span style={{ color: "#FFD700" }} className="font-semibold"> &ldquo;This is Yaya, may I call you back shortly&rdquo;</span> — and he always does.
+                  </p>
+                  <p>
+                    Whether you&apos;re a homeowner, a realtor, a property manager, or a contractor — Abayneh handles it all under one roof.
+                    Electrical. Plumbing. Appliances. One call, zero runaround.
+                  </p>
+                </div>
+                <div className="grid grid-cols-3 gap-4 mt-8">
+                  {[
+                    { number: "17+", label: "Years Experience" },
+                    { number: "3", label: "Certifications" },
+                    { number: "0", label: "After-Hours Fee" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="text-center p-4 rounded-xl" style={{ background: "#111", border: "1px solid rgba(255,215,0,0.15)" }}>
+                      <div className="text-3xl font-black" style={{ color: "#FFD700" }}>{stat.number}</div>
+                      <div className="text-gray-400 text-xs mt-1">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+                <a href="tel:4034003055" className="inline-block mt-8 px-8 py-4 rounded-full font-black text-black text-lg hover:scale-105 transition-transform duration-200"
+                  style={{ background: "linear-gradient(135deg, #FFD700, #FFA500)" }}>
+                  Call Abayneh Now
+                </a>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section className="section" style={{ background: "#0d0d0d" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <h2 className="section-heading">Our <span>Work</span></h2>
             <p className="section-subheading">Real jobs, real results. Calgary homes and businesses.</p>
           </FadeIn>
-          <Gallery />
+          <FadeIn delay={100}>
+            <Gallery photos={homeGallery} columns={4} />
+          </FadeIn>
         </div>
       </section>
 
       {/* FOLLOW */}
-      <section className="section" style={{ background: "#0d0d0d" }}>
+      <section className="section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <h2 className="section-heading">Follow <span>Yaya</span></h2>
@@ -230,7 +341,7 @@ export default function HomePage() {
       </section>
 
       {/* HOURS */}
-      <section className="section">
+      <section className="section" style={{ background: "#0d0d0d" }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <h2 className="section-heading">When We&apos;re <span>Available</span></h2>
@@ -253,6 +364,21 @@ export default function HomePage() {
                   <span className={`font-bold text-right ${row.highlight ? "text-yellow-400" : "text-gray-300"}`}>{row.hours}</span>
                 </div>
               ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* BOOK AN APPOINTMENT */}
+      <section className="section" id="booking">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="section-heading">Book an <span>Appointment</span></h2>
+            <p className="section-subheading">Pick your date and time — Abayneh will call to confirm.</p>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <div className="rounded-2xl p-8" style={{ background: "#111", border: "1px solid rgba(255,215,0,0.15)" }}>
+              <BookingForm />
             </div>
           </FadeIn>
         </div>
