@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import AnimatedShaderHero from "@/components/ui/animated-shader-hero";
 import Gallery from "@/components/ui/gallery";
 import BookingForm from "@/components/ui/booking-form";
@@ -72,6 +73,7 @@ const homeGallery = [
   { src: "/images/gallery/appliance/calgary-appliance-repair-stove-heating-element-burner-8.jpg", alt: "Stove heating element replacement by Calgary appliance repair specialist" },
   { src: "/images/gallery/appliance/calgary-appliance-repair-furnace-control-board-replacement-11.jpg", alt: "HVAC furnace control board replacement by Calgary appliance technician" },
   { src: "/images/gallery/appliance/calgary-appliance-repair-commercial-oven-us-range-13.jpg", alt: "Commercial US Range oven serviced by Calgary appliance repair specialist" },
+  { src: "/images/gallery/plumbing/calgary-plumber-shower-valve-brass-fitting-rough-in-5.jpg", alt: "Calgary plumber installing brass shower valve rough-in fitting" },
 ];
 
 function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
@@ -239,10 +241,11 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
               <div className="relative">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://www.jotform.com/uploads/christopherk4119/261745599595074/6582251096326467221/20260519_192400.jpg"
-                  alt="Abayneh — owner of YAYA General Contractor Inc. Calgary"
+                <Image
+                  src="/images/gallery/electrical/calgary-electrician-ceiling-light-installation-abayneh-1.jpg"
+                  alt="Abayneh — owner of YAYA General Contractor Inc. Calgary, certified electrician since 2007"
+                  width={600}
+                  height={700}
                   className="w-full rounded-2xl object-cover"
                   style={{ maxHeight: "560px", border: "2px solid rgba(255,215,0,0.2)" }}
                 />
