@@ -2,10 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 const socials = [
-  { label: "TikTok", href: "https://www.tiktok.com/@abayneh.yared.yay", icon: "🎵" },
+  { label: "TikTok", href: "https://www.tiktok.com/@yaya.electric_canada", icon: "🎵" },
   { label: "Facebook", href: "https://www.facebook.com/p/YAYA-General-Contracting-100067728921076", icon: "📘" },
-  { label: "Instagram", href: "#", icon: "📷" },
-  { label: "Google Maps", href: "#", icon: "📍" },
+  { label: "Instagram", href: "https://www.instagram.com/yayacalgary/", icon: "📷" },
 ];
 
 export default function Footer() {
