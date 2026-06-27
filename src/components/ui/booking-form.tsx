@@ -39,7 +39,7 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
     notes: "",
   });
   const [bookedSlots, setBookedSlots] = useState<string[]>([]);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "taken">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "taken" | "email_limit">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
@@ -70,6 +70,11 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
 
     if (res.status === 409) {
       setStatus("taken");
+      return;
+    }
+
+    if (res.status === 429) {
+      setStatus("email_limit");
       return;
     }
 
@@ -192,6 +197,13 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
         <div className="flex items-center gap-2 p-4 rounded-lg" style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)" }}>
           <AlertCircle size={18} className="text-red-400" />
           <p className="text-red-400 text-sm">Sorry, this time slot is already booked. Please choose a different time.</p>
+        </div>
+      )}
+
+      {status === "email_limit" && (
+        <div className="flex items-center gap-2 p-4 rounded-lg" style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)" }}>
+          <AlertCircle size={18} className="text-red-400" />
+          <p className="text-red-400 text-sm">You already have a booking on this date. Please call <strong>(403) 400-3055</strong> if you need to make changes.</p>
         </div>
       )}
 

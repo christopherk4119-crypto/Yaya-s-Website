@@ -8,6 +8,18 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { name, phone, email, service_type, appointment_date, appointment_time, notes } = body;
 
+    // 1 booking per email per day
+    const { data: emailCheck } = await supabase
+      .from("appointments")
+      .select("id")
+      .eq("email", email)
+      .eq("appointment_date", appointment_date)
+      .limit(1);
+
+    if (emailCheck && emailCheck.length > 0) {
+      return NextResponse.json({ error: "email_limit" }, { status: 429 });
+    }
+
     // Double-booking check
     const { data: existing } = await supabase
       .from("appointments")
