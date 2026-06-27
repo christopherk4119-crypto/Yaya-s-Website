@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 
@@ -29,11 +30,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* LOGO — REPLACE THIS WITH LOGO PNG (transparent background PNG, drop in /public/logo.png) */}
-          <Link href="/" className="flex items-center gap-3 min-w-[200px]">
-            <div className="w-12 h-12 rounded-lg flex items-center justify-center font-black text-xl" style={{ background: "#FFD700", color: "#1a1a1a" }}>
-              Y
-            </div>
+          <Link href="/" className="flex items-center gap-2 min-w-[180px]">
+            <Image src="/logo.png" alt="YAYA General Contractor Inc." width={52} height={52} className="rounded-lg" style={{ background: "#FFD700" }} priority />
             <div>
               <div className="font-black text-xl leading-tight" style={{ color: "#FFD700" }}>YAYA</div>
               <div className="text-xs text-gray-400 leading-tight">General Contractor Inc.</div>

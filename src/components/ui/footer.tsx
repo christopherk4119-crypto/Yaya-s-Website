@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const socials = [
   { label: "TikTok", href: "https://www.tiktok.com/@yaya.electric_canada", icon: "🎵" },
@@ -15,7 +16,7 @@ export default function Footer() {
           {/* Logo + tagline */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center font-black text-lg" style={{ background: "#FFD700", color: "#1a1a1a" }}>Y</div>
+              <Image src="/logo.png" alt="YAYA General Contractor Inc." width={44} height={44} className="rounded-lg" style={{ background: "#FFD700" }} />
               <div>
                 <div className="font-black text-lg" style={{ color: "#FFD700" }}>YAYA</div>
                 <div className="text-xs text-gray-500">General Contractor Inc.</div>
