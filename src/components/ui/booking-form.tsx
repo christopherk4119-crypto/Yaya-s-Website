@@ -94,7 +94,7 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
         <CheckCircle size={64} className="mx-auto mb-4" style={{ color: "#FFD700" }} />
         <h3 className="text-3xl font-black text-white mb-2">Appointment Booked!</h3>
         <p className="text-gray-300 text-lg">
-          Abayneh will confirm shortly at <span style={{ color: "#FFD700" }}>(403) 400-3055</span>.
+          Yaya will confirm shortly at <span style={{ color: "#FFD700" }}>(403) 400-3055</span>.
           <br />
           <span className="text-sm text-gray-500 mt-1 block">A confirmation email is on its way to you.</span>
         </p>

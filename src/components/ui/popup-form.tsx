@@ -58,7 +58,7 @@ export default function PopupForm() {
           <div className="text-center py-8">
             <div className="text-5xl mb-4">✅</div>
             <h3 className="text-2xl font-black text-white mb-2">You&apos;re All Set!</h3>
-            <p className="text-gray-300">Thank you! Abayneh will call you back shortly at <span style={{ color: "#FFD700" }}>(403) 400-3055</span>.</p>
+            <p className="text-gray-300">Thank you! Yaya will call you back shortly at <span style={{ color: "#FFD700" }}>(403) 400-3055</span>.</p>
           </div>
         ) : (
           <>

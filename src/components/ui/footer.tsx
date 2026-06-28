@@ -4,7 +4,6 @@ import Image from "next/image";
 
 const socials = [
   { label: "TikTok", href: "https://www.tiktok.com/@yaya.electric_canada", icon: "🎵" },
-  { label: "Facebook", href: "https://www.facebook.com/p/YAYA-General-Contracting-100067728921076", icon: "📘" },
   { label: "Instagram", href: "https://www.instagram.com/yayacalgary/", icon: "📷" },
 ];
 
