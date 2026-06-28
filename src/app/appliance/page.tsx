@@ -4,12 +4,12 @@ import ServicePageLayout from "@/components/ui/service-page-layout";
 export const metadata: Metadata = {
   title: "Appliance Repair Calgary",
   description:
-    "Certified appliance technician in Calgary. Oven, stove, dishwasher, dryer, HVAC & exhaust fan repair. All brands. No after-hours fee. Emergency repairs available. Call (403) 400-3055.",
+    "Experienced appliance technician in Calgary. Oven, stove, dishwasher, dryer, HVAC & exhaust fan repair. All brands. No after-hours fee. Emergency repairs available. Call (403) 400-3055.",
   keywords: ["appliance repair Calgary", "oven repair Calgary", "dishwasher repair Calgary", "dryer repair Calgary", "HVAC service Calgary", "exhaust fan repair Calgary"],
   alternates: { canonical: "https://yayacontractor.ca/appliance" },
   openGraph: {
     title: "Appliance Repair Calgary | YAYA General Contractor Inc.",
-    description: "Certified appliance tech. Oven, dishwasher, dryer, HVAC & more. No after-hours fee. Call (403) 400-3055.",
+    description: "Experienced appliance tech. Oven, dishwasher, dryer, HVAC & more. No after-hours fee. Call (403) 400-3055.",
     url: "https://yayacontractor.ca/appliance",
   },
 };
@@ -42,7 +42,7 @@ export default function AppliancePage() {
   return (
     <ServicePageLayout
       heroHeadline="Appliance Repair Services Calgary"
-      heroSubheadline="Certified Appliance Technician | Emergency Repairs | No After-Hours Fee"
+      heroSubheadline="Experienced Appliance Technician | Emergency Repairs | No After-Hours Fee"
       heroCta="Book Appliance Repair"
       serviceType="Appliance"
       services={services}

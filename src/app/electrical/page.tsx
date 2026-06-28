@@ -4,12 +4,12 @@ import ServicePageLayout from "@/components/ui/service-page-layout";
 export const metadata: Metadata = {
   title: "Electrical Services Calgary",
   description:
-    "Certified electrician in Calgary since 2007. Panel upgrades, wiring, outlets, ceiling lights, smoke alarms & more. No after-hours surcharge. Emergency calls welcome. Call (403) 400-3055.",
+    "Experienced electrician in Calgary since 2007. Panel upgrades, wiring, outlets, ceiling lights, smoke alarms & more. No after-hours surcharge. Emergency calls welcome. Call (403) 400-3055.",
   keywords: ["electrician Calgary", "panel upgrade Calgary", "electrical installation Calgary", "ceiling light installation Calgary", "smoke alarm Calgary", "emergency electrician"],
   alternates: { canonical: "https://yayacontractor.ca/electrical" },
   openGraph: {
     title: "Electrical Services Calgary | YAYA General Contractor Inc.",
-    description: "Certified electrician since 2007. Panel upgrades, wiring, outlets & more. No after-hours fee. Call (403) 400-3055.",
+    description: "Experienced electrician since 2007. Panel upgrades, wiring, outlets & more. No after-hours fee. Call (403) 400-3055.",
     url: "https://yayacontractor.ca/electrical",
   },
 };
@@ -41,7 +41,7 @@ export default function ElectricalPage() {
   return (
     <ServicePageLayout
       heroHeadline="Electrical Services Calgary"
-      heroSubheadline="Certified Electrician Since 2007 | No After-Hours Surcharge | Emergency Welcome"
+      heroSubheadline="Experienced Electrician Since 2007 | No After-Hours Surcharge | Emergency Welcome"
       heroCta="Book Electrical Service"
       serviceType="Electrical"
       services={services}

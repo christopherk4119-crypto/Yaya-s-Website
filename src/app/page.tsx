@@ -13,21 +13,21 @@ const services = [
   {
     icon: <Zap size={28} />,
     title: "Electrical Services",
-    desc: "Panel upgrades, wiring, outlets, ceiling lights, smoke alarms & more. Certified since 2007.",
+    bullets: ["★ Panel Upgrades", "★ Wiring & Outlets", "★ Ceiling Lights", "★ Smoke Alarms & More"],
     href: "/electrical",
     bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80",
   },
   {
     icon: <Wrench size={28} />,
     title: "Plumbing Services",
-    desc: "Water lines, drain lines, faucets, toilets & any plumbing need. Licensed plumber.",
+    bullets: ["★ Water Lines", "★ Drain Lines", "★ Faucet & Toilet", "★ Any Plumbing Need"],
     href: "/plumbing",
     bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80",
   },
   {
     icon: <Settings size={28} />,
     title: "Appliance Services",
-    desc: "Oven, dishwasher, dryer, HVAC & exhaust fan repair. All brands, all appliances.",
+    bullets: ["★ Oven & Stove", "★ Dishwasher & Dryer", "★ HVAC & Exhaust Fan", "★ All Brands"],
     href: "/appliance",
     bg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
   },
@@ -35,9 +35,9 @@ const services = [
 
 const reasons = [
   { icon: "⚡", title: "No Extra Charge After Hours", desc: "Emergency or late night — same price always. No surprise fees." },
-  { icon: "🔧", title: "Certified Since 2007", desc: "Electrician, licensed plumber & appliance technician all in one person." },
+  { icon: "🔧", title: "Experienced Since 2007", desc: "Electrician, licensed plumber & appliance technician all in one person." },
   { icon: "📞", title: "Fast Response", desc: '"This is Yaya, may I call you back shortly" — every single time.' },
-  { icon: "🛠️", title: "All In One Hand", desc: "One call handles electrical, plumbing AND appliances. One contractor, zero hassle." },
+  { icon: "🛠️", title: "All In One Hand", desc: "On Call for electrical, plumbing AND appliances. One contractor, zero hassle." },
 ];
 
 const socials = [
@@ -147,7 +147,7 @@ export default function HomePage() {
   return (
     <>
       <AnimatedShaderHero
-        trustBadge={{ text: "Certified Since 2007 · No After-Hours Fee · Emergency Calls Welcome", icons: ["⚡"] }}
+        trustBadge={{ text: "Experienced Since 2007 · No After-Hours Fee · Emergency Calls Welcome", icons: ["⚡"] }}
         headline={{ line1: "Calgary's All-In-One", line2: "Contractor" }}
         subtitle="Electrical • Plumbing • Appliance — One call, one expert, zero extra fees after hours."
         buttons={{
@@ -159,7 +159,7 @@ export default function HomePage() {
       {/* SEO: visually hidden h1 and NAP */}
       <div className="sr-only" aria-hidden="false">
         <h1>YAYA General Contractor Inc. — Calgary Electrician, Plumber &amp; Appliance Repair</h1>
-        <p>Certified electrician, licensed plumber and appliance technician serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available Monday to Friday 4:30 PM to 6:00 AM and 24 hours on Saturday and Sunday.</p>
+        <p>Experienced electrician, licensed plumber and appliance technician serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available Monday to Friday 4:30 PM to 6:00 AM and 24 hours on Saturday and Sunday.</p>
         <address>
           <span itemProp="name">YAYA General Contractor Inc.</span><br />
           <span itemProp="addressLocality">Calgary</span>, <span itemProp="addressRegion">AB</span>, <span itemProp="addressCountry">Canada</span><br />
@@ -171,7 +171,7 @@ export default function HomePage() {
       {/* TRUST BAR */}
       <div style={{ background: "#111", borderTop: "1px solid rgba(255,215,0,0.15)", borderBottom: "1px solid rgba(255,215,0,0.15)" }}>
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-center gap-6">
-          {["✅ Certified Electrician", "✅ Licensed Plumber", "✅ Appliance Technician", "✅ No After-Hours Fee", "✅ Emergency Service"].map((item) => (
+          {["✅ Experienced Electrician", "✅ Licensed Plumber", "✅ Appliance Technician", "✅ No After-Hours Fee", "✅ Emergency Service"].map((item) => (
             <span key={item} className="text-sm font-semibold text-gray-300 whitespace-nowrap">{item}</span>
           ))}
         </div>
@@ -198,7 +198,11 @@ export default function HomePage() {
                       </div>
                       <div>
                         <h3 className="text-xl font-black text-white mb-2">{s.title}</h3>
-                        <p className="text-gray-300 text-sm mb-4">{s.desc}</p>
+                        <ul className="mb-4 space-y-1">
+                          {s.bullets.map((b) => (
+                            <li key={b} className="text-gray-300 text-xs font-semibold">{b}</li>
+                          ))}
+                        </ul>
                         <span className="text-sm font-bold" style={{ color: "#FFD700" }}>Get Quote →</span>
                       </div>
                     </div>

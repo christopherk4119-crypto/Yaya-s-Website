@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | YAYA General Contractor Inc.",
   },
   description:
-    "Certified electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available Mon–Fri 4:30PM–6AM and 24hrs on weekends. Call (403) 400-3055.",
+    "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available Mon–Fri 4:30PM–6AM and 24hrs on weekends. Call (403) 400-3055.",
   keywords: [
     "electrician Calgary",
     "plumber Calgary",
@@ -45,12 +45,12 @@ export const metadata: Metadata = {
     siteName: "YAYA General Contractor Inc.",
     title: "YAYA General Contractor Inc. | Electrician, Plumber & Appliance Repair Calgary",
     description:
-      "One call handles electrical, plumbing AND appliances. Certified since 2007. No extra charge after hours. Calgary, AB — (403) 400-3055.",
+      "On Call for electrical, plumbing AND appliances. Experienced since 2007. No extra charge after hours. Calgary, AB — (403) 400-3055.",
   },
   twitter: {
     card: "summary_large_image",
     title: "YAYA General Contractor Inc. — Calgary's All-In-One Contractor",
-    description: "Certified electrician, plumber & appliance tech. No after-hours fee. Call (403) 400-3055.",
+    description: "Experienced electrician, plumber & appliance tech. No after-hours fee. Call (403) 400-3055.",
   },
   alternates: { canonical: siteUrl },
 };
