@@ -15,21 +15,21 @@ const services = [
     title: "Electrical Services",
     bullets: ["★ Panel Upgrades", "★ Wiring & Outlets", "★ Ceiling Lights", "★ Smoke Alarms & More"],
     href: "/electrical",
-    bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80",
+    bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&q=95",
   },
   {
     icon: <Wrench size={28} />,
     title: "Plumbing Services",
     bullets: ["★ Water Lines", "★ Drain Lines", "★ Faucet & Toilet", "★ Any Plumbing Need"],
     href: "/plumbing",
-    bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80",
+    bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95",
   },
   {
     icon: <Settings size={28} />,
     title: "Appliance Services",
     bullets: ["★ Oven & Stove", "★ Dishwasher & Dryer", "★ HVAC & Exhaust Fan", "★ All Brands"],
     href: "/appliance",
-    bg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    bg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=95",
   },
 ];
 

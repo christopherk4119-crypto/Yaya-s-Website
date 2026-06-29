@@ -15,17 +15,17 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Panel Upgrade", desc: "Upgrade your electrical panel safely and to code. All permits pulled.", bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", alt: "Electrical panel upgrade service in Calgary" },
-  { title: "Electrical Installation", desc: "New wiring, outlets, switches and complete electrical installations.", bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80", alt: "Electrical wiring installation Calgary" },
-  { title: "Ceiling Lights & Fans", desc: "Professional ceiling light and fan installation for any room.", bg: "https://images.unsplash.com/photo-1513506003901-1e6a35596f78?w=800&q=80", alt: "Ceiling light and fan installation Calgary" },
-  { title: "Smoke Alarm Installation", desc: "Code-compliant smoke alarm installation and testing.", bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80", alt: "Smoke alarm installation Calgary" },
-  { title: "Any Electrical Work", desc: "No job too small or too large. Abayneh handles it all.", bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80", alt: "General electrical work Calgary contractor" },
+  { title: "Panel Upgrade", desc: "Upgrade your electrical panel safely and to code. All permits pulled.", bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=95", alt: "Electrical panel upgrade service in Calgary" },
+  { title: "Electrical Installation", desc: "New wiring, outlets, switches and complete electrical installations.", bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&q=95", alt: "Electrical wiring installation Calgary" },
+  { title: "Ceiling Lights & Fans", desc: "Professional ceiling light and fan installation for any room.", bg: "https://images.unsplash.com/photo-1513506003901-1e6a35596f78?w=1920&q=95", alt: "Ceiling light and fan installation Calgary" },
+  { title: "Smoke Alarm Installation", desc: "Code-compliant smoke alarm installation and testing.", bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95", alt: "Smoke alarm installation Calgary" },
+  { title: "Any Electrical Work", desc: "No job too small or too large. Yaya handles it all.", bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=95", alt: "General electrical work Calgary contractor" },
 ];
 
 const galleryPhotos = [
   {
     src: "/images/gallery/electrical/calgary-electrician-ceiling-light-installation-abayneh-1.jpg",
-    alt: "Certified Calgary electrician specialist Abayneh performing ceiling light installation",
+    alt: "Certified Calgary electrician specialist Yaya performing ceiling light installation",
   },
   {
     src: "/images/gallery/electrical/calgary-electrician-hexagon-led-ceiling-completed-5.jpg",

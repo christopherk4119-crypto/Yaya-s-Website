@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Oven & Stove Repair", desc: "Diagnose and repair all oven and stove issues. All brands.", bg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80", alt: "Oven and stove repair Calgary appliance technician" },
-  { title: "Kitchen Exhaust Fan", desc: "Exhaust fan repair and replacement for kitchens and bathrooms.", bg: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80", alt: "Kitchen exhaust fan repair Calgary" },
-  { title: "Dishwasher Repair", desc: "Fix leaks, drainage issues, and electrical faults in dishwashers.", bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80", alt: "Dishwasher repair service Calgary" },
-  { title: "Dryer Repair", desc: "Heating element, vent cleaning, and full dryer diagnostics and repair.", bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", alt: "Dryer repair Calgary appliance service" },
-  { title: "HVAC Service", desc: "Heating, ventilation and air conditioning service and repair.", bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80", alt: "HVAC service and repair Calgary" },
-  { title: "Any Appliance", desc: "If it runs on electricity or water, Abayneh can fix it.", bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80", alt: "General appliance repair Calgary contractor" },
+  { title: "Oven & Stove Repair", desc: "Diagnose and repair all oven and stove issues. All brands.", bg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=95", alt: "Oven and stove repair Calgary appliance technician" },
+  { title: "Kitchen Exhaust Fan", desc: "Exhaust fan repair and replacement for kitchens and bathrooms.", bg: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1920&q=95", alt: "Kitchen exhaust fan repair Calgary" },
+  { title: "Dishwasher Repair", desc: "Fix leaks, drainage issues, and electrical faults in dishwashers.", bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95", alt: "Dishwasher repair service Calgary" },
+  { title: "Dryer Repair", desc: "Heating element, vent cleaning, and full dryer diagnostics and repair.", bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=95", alt: "Dryer repair Calgary appliance service" },
+  { title: "HVAC Service", desc: "Heating, ventilation and air conditioning service and repair.", bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=95", alt: "HVAC service and repair Calgary" },
+  { title: "Any Appliance", desc: "If it runs on electricity or water, Yaya can fix it.", bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&q=95", alt: "General appliance repair Calgary contractor" },
 ];
 
 const galleryPhotos = [

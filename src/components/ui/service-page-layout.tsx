@@ -45,30 +45,43 @@ export default function ServicePageLayout({
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden" style={{ background: "#0a0a0a" }}>
-        <div className="absolute inset-0" style={{
-          background: "radial-gradient(ellipse at center, rgba(255,215,0,0.08) 0%, transparent 70%)",
+      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden" style={{ background: "#080808" }}>
+        <div className="absolute inset-0 pointer-events-none" style={{
+          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,215,0,0.1) 0%, transparent 70%)",
         }} />
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto py-24">
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: "linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }} />
+
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto py-28">
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold mb-8"
-            style={{ background: "rgba(255,215,0,0.1)", border: "1px solid rgba(255,215,0,0.3)", color: "#FFD700" }}>
-            ⚡ No After-Hours Surcharge · Emergency Welcome
+            style={{ background: "rgba(255,215,0,0.08)", border: "1px solid rgba(255,215,0,0.25)", color: "#FFD700" }}>
+            ⚡ No After-Hours Surcharge &nbsp;·&nbsp; Emergency Welcome
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-            {heroHeadline.split(" ").map((word, i) =>
-              i === heroHeadline.split(" ").length - 1
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight" style={{ letterSpacing: "-0.02em" }}>
+            {heroHeadline.split(" ").map((word, i, arr) =>
+              i === arr.length - 1
                 ? <span key={i} style={{ color: "#FFD700" }}> {word}</span>
                 : <span key={i}>{word} </span>
             )}
           </h1>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">{heroSubheadline}</p>
-          <a
-            href="#booking"
-            className="inline-block px-10 py-4 rounded-full font-black text-black text-lg hover:scale-105 transition-transform duration-200"
-            style={{ background: "linear-gradient(135deg, #FFD700, #FFA500)" }}
-          >
-            {heroCta}
-          </a>
+          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">{heroSubheadline}</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#booking" className="btn-gold inline-block px-10 py-4 text-lg font-black">{heroCta}</a>
+            <a href="tel:4034003055"
+              className="inline-block px-10 py-4 rounded-full font-bold text-white text-lg transition-colors duration-200"
+              style={{ border: "1px solid rgba(255,255,255,0.15)" }}>
+              Call (403) 400-3055
+            </a>
+          </div>
+          <div className="flex flex-wrap justify-center gap-8 mt-14">
+            {["Experienced Since 2007", "Same Price Day & Night", "Fast Response Guaranteed"].map((t) => (
+              <div key={t} className="flex items-center gap-2 text-sm text-gray-400">
+                <span style={{ color: "#FFD700" }}>✓</span> {t}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -82,14 +95,16 @@ export default function ServicePageLayout({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <FadeIn key={s.title} delay={i * 80}>
-                <div className="service-card h-72 group">
+                <div className="service-card h-80 group">
                   <div className="service-card-bg absolute inset-0"
                     style={{ backgroundImage: `url(${s.bg})`, backgroundSize: "cover", backgroundPosition: "center" }} />
-                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.93) 45%, rgba(0,0,0,0.5) 100%)" }} />
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.4) 100%)" }} />
+                  <div className="absolute inset-0 p-7 flex flex-col justify-end">
                     <h3 className="text-xl font-black text-white mb-2">{s.title}</h3>
-                    <p className="text-gray-300 text-sm mb-4">{s.desc}</p>
-                    <a href="#booking" className="text-sm font-bold" style={{ color: "#FFD700" }}>Get Quote →</a>
+                    <p className="text-gray-400 text-sm mb-4 leading-relaxed">{s.desc}</p>
+                    <a href="#booking" className="inline-flex items-center gap-1 text-sm font-bold" style={{ color: "#FFD700" }}>
+                      Get a Quote <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                    </a>
                   </div>
                 </div>
               </FadeIn>
@@ -114,14 +129,14 @@ export default function ServicePageLayout({
       )}
 
       {/* BOOKING */}
-      <section className="section" id="booking" style={{ background: galleryPhotos.length > 0 ? "#111" : "#0d0d0d" }}>
+      <section className="section" id="booking" style={{ background: "#0a0a0a" }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <h2 className="section-heading">Book Your <span>Appointment</span></h2>
-            <p className="section-subheading">Choose your date and time — Abayneh will confirm.</p>
+            <p className="section-subheading">Pick your date and time — Yaya will call to confirm.</p>
           </FadeIn>
           <FadeIn delay={100}>
-            <div className="rounded-2xl p-8" style={{ background: "#111", border: "1px solid rgba(255,215,0,0.15)" }}>
+            <div className="rounded-2xl p-8" style={{ background: "#111", border: "1px solid rgba(255,215,0,0.15)", boxShadow: "0 0 60px rgba(255,215,0,0.04)" }}>
               <BookingForm defaultService={serviceType} />
             </div>
           </FadeIn>
