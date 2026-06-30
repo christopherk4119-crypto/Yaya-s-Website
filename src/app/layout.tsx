@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "after hours electrician Calgary",
     "panel upgrade Calgary",
     "YAYA contractor",
-    "Abayneh electrician",
+    "Yaya electrician",
     "Calgary contractor no extra fee",
   ],
   authors: [{ name: "YAYA General Contractor Inc." }],

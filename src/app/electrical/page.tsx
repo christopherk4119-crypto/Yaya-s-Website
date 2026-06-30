@@ -24,7 +24,7 @@ const services = [
 ];
 
 const galleryPhotos = [
-  { src: "/images/gallery/electrical/calgary-electrician-ceiling-light-installation-abayneh-1.jpg", alt: "Calgary electrician Yaya performing ceiling light installation" },
+  { src: "/images/gallery/electrical/calgary-electrician-ceiling-light-installation-abayneh-1.jpg", alt: "Experienced Calgary electrician Yaya performing ceiling light installation" },
   { src: "/images/gallery/electrical/calgary-electrician-hexagon-led-ceiling-completed-5.jpg", alt: "Calgary electrician completing hexagon LED ceiling light installation" },
   { src: "/images/gallery/electrical/calgary-electrician-breaker-panel-upgrade-before-6.jpg", alt: "Calgary electrician performing breaker panel upgrade" },
 ];
