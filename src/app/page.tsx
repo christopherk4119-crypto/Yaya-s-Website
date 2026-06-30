@@ -58,7 +58,7 @@ const socials = [
 ];
 
 const homeGallery = [
-  { src: "/images/gallery/electrical/calgary-electrician-ceiling-light-installation-yaya-1.jpg", alt: "Experienced Calgary electrician Yaya installing ceiling light fixture" },
+  { src: "/images/gallery/electrical/calgary-electrician-ceiling-light-installation-abayneh-1.jpg", alt: "Experienced Calgary electrician Yaya installing ceiling light fixture" },
   { src: "/images/gallery/electrical/calgary-electrician-ceiling-light-fixture-install-2.jpg", alt: "Calgary electrician Yaya smiling while completing ceiling light installation" },
   { src: "/images/gallery/electrical/calgary-electrician-hexagon-led-ceiling-completed-5.jpg", alt: "Completed hexagon LED ceiling light installation by Calgary electrician" },
   { src: "/images/gallery/electrical/calgary-electrician-breaker-panel-upgrade-before-6.jpg", alt: "Electrical breaker panel upgrade in Calgary home" },
@@ -242,7 +242,7 @@ export default function HomePage() {
             <FadeIn>
               <div className="relative">
                 <Image
-                  src="/images/gallery/electrical/calgary-electrician-ceiling-light-installation-yaya-1.jpg"
+                  src="/images/gallery/electrical/calgary-electrician-ceiling-light-installation-abayneh-1.jpg"
                   alt="Yaya — owner of YAYA General Contractor Inc. Calgary, experienced electrician since 2007"
                   width={600}
                   height={700}

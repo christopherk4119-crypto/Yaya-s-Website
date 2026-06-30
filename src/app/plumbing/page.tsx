@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Water Line Installation", desc: "New water line installation for residential and commercial properties.", bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95", alt: "Water line installation Calgary plumber" },
-  { title: "Drain Line Installation", desc: "Complete drain line installation done properly the first time.", bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=95", alt: "Drain line installation Calgary" },
-  { title: "Faucet Replacement", desc: "Quick, clean faucet replacement for any kitchen or bathroom.", bg: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&q=95", alt: "Faucet replacement Calgary bathroom kitchen" },
-  { title: "Toilet Replacement", desc: "Professional toilet removal and installation. No mess left behind.", bg: "https://images.unsplash.com/photo-1562184552-997c461abbe6?w=1920&q=95", alt: "Toilet replacement installation Calgary" },
-  { title: "Any Plumbing Work", desc: "Whatever your plumbing issue, Yaya handles it.", bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=95", alt: "General plumbing services Calgary contractor" },
+  { title: "Water Line Installation", desc: "", bullets: ["★ Residential & Commercial", "★ Copper & PVC", "★ Fast Install", "★ No Mess Left Behind"], bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95", alt: "Water line installation Calgary plumber" },
+  { title: "Drain Line Installation", desc: "", bullets: ["★ Done Right First Time", "★ All Drain Types", "★ Proper Slope & Venting", "★ Residential & Commercial"], bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=95", alt: "Drain line installation Calgary" },
+  { title: "Faucet Replacement", desc: "", bullets: ["★ Kitchen & Bathroom", "★ All Brands & Styles", "★ Quick & Clean", "★ Same Day Available"], bg: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&q=95", alt: "Faucet replacement Calgary bathroom kitchen" },
+  { title: "Toilet Replacement", desc: "", bullets: ["★ Full Removal & Install", "★ No Mess Left Behind", "★ All Toilet Types", "★ Fast Turnaround"], bg: "https://images.unsplash.com/photo-1562184552-997c461abbe6?w=1920&q=95", alt: "Toilet replacement installation Calgary" },
+  { title: "Any Plumbing Work", desc: "", bullets: ["★ Emergency Calls Welcome", "★ No After-Hours Fee", "★ Residential & Commercial", "★ Same Price Always"], bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=95", alt: "General plumbing services Calgary contractor" },
 ];
 
 const galleryPhotos = [

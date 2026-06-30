@@ -6,6 +6,7 @@ import Gallery, { GalleryPhoto } from "@/components/ui/gallery";
 interface ServiceItem {
   title: string;
   desc: string;
+  bullets?: string[];
   bg: string;
   alt?: string;
 }
@@ -101,7 +102,13 @@ export default function ServicePageLayout({
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.4) 100%)" }} />
                   <div className="absolute inset-0 p-7 flex flex-col justify-end">
                     <h3 className="text-xl font-black text-white mb-2">{s.title}</h3>
-                    <p className="text-gray-400 text-sm mb-4 leading-relaxed">{s.desc}</p>
+                    {s.bullets ? (
+                      <ul className="mb-4 space-y-1">
+                        {s.bullets.map((b) => <li key={b} className="text-gray-300 text-xs font-semibold">{b}</li>)}
+                      </ul>
+                    ) : (
+                      <p className="text-gray-400 text-sm mb-4 leading-relaxed">{s.desc}</p>
+                    )}
                     <a href="#booking" className="inline-flex items-center gap-1 text-sm font-bold" style={{ color: "#FFD700" }}>
                       Get a Quote <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
                     </a>
