@@ -49,6 +49,7 @@ export default function LocalBusinessSchema() {
     sameAs: [
       "https://www.tiktok.com/@yaya.electric_canada",
       "https://www.instagram.com/yayacalgary/",
+      "https://www.youtube.com/channel/UCNgUCI9MK3DShuf3G_I72fg",
     ],
   };
 

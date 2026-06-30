@@ -5,6 +5,7 @@ import Image from "next/image";
 const socials = [
   { label: "TikTok", href: "https://www.tiktok.com/@yaya.electric_canada", icon: "🎵" },
   { label: "Instagram", href: "https://www.instagram.com/yayacalgary/", icon: "📷" },
+  { label: "YouTube", href: "https://www.youtube.com/channel/UCNgUCI9MK3DShuf3G_I72fg", icon: "▶️" },
 ];
 
 export default function Footer() {
