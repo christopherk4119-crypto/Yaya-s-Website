@@ -1,12 +1,12 @@
 export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": "https://yayacontractor.ca",
     name: "YAYA General Contractor Inc.",
     alternateName: "Yaya Contractor",
     description:
-      "Certified electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Certified since 2007.",
+      "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available Mon–Fri 4:30PM–6AM and 24hrs on weekends. Call (403) 400-3055.",
     url: "https://yayacontractor.ca",
     telephone: "+14034003055",
     email: "electricianyaya@gmail.com",
@@ -15,23 +15,14 @@ export default function LocalBusinessSchema() {
     priceRange: "$$",
     currenciesAccepted: "CAD",
     paymentAccepted: "Cash, Credit Card, Debit",
-    areaServed: {
-      "@type": "City",
-      name: "Calgary",
-      addressRegion: "AB",
-      addressCountry: "CA",
-    },
+    areaServed: { "@type": "City", name: "Calgary", addressRegion: "AB", addressCountry: "CA" },
     address: {
       "@type": "PostalAddress",
       addressLocality: "Calgary",
       addressRegion: "AB",
       addressCountry: "CA",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 51.0447,
-      longitude: -114.0719,
-    },
+    geo: { "@type": "GeoCoordinates", latitude: 51.0447, longitude: -114.0719 },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -56,8 +47,8 @@ export default function LocalBusinessSchema() {
       ],
     },
     sameAs: [
-      "https://www.tiktok.com/@abayneh.yared.yay",
-      "https://www.facebook.com/p/YAYA-General-Contracting-100067728921076",
+      "https://www.tiktok.com/@yaya.electric_canada",
+      "https://www.instagram.com/yayacalgary/",
     ],
   };
 
