@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/electrical", label: "Electrical" },
   { href: "/plumbing", label: "Plumbing" },
   { href: "/appliance", label: "Appliance" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export default function Navbar() {
