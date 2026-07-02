@@ -3,6 +3,6 @@ import { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://yayacontractor.ca/sitemap.xml",
+    sitemap: "https://www.yayageneralservice.com/sitemap.xml",
   };
 }

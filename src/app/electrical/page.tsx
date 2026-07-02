@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   description:
     "Experienced electrician in Calgary since 2007. Panel upgrades, wiring, outlets, ceiling lights, smoke alarms & more. No after-hours surcharge. Emergency calls welcome. Call (403) 400-3055.",
   keywords: ["electrician Calgary", "panel upgrade Calgary", "electrical installation Calgary", "ceiling light installation Calgary", "smoke alarm Calgary", "emergency electrician Calgary", "after hours electrician Calgary"],
-  alternates: { canonical: "https://yayacontractor.ca/electrical" },
+  alternates: { canonical: "https://www.yayageneralservice.com/electrical" },
   openGraph: {
     title: "Electrician Calgary | YAYA General Contractor Inc.",
     description: "Experienced electrician since 2007. Panel upgrades, wiring, outlets & more. No after-hours fee. Call (403) 400-3055.",
-    url: "https://yayacontractor.ca/electrical",
+    url: "https://www.yayageneralservice.com/electrical",
   },
 };
 

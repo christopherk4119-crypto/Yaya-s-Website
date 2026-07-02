@@ -9,7 +9,7 @@ import LocalBusinessSchema from "@/components/ui/local-business-schema";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "600", "700", "900"] });
 
-const siteUrl = "https://yayacontractor.ca";
+const siteUrl = "https://www.yayageneralservice.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

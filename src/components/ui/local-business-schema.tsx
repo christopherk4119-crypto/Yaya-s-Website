@@ -2,12 +2,12 @@ export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
-    "@id": "https://yayacontractor.ca",
+    "@id": "https://www.yayageneralservice.com",
     name: "YAYA General Contractor Inc.",
     alternateName: "Yaya Contractor",
     description:
       "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available Mon–Fri 4:30PM–6AM and 24hrs on weekends. Call (403) 400-3055.",
-    url: "https://yayacontractor.ca",
+    url: "https://www.yayageneralservice.com",
     telephone: "+14034003055",
     email: "electricianyaya@gmail.com",
     foundingDate: "2007",
@@ -41,9 +41,9 @@ export default function LocalBusinessSchema() {
       "@type": "OfferCatalog",
       name: "Contractor Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Electrical Services", url: "https://yayacontractor.ca/electrical" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Plumbing Services", url: "https://yayacontractor.ca/plumbing" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Appliance Repair", url: "https://yayacontractor.ca/appliance" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Electrical Services", url: "https://www.yayageneralservice.com/electrical" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Plumbing Services", url: "https://www.yayageneralservice.com/plumbing" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Appliance Repair", url: "https://www.yayageneralservice.com/appliance" } },
       ],
     },
     sameAs: [
