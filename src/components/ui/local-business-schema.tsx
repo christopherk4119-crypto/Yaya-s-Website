@@ -8,6 +8,8 @@ export default function LocalBusinessSchema() {
     description:
       "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available Mon–Fri 4:30PM–6AM and 24hrs on weekends. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com",
+    logo: "https://www.yayageneralservice.com/icon.png",
+    image: "https://www.yayageneralservice.com/icon.png",
     telephone: "+14034003055",
     email: "electricianyaya@gmail.com",
     foundingDate: "2007",
@@ -39,7 +41,7 @@ export default function LocalBusinessSchema() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Contractor Services",
+      name: "Electrical, Plumbing and Appliance Services",
       itemListElement: [
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Electrical Services", url: "https://www.yayageneralservice.com/electrical" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Plumbing Services", url: "https://www.yayageneralservice.com/plumbing" } },

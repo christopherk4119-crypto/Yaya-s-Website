@@ -46,11 +46,13 @@ export const metadata: Metadata = {
     title: "YAYA Electrical, Plumbing and Appliance | Electrician, Plumber & Appliance Repair Calgary",
     description:
       "On Call for electrical, plumbing AND appliances. Experienced since 2007. No extra charge after hours. Calgary, AB — (403) 400-3055.",
+    images: [{ url: "/icon.png", width: 512, height: 512, alt: "YAYA Electrical, Plumbing and Appliance logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "YAYA Electrical, Plumbing and Appliance — Calgary's All-In-One Contractor",
     description: "Experienced electrician, plumber & appliance tech. No after-hours fee. Call (403) 400-3055.",
+    images: ["/icon.png"],
   },
   alternates: { canonical: siteUrl },
 };
