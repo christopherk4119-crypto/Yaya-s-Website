@@ -19,7 +19,7 @@ export default function Footer() {
               <Image src="/logo.png" alt="YAYA Electrical, Plumbing and Appliance" width={44} height={44} className="rounded-lg" style={{ background: "#FFD700" }} />
               <div>
                 <div className="font-black text-lg" style={{ color: "#FFD700" }}>YAYA</div>
-                <div className="text-xs text-gray-500">General Contractor Inc.</div>
+                <div className="text-xs text-gray-500">Electrical, Plumbing and Appliance</div>
               </div>
             </div>
             <p className="text-gray-400 text-sm italic mb-4">&quot;All In One Hand&quot;</p>
