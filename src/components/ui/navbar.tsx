@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 min-w-[180px]">
-            <Image src="/logo.png" alt="YAYA General Contractor Inc." width={52} height={52} className="rounded-lg" style={{ background: "#FFD700" }} priority />
+            <Image src="/logo.png" alt="YAYA Electrical, Plumbing and Appliance" width={52} height={52} className="rounded-lg" style={{ background: "#FFD700" }} priority />
             <div>
               <div className="font-black text-xl leading-tight" style={{ color: "#FFD700" }}>YAYA</div>
               <div className="text-xs text-gray-400 leading-tight">General Contractor Inc.</div>

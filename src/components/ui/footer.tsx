@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Logo + tagline */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Image src="/logo.png" alt="YAYA General Contractor Inc." width={44} height={44} className="rounded-lg" style={{ background: "#FFD700" }} />
+              <Image src="/logo.png" alt="YAYA Electrical, Plumbing and Appliance" width={44} height={44} className="rounded-lg" style={{ background: "#FFD700" }} />
               <div>
                 <div className="font-black text-lg" style={{ color: "#FFD700" }}>YAYA</div>
                 <div className="text-xs text-gray-500">General Contractor Inc.</div>
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4" style={{ borderTop: "1px solid rgba(255,215,0,0.1)" }}>
-          <p className="text-gray-600 text-sm">© 2026 YAYA General Contractor Inc. — Calgary, AB</p>
+          <p className="text-gray-600 text-sm">© 2026 YAYA Electrical, Plumbing and Appliance — Calgary, AB</p>
           <p className="text-gray-600 text-sm italic">All In One Hand</p>
         </div>
       </div>

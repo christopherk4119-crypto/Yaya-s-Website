@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords: ["electrician Calgary", "panel upgrade Calgary", "electrical installation Calgary", "ceiling light installation Calgary", "smoke alarm Calgary", "emergency electrician Calgary", "after hours electrician Calgary"],
   alternates: { canonical: "https://www.yayageneralservice.com/electrical" },
   openGraph: {
-    title: "Electrician Calgary | YAYA General Contractor Inc.",
+    title: "Electrician Calgary | YAYA Electrical, Plumbing and Appliance",
     description: "Experienced electrician since 2007. Panel upgrades, wiring, outlets & more. No after-hours fee. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com/electrical",
   },
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "Do you charge extra for emergency or after-hours electrical calls in Calgary?",
-    a: "No. YAYA General Contractor does not charge after-hours surcharges. Whether you call at 2 AM on a Saturday or 5 PM on a weekday, the price is the same. This applies to all electrical, plumbing, and appliance work.",
+    a: "No. YAYA Electrical, Plumbing and Appliance does not charge after-hours surcharges. Whether you call at 2 AM on a Saturday or 5 PM on a weekday, the price is the same. This applies to all electrical, plumbing, and appliance work.",
   },
   {
     q: "How fast can an electrician come to my home in Calgary?",
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: "What areas of Calgary do you serve?",
-    a: "YAYA General Contractor serves all of Calgary, AB including NW, NE, SW, SE, and surrounding communities. There is no travel surcharge for any area within the city.",
+    a: "YAYA Electrical, Plumbing and Appliance serves all of Calgary, AB including NW, NE, SW, SE, and surrounding communities. There is no travel surcharge for any area within the city.",
   },
 ];
 
