@@ -9,25 +9,45 @@ interface BookingFormProps {
   defaultService?: ServiceType;
 }
 
-const getTimeSlots = (date: string): string[] => {
-  if (!date) return [];
-  const d = new Date(date);
-  const day = d.getDay();
+const formatHour = (h: number): string => {
+  const hour = h % 12 === 0 ? 12 : h % 12;
+  const ampm = h < 12 ? "AM" : "PM";
+  return `${hour}:00 ${ampm}`;
+};
 
-  const slots: string[] = [];
-  if (day === 0 || day === 6) {
-    for (let h = 0; h < 23; h++) {
-      const hour = h % 12 === 0 ? 12 : h % 12;
-      const ampm = h < 12 ? "AM" : "PM";
-      slots.push(`${hour}:00 ${ampm}`);
+const getTimeSlots = (date: string): { slot: string; disabled: boolean }[] => {
+  if (!date) return [];
+  const d = new Date(date + "T12:00:00");
+  const day = d.getDay();
+  const isWeekend = day === 0 || day === 6;
+
+  const results: { slot: string; disabled: boolean }[] = [];
+
+  if (isWeekend) {
+    // Saturday & Sunday: 8 AM to 10 PM
+    for (let h = 8; h <= 22; h++) {
+      results.push({ slot: formatHour(h), disabled: false });
     }
   } else {
-    slots.push(
-      "4:30 PM","5:00 PM","6:00 PM","7:00 PM","8:00 PM","9:00 PM","10:00 PM","11:00 PM",
-      "12:00 AM","1:00 AM","2:00 AM","3:00 AM","4:00 AM","5:00 AM","6:00 AM"
-    );
+    // Monday to Friday: show 8 AM to 10 PM but grey out before 4:30 PM
+    results.push({ slot: "8:00 AM", disabled: true });
+    results.push({ slot: "9:00 AM", disabled: true });
+    results.push({ slot: "10:00 AM", disabled: true });
+    results.push({ slot: "11:00 AM", disabled: true });
+    results.push({ slot: "12:00 PM", disabled: true });
+    results.push({ slot: "1:00 PM", disabled: true });
+    results.push({ slot: "2:00 PM", disabled: true });
+    results.push({ slot: "3:00 PM", disabled: true });
+    results.push({ slot: "4:00 PM", disabled: true });
+    results.push({ slot: "4:30 PM", disabled: false });
+    results.push({ slot: "5:30 PM", disabled: false });
+    results.push({ slot: "6:30 PM", disabled: false });
+    results.push({ slot: "7:30 PM", disabled: false });
+    results.push({ slot: "8:30 PM", disabled: false });
+    results.push({ slot: "9:30 PM", disabled: false });
   }
-  return slots;
+
+  return results;
 };
 
 export default function BookingForm({ defaultService = "Electrical" }: BookingFormProps) {
@@ -57,6 +77,7 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
   }, [form.appointment_date]);
 
   const slots = getTimeSlots(form.appointment_date);
+  const availableSlots = slots.filter((s) => !s.disabled);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -153,27 +174,29 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
             <Clock size={18} style={{ color: "#FFD700" }} />
             <span className="text-white font-semibold text-sm">Select Time</span>
             <span className="text-gray-500 text-xs ml-2">
-              {new Date(form.appointment_date).getDay() === 0 || new Date(form.appointment_date).getDay() === 6
-                ? "24hr availability"
-                : "After-hours: 4:30 PM – 6:00 AM"}
+              {new Date(form.appointment_date + "T12:00:00").getDay() === 0 || new Date(form.appointment_date + "T12:00:00").getDay() === 6
+                ? "8:00 AM – 10:00 PM"
+                : "4:30 PM – 10:00 PM (Mon–Fri)"}
             </span>
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 max-h-48 overflow-y-auto pr-1">
-            {slots.map((slot) => {
+            {slots.map(({ slot, disabled: unavailable }) => {
               const taken = bookedSlots.includes(slot);
+              const isDisabled = taken || unavailable;
               const selected = form.appointment_time === slot;
               return (
                 <button
                   key={slot}
                   type="button"
-                  disabled={taken}
-                  onClick={() => !taken && setForm({ ...form, appointment_time: slot })}
-                  className="py-2 px-2 rounded-lg text-xs font-bold transition-all duration-150 cursor-pointer"
+                  disabled={isDisabled}
+                  onClick={() => !isDisabled && setForm({ ...form, appointment_time: slot })}
+                  className="py-2 px-2 rounded-lg text-xs font-bold transition-all duration-150"
                   style={{
-                    background: taken ? "#1a1a1a" : selected ? "#FFD700" : "#222",
-                    color: taken ? "#555" : selected ? "#000" : "#fff",
-                    border: selected ? "2px solid #FFD700" : "1px solid #333",
-                    cursor: taken ? "not-allowed" : "pointer",
+                    background: isDisabled ? "#111" : selected ? "#FFD700" : "#222",
+                    color: isDisabled ? "#444" : selected ? "#000" : "#fff",
+                    border: selected ? "2px solid #FFD700" : "1px solid #2a2a2a",
+                    cursor: isDisabled ? "not-allowed" : "pointer",
+                    opacity: unavailable ? 0.4 : 1,
                   }}
                 >
                   {taken ? "✗" : slot}
