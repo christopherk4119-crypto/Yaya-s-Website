@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Home, Wrench } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -72,6 +72,22 @@ export default function Navbar() {
           <button onClick={() => setOpen(!open)} className="md:hidden text-white p-2">
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
+        </div>
+
+        {/* Mobile quick-access bar — always visible, no need to open the menu */}
+        <div className="md:hidden flex items-center justify-around pb-2" style={{ borderTop: "1px solid rgba(255,215,0,0.12)" }}>
+          <Link href="/" className="flex flex-col items-center gap-0.5 px-4 pt-2" style={{ color: pathname === "/" ? "#FFD700" : "#e5e7eb" }}>
+            <Home size={18} />
+            <span className="text-[11px] font-bold uppercase tracking-wide">Home</span>
+          </Link>
+          <Link href="/#services" className="flex flex-col items-center gap-0.5 px-4 pt-2 text-gray-200">
+            <Wrench size={18} />
+            <span className="text-[11px] font-bold uppercase tracking-wide">Services</span>
+          </Link>
+          <Link href="/#contact" className="flex flex-col items-center gap-0.5 px-4 pt-2 text-gray-200">
+            <Phone size={18} />
+            <span className="text-[11px] font-bold uppercase tracking-wide">Contact</span>
+          </Link>
         </div>
       </div>
 
