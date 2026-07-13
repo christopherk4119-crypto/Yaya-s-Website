@@ -52,6 +52,8 @@ export default function LocalBusinessSchema() {
       "https://www.tiktok.com/@yaya.electric_canada",
       "https://www.instagram.com/yayacalgary/",
       "https://www.youtube.com/channel/UCNgUCI9MK3DShuf3G_I72fg",
+      "https://www.kijiji.ca/v-appliance-repair-installation/calgary/cheaper-price-electrical-plumbing-&-appliance-repair-service/1694676987",
+      "https://www.kijiji.ca/v-electrician/calgary/cheaper-price-plumbing-electrical-and-appliance-maintenance/1697041621",
     ],
   };
 

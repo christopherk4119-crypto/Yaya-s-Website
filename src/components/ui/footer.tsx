@@ -6,6 +6,8 @@ const socials = [
   { label: "TikTok", href: "https://www.tiktok.com/@yaya.electric_canada", icon: "🎵" },
   { label: "Instagram", href: "https://www.instagram.com/yayacalgary/", icon: "📷" },
   { label: "YouTube", href: "https://www.youtube.com/channel/UCNgUCI9MK3DShuf3G_I72fg", icon: "▶️" },
+  { label: "Kijiji — Appliance Repair", href: "https://www.kijiji.ca/v-appliance-repair-installation/calgary/cheaper-price-electrical-plumbing-&-appliance-repair-service/1694676987", icon: "🏷️" },
+  { label: "Kijiji — Electrician", href: "https://www.kijiji.ca/v-electrician/calgary/cheaper-price-plumbing-electrical-and-appliance-maintenance/1697041621", icon: "🏷️" },
 ];
 
 export default function Footer() {
