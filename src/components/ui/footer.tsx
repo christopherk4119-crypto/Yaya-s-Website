@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import KijijiMark from "@/components/ui/kijiji-mark";
 
 const socials = [
   { label: "TikTok", href: "https://www.tiktok.com/@yaya.electric_canada", icon: "🎵" },
   { label: "Instagram", href: "https://www.instagram.com/yayacalgary/", icon: "📷" },
   { label: "YouTube", href: "https://www.youtube.com/channel/UCNgUCI9MK3DShuf3G_I72fg", icon: "▶️" },
-  { label: "Kijiji — Appliance Repair", href: "https://www.kijiji.ca/v-appliance-repair-installation/calgary/cheaper-price-electrical-plumbing-&-appliance-repair-service/1694676987", icon: "🏷️" },
-  { label: "Kijiji — Electrician", href: "https://www.kijiji.ca/v-electrician/calgary/cheaper-price-plumbing-electrical-and-appliance-maintenance/1697041621", icon: "🏷️" },
+  { label: "Kijiji — Appliance Repair", href: "https://www.kijiji.ca/v-appliance-repair-installation/calgary/cheaper-price-electrical-plumbing-&-appliance-repair-service/1694676987", icon: <KijijiMark size={40} radius={10} /> },
+  { label: "Kijiji — Electrician", href: "https://www.kijiji.ca/v-electrician/calgary/cheaper-price-plumbing-electrical-and-appliance-maintenance/1697041621", icon: <KijijiMark size={40} radius={10} /> },
 ];
 
 export default function Footer() {
@@ -56,7 +57,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={s.label}
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-all duration-200 hover:scale-110"
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-all duration-200 hover:scale-110 overflow-hidden"
                   style={{ background: "#1a1a1a", border: "1px solid rgba(255,215,0,0.2)" }}
                 >
                   {s.icon}

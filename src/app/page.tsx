@@ -5,7 +5,8 @@ import Image from "next/image";
 import AnimatedShaderHero from "@/components/ui/animated-shader-hero";
 import Gallery from "@/components/ui/gallery";
 import BookingForm from "@/components/ui/booking-form";
-import { Phone, Mail, Clock, Zap, Wrench, Settings, Shield, CheckCircle, Tag } from "lucide-react";
+import { Phone, Mail, Clock, Zap, Wrench, Settings, Shield, CheckCircle } from "lucide-react";
+import KijijiMark from "@/components/ui/kijiji-mark";
 
 const FORMSPREE = "https://formspree.io/f/mjgqynvj";
 
@@ -58,14 +59,14 @@ const socials = [
   {
     name: "Kijiji", handle: "Appliance Repair Listing", desc: "See our appliance repair ad",
     href: "https://www.kijiji.ca/v-appliance-repair-installation/calgary/cheaper-price-electrical-plumbing-&-appliance-repair-service/1694676987",
-    color: "#00B25D",
-    icon: <Tag size={40} color="white" strokeWidth={2} />,
+    color: "#2D1B4E",
+    icon: <KijijiMark />,
   },
   {
     name: "Kijiji", handle: "Electrician Listing", desc: "See our electrical & plumbing ad",
     href: "https://www.kijiji.ca/v-electrician/calgary/cheaper-price-plumbing-electrical-and-appliance-maintenance/1697041621",
-    color: "#00B25D",
-    icon: <Tag size={40} color="white" strokeWidth={2} />,
+    color: "#2D1B4E",
+    icon: <KijijiMark />,
   },
 ];
 
@@ -336,7 +337,7 @@ export default function HomePage() {
           </FadeIn>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {socials.map((s, i) => (
-              <FadeIn key={s.name} delay={i * 80}>
+              <FadeIn key={`${s.name}-${s.handle}`} delay={i * 80}>
                 <a href={s.href} target="_blank" rel="noopener noreferrer"
                   className="group flex flex-col items-center justify-center p-8 rounded-2xl text-center transition-all duration-300 hover:scale-105"
                   style={{ background: "#111", border: "1px solid #222" }}
