@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/plumbing", label: "Plumbing" },
   { href: "/appliance", label: "Appliance" },
   { href: "/faq", label: "FAQ" },
+  { href: "/media", label: "Media" },
 ];
 
 export default function Navbar() {
