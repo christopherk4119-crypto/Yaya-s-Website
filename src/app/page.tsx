@@ -171,10 +171,10 @@ export default function HomePage() {
 
       {/* SEO: visually hidden NAP */}
       <div className="sr-only" aria-hidden="false">
-        <h2>YAYA Electrical, Plumbing and Appliance — Calgary Electrician, Plumber &amp; Appliance Repair</h2>
+        <h2>YAYA General Contractor Incorporated — Calgary Electrician, Plumber &amp; Appliance Repair</h2>
         <p>Experienced electrician, licensed plumber and appliance technician serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available Monday to Friday 4:30 PM to 6:00 AM and 24 hours on Saturday and Sunday.</p>
         <address>
-          <span itemProp="name">YAYA Electrical, Plumbing and Appliance</span><br />
+          <span itemProp="name">YAYA General Contractor Incorporated</span><br />
           <span itemProp="addressLocality">Calgary</span>, <span itemProp="addressRegion">AB</span>, <span itemProp="addressCountry">Canada</span><br />
           Phone: <a href="tel:+14034003055" itemProp="telephone">(403) 400-3055</a><br />
           Email: <a href="mailto:electricianyaya@gmail.com" itemProp="email">electricianyaya@gmail.com</a>
@@ -256,7 +256,7 @@ export default function HomePage() {
               <div className="relative">
                 <Image
                   src="/images/gallery/electrical/calgary-electrician-ceiling-light-installation-abayneh-1.jpg"
-                  alt="Yaya — owner of YAYA Electrical, Plumbing and Appliance Calgary, experienced electrician since 2007"
+                  alt="Yaya — owner of YAYA General Contractor Incorporated Calgary, experienced electrician since 2007"
                   width={600}
                   height={700}
                   className="w-full rounded-2xl object-cover"

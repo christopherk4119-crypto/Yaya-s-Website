@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "YAYA Electrical, Plumbing and Appliance",
+    name: "YAYA General Contractor Incorporated",
     short_name: "YAYA",
     description:
       "Experienced electrician, licensed plumber & appliance technician in Calgary, AB.",

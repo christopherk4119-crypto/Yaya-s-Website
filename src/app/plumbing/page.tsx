@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords: ["plumber Calgary", "water line installation Calgary", "drain line Calgary", "faucet replacement Calgary", "toilet installation Calgary", "emergency plumber Calgary", "licensed plumber Calgary"],
   alternates: { canonical: "https://www.yayageneralservice.com/plumbing" },
   openGraph: {
-    title: "Plumber Calgary | YAYA Electrical, Plumbing and Appliance",
+    title: "Plumber Calgary | YAYA General Contractor Incorporated",
     description: "Licensed plumber. Water lines, drains, faucets, toilets & more. Same price day or night. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com/plumbing",
   },
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "Do you charge extra for emergency plumbing calls in Calgary?",
-    a: "No. YAYA Electrical, Plumbing and Appliance charges the same rate regardless of time of day or day of week. If your pipe bursts at midnight or your toilet overflows on a Sunday, the price is identical to a regular weekday call.",
+    a: "No. YAYA General Contractor Incorporated charges the same rate regardless of time of day or day of week. If your pipe bursts at midnight or your toilet overflows on a Sunday, the price is identical to a regular weekday call.",
   },
   {
     q: "How quickly can a plumber come to my home in Calgary?",

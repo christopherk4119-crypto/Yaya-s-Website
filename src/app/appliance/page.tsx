@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: ["appliance repair Calgary", "oven repair Calgary", "dishwasher repair Calgary", "dryer repair Calgary", "HVAC service Calgary", "exhaust fan repair Calgary", "emergency appliance repair Calgary"],
   alternates: { canonical: "https://www.yayageneralservice.com/appliance" },
   openGraph: {
-    title: "Appliance Repair Calgary | YAYA Electrical, Plumbing and Appliance",
+    title: "Appliance Repair Calgary | YAYA General Contractor Incorporated",
     description: "Experienced appliance tech. Oven, dishwasher, dryer, HVAC & more. No after-hours fee. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com/appliance",
   },
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "Do you charge extra for appliance repair on evenings or weekends in Calgary?",
-    a: "No. YAYA Electrical, Plumbing and Appliance does not charge after-hours or weekend surcharges for any service — electrical, plumbing, or appliance. The price is always the same.",
+    a: "No. YAYA General Contractor Incorporated does not charge after-hours or weekend surcharges for any service — electrical, plumbing, or appliance. The price is always the same.",
   },
   {
     q: "Can you service HVAC systems in Calgary homes?",

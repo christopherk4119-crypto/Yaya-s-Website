@@ -14,8 +14,8 @@ const siteUrl = "https://www.yayageneralservice.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "YAYA Electrical, Plumbing and Appliance | Electrician, Plumber & Appliance Repair Calgary",
-    template: "%s | YAYA Electrical, Plumbing and Appliance",
+    default: "YAYA General Contractor Incorporated | Electrician, Plumber & Appliance Repair Calgary",
+    template: "%s | YAYA General Contractor Incorporated",
   },
   description:
     "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available Mon–Fri 4:30PM–6AM and 24hrs on weekends. Call (403) 400-3055.",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     "Yaya electrician",
     "Calgary contractor no extra fee",
   ],
-  authors: [{ name: "YAYA Electrical, Plumbing and Appliance" }],
-  creator: "YAYA Electrical, Plumbing and Appliance",
-  publisher: "YAYA Electrical, Plumbing and Appliance",
+  authors: [{ name: "YAYA General Contractor Incorporated" }],
+  creator: "YAYA General Contractor Incorporated",
+  publisher: "YAYA General Contractor Incorporated",
   robots: {
     index: true,
     follow: true,
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
     url: siteUrl,
-    siteName: "YAYA Electrical, Plumbing and Appliance",
-    title: "YAYA Electrical, Plumbing and Appliance | Electrician, Plumber & Appliance Repair Calgary",
+    siteName: "YAYA General Contractor Incorporated",
+    title: "YAYA General Contractor Incorporated | Electrician, Plumber & Appliance Repair Calgary",
     description:
       "On Call for electrical, plumbing AND appliances. Experienced since 2007. No extra charge after hours. Calgary, AB — (403) 400-3055.",
-    images: [{ url: "/icon.png", width: 512, height: 512, alt: "YAYA Electrical, Plumbing and Appliance logo" }],
+    images: [{ url: "/icon.png", width: 512, height: 512, alt: "YAYA General Contractor Incorporated logo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "YAYA Electrical, Plumbing and Appliance — Calgary's All-In-One Contractor",
+    title: "YAYA General Contractor Incorporated — Calgary's All-In-One Contractor",
     description: "Experienced electrician, plumber & appliance tech. No after-hours fee. Call (403) 400-3055.",
     images: ["/icon.png"],
   },

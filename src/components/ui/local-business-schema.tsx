@@ -3,8 +3,8 @@ export default function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Electrician", "GeneralContractor"],
     "@id": "https://www.yayageneralservice.com",
-    name: "YAYA Electrical, Plumbing and Appliance",
-    alternateName: "Yaya Contractor",
+    name: "YAYA General Contractor Incorporated",
+    alternateName: ["Yaya Contractor", "YAYA Electrical, Plumbing and Appliance"],
     description:
       "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available Mon–Fri 4:30PM–6AM and 24hrs on weekends. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com",

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dishwasher Repair Calgary | All Brands | YAYA Electrical, Plumbing and Appliance",
+  title: "Dishwasher Repair Calgary | All Brands | YAYA General Contractor Incorporated",
   description: "Dishwasher repair in Calgary — leaks, drainage, electrical faults, all brands. Same-day available. No after-hours fee. Call (403) 400-3055.",
   alternates: { canonical: "https://www.yayageneralservice.com/dishwasher-repair-calgary" },
   openGraph: {
-    title: "Dishwasher Repair Calgary | YAYA Electrical, Plumbing and Appliance",
+    title: "Dishwasher Repair Calgary | YAYA General Contractor Incorporated",
     description: "Dishwasher leaking or not draining? Repair in Calgary, all brands. No after-hours fee. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com/dishwasher-repair-calgary",
   },
@@ -18,7 +18,7 @@ export default function DishwasherRepairPage() {
       <div className="mb-4 text-sm text-gray-500"><Link href="/appliance" style={{ color: "#FFD700" }}>← Appliance Services</Link></div>
       <h1 className="text-5xl font-black text-white mb-6">Dishwasher Repair Calgary</h1>
       <p className="text-gray-300 text-xl mb-8 leading-relaxed">
-        Dishwasher leaking, not draining, or not cleaning properly? YAYA Electrical, Plumbing and Appliance repairs all dishwasher brands in Calgary. Fast diagnosis, clear quote before any work starts, no after-hours fee.
+        Dishwasher leaking, not draining, or not cleaning properly? YAYA General Contractor Incorporated repairs all dishwasher brands in Calgary. Fast diagnosis, clear quote before any work starts, no after-hours fee.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {[

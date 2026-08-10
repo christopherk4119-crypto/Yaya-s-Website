@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dryer Repair Calgary | All Brands | YAYA Electrical, Plumbing and Appliance",
+  title: "Dryer Repair Calgary | All Brands | YAYA General Contractor Incorporated",
   description: "Dryer repair in Calgary — heating element, vent cleaning, motor, all brands. Same-day available. No after-hours fee. Call (403) 400-3055.",
   alternates: { canonical: "https://www.yayageneralservice.com/dryer-repair-calgary" },
   openGraph: {
-    title: "Dryer Repair Calgary | YAYA Electrical, Plumbing and Appliance",
+    title: "Dryer Repair Calgary | YAYA General Contractor Incorporated",
     description: "Dryer not heating? Dryer repair in Calgary, all brands. No after-hours fee. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com/dryer-repair-calgary",
   },
@@ -18,7 +18,7 @@ export default function DryerRepairPage() {
       <div className="mb-4 text-sm text-gray-500"><Link href="/appliance" style={{ color: "#FFD700" }}>← Appliance Services</Link></div>
       <h1 className="text-5xl font-black text-white mb-6">Dryer Repair Calgary</h1>
       <p className="text-gray-300 text-xl mb-8 leading-relaxed">
-        Dryer not heating, taking too long, or making a noise? YAYA Electrical, Plumbing and Appliance repairs all dryer brands in Calgary — Samsung, LG, Whirlpool, Maytag, GE, and more. Same-day available, no after-hours fee.
+        Dryer not heating, taking too long, or making a noise? YAYA General Contractor Incorporated repairs all dryer brands in Calgary — Samsung, LG, Whirlpool, Maytag, GE, and more. Same-day available, no after-hours fee.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {[

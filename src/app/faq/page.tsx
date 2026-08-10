@@ -4,10 +4,10 @@ import FAQSection from "@/components/ui/faq-section";
 export const metadata: Metadata = {
   title: "FAQ | Electrician, Plumber & Appliance Repair Calgary",
   description:
-    "Answers to common questions about electrical, plumbing, and appliance repair in Calgary. Pricing, availability, permits, and more. YAYA Electrical, Plumbing and Appliance — (403) 400-3055.",
+    "Answers to common questions about electrical, plumbing, and appliance repair in Calgary. Pricing, availability, permits, and more. YAYA General Contractor Incorporated — (403) 400-3055.",
   alternates: { canonical: "https://www.yayageneralservice.com/faq" },
   openGraph: {
-    title: "FAQ | YAYA Electrical, Plumbing and Appliance Calgary",
+    title: "FAQ | YAYA General Contractor Incorporated Calgary",
     description: "Common questions about electrical, plumbing, and appliance repair in Calgary. No after-hours fee. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com/faq",
   },
@@ -17,7 +17,7 @@ const faqs = [
   // General
   {
     q: "Do you charge extra for after-hours or emergency calls in Calgary?",
-    a: "No. YAYA Electrical, Plumbing and Appliance does not charge after-hours or weekend surcharges for any service — electrical, plumbing, or appliance. Whether you call at 2 AM on a Sunday or 5 PM on a weekday, the price is always the same.",
+    a: "No. YAYA General Contractor Incorporated does not charge after-hours or weekend surcharges for any service — electrical, plumbing, or appliance. Whether you call at 2 AM on a Sunday or 5 PM on a weekday, the price is always the same.",
   },
   {
     q: "What areas of Calgary do you serve?",
