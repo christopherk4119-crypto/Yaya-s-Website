@@ -55,6 +55,22 @@ export default function LocalBusinessSchema() {
       "https://www.kijiji.ca/v-appliance-repair-installation/calgary/cheaper-price-electrical-plumbing-&-appliance-repair-service/1694676987",
       "https://www.kijiji.ca/v-electrician/calgary/cheaper-price-plumbing-electrical-and-appliance-maintenance/1697041621",
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      bestRating: "5",
+      worstRating: "1",
+      reviewCount: "9",
+    },
+    review: [
+      { "@type": "Review", author: { "@type": "Person", name: "Eyeta Eyeta" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Yaya is exceptionally professional, kind, & dedicated to meet his clients need. I would recommend him 100 percent, as his professionalism was beyond my expectations." },
+      { "@type": "Review", author: { "@type": "Person", name: "Biruk" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Yaya is absolutely amazing. He's reliable and professional. Highly recommend him! Thank you for your great service." },
+      { "@type": "Review", author: { "@type": "Person", name: "Berihun Tsegye" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "I had a great experience with Yaya Electric and Plumbing Contractors. They are very professional, reliable, and…" },
+      { "@type": "Review", author: { "@type": "Person", name: "Nigist Bogale" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "He is nice guy fair price" },
+      { "@type": "Review", author: { "@type": "Person", name: "Eliasw Gebretadik" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Great service and quick. Recommended for everyone." },
+      { "@type": "Review", author: { "@type": "Person", name: "Sherilynn Robles" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Yared is a great guy! Highly recommended!" },
+      { "@type": "Review", author: { "@type": "Person", name: "Gloria Mutombo" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Nice jog clean and quick according to Alberta regulations" },
+    ],
   };
 
   return (

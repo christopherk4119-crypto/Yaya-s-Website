@@ -5,7 +5,7 @@ import Image from "next/image";
 import AnimatedShaderHero from "@/components/ui/animated-shader-hero";
 import Gallery from "@/components/ui/gallery";
 import BookingForm from "@/components/ui/booking-form";
-import { Phone, Mail, Clock, Zap, Wrench, Settings, Shield, CheckCircle } from "lucide-react";
+import { Phone, Mail, Clock, Zap, Wrench, Settings, Shield, CheckCircle, Star } from "lucide-react";
 import KijijiMark from "@/components/ui/kijiji-mark";
 
 const FORMSPREE = "https://formspree.io/f/mjgqynvj";
@@ -68,6 +68,16 @@ const socials = [
     color: "#2D1B4E",
     icon: <KijijiMark />,
   },
+];
+
+const testimonials = [
+  { name: "Eyeta Eyeta", text: "Yaya is exceptionally professional, kind, & dedicated to meet his clients need. I would recommend him 100 percent, as his professionalism was beyond my expectations." },
+  { name: "Biruk", text: "Yaya is absolutely amazing. He's reliable and professional. Highly recommend him! Thank you for your great service." },
+  { name: "Berihun Tsegye", text: "I had a great experience with Yaya Electric and Plumbing Contractors. They are very professional, reliable, and…" },
+  { name: "Nigist Bogale", text: "He is nice guy fair price" },
+  { name: "Eliasw Gebretadik", text: "Great service and quick. Recommended for everyone." },
+  { name: "Sherilynn Robles", text: "Yared is a great guy! Highly recommended!" },
+  { name: "Gloria Mutombo", text: "Nice jog clean and quick according to Alberta regulations" },
 ];
 
 const homeGallery = [
@@ -380,6 +390,38 @@ export default function HomePage() {
               ))}
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section className="section" id="reviews" style={{ background: "#0d0d0d" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="section-heading">What Calgary <span>Says</span></h2>
+            <div className="flex items-center gap-2 mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={20} fill="#FFD700" style={{ color: "#FFD700" }} />
+              ))}
+              <span className="text-white font-bold ml-1">5.0</span>
+              <span className="text-gray-500 text-sm">— 9 Google reviews</span>
+            </div>
+            <p className="section-subheading">Real reviews from real Calgary customers.</p>
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <FadeIn key={t.name} delay={i * 100}>
+                <div className="p-6 rounded-2xl h-full" style={{ background: "#111", border: "1px solid rgba(255,215,0,0.1)" }}>
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} size={14} fill="#FFD700" style={{ color: "#FFD700" }} />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">&quot;{t.text}&quot;</p>
+                  <p className="text-white font-bold text-sm">{t.name}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
