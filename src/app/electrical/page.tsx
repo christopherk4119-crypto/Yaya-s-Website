@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ui/service-page-layout";
 import FAQSection from "@/components/ui/faq-section";
+import RelatedServices from "@/components/ui/related-services";
 
 export const metadata: Metadata = {
   title: "Electrician Calgary | Panel Upgrades, Wiring & More",
@@ -66,6 +67,13 @@ export default function ElectricalPage() {
         serviceType="Electrical"
         services={services}
         galleryPhotos={galleryPhotos}
+      />
+      <RelatedServices
+        items={[
+          { href: "/panel-upgrade-calgary", label: "Panel Upgrade Calgary" },
+          { href: "/emergency-electrician-calgary", label: "Emergency Electrician Calgary" },
+          { href: "/basement-suite-electrical-calgary", label: "Basement Suite Electrical Calgary" },
+        ]}
       />
       <FAQSection faqs={faqs} heading="Electrical FAQ" />
     </>

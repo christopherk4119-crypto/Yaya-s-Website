@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ui/service-page-layout";
 import FAQSection from "@/components/ui/faq-section";
+import RelatedServices from "@/components/ui/related-services";
 
 export const metadata: Metadata = {
   title: "Appliance Repair Calgary | Oven, Dishwasher, Dryer & HVAC",
@@ -67,6 +68,12 @@ export default function AppliancePage() {
         serviceType="Appliance"
         services={services}
         galleryPhotos={galleryPhotos}
+      />
+      <RelatedServices
+        items={[
+          { href: "/dryer-repair-calgary", label: "Dryer Repair Calgary" },
+          { href: "/dishwasher-repair-calgary", label: "Dishwasher Repair Calgary" },
+        ]}
       />
       <FAQSection faqs={faqs} heading="Appliance Repair FAQ" />
     </>
