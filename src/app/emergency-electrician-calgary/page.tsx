@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Emergency Electrician Calgary | No Extra Fee | YAYA General Contractor Inc.",
+  title: "Emergency Electrician Calgary | No Extra Fee | YAYA Electrical, Plumbing and Appliance",
   description: "Emergency electrician in Calgary available nights and weekends. No after-hours surcharge. Tripped breakers, no power, burning smell — call (403) 400-3055 now.",
   alternates: { canonical: "https://www.yayageneralservice.com/emergency-electrician-calgary" },
   openGraph: {
-    title: "Emergency Electrician Calgary | YAYA General Contractor Inc.",
+    title: "Emergency Electrician Calgary | YAYA Electrical, Plumbing and Appliance",
     description: "Emergency electrical calls in Calgary with no after-hours fee. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com/emergency-electrician-calgary",
   },
@@ -18,7 +18,7 @@ export default function EmergencyElectricianPage() {
       <div className="mb-4 text-sm text-gray-500"><Link href="/electrical" style={{ color: "#FFD700" }}>← Electrical Services</Link></div>
       <h1 className="text-5xl font-black text-white mb-6">Emergency Electrician Calgary</h1>
       <p className="text-gray-300 text-xl mb-8 leading-relaxed">
-        Electrical emergencies don't wait for business hours. YAYA General Contractor Inc. takes emergency calls in Calgary Monday to Friday from 4:30 PM to 6:00 AM, and 24 hours on weekends — with no after-hours surcharge.
+        Electrical emergencies don&apos;t wait for business hours. YAYA Electrical, Plumbing and Appliance takes emergency calls in Calgary Monday to Friday from 4:30 PM to 6:00 AM, and 24 hours on weekends — with no after-hours surcharge.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {[

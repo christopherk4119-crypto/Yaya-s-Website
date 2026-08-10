@@ -1,7 +1,7 @@
 export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Electrician"],
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Electrician", "GeneralContractor"],
     "@id": "https://www.yayageneralservice.com",
     name: "YAYA Electrical, Plumbing and Appliance",
     alternateName: "Yaya Contractor",

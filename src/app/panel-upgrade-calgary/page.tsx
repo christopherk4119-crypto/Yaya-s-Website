@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Panel Upgrade Calgary | 100A to 200A | YAYA General Contractor Inc.",
+  title: "Panel Upgrade Calgary | 100A to 200A | YAYA Electrical, Plumbing and Appliance",
   description: "Electrical panel upgrade in Calgary starting from $1,500. 100A to 200A upgrades, all permits pulled, done to code. No after-hours fee. Call (403) 400-3055.",
   alternates: { canonical: "https://www.yayageneralservice.com/panel-upgrade-calgary" },
   openGraph: {
-    title: "Panel Upgrade Calgary | YAYA General Contractor Inc.",
+    title: "Panel Upgrade Calgary | YAYA Electrical, Plumbing and Appliance",
     description: "100A to 200A panel upgrades in Calgary. All permits included. No hidden fees. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com/panel-upgrade-calgary",
   },
@@ -18,7 +18,7 @@ export default function PanelUpgradePage() {
       <div className="mb-4 text-sm text-gray-500"><Link href="/electrical" style={{ color: "#FFD700" }}>← Electrical Services</Link></div>
       <h1 className="text-5xl font-black text-white mb-6">Panel Upgrade Calgary</h1>
       <p className="text-gray-300 text-xl mb-8 leading-relaxed">
-        If your home still runs on a 100-amp panel, it may not safely handle modern appliances, EV chargers, or a finished basement. YAYA General Contractor Inc. upgrades residential panels from 100A to 200A across all of Calgary — permits included, done to code.
+        If your home still runs on a 100-amp panel, it may not safely handle modern appliances, EV chargers, or a finished basement. YAYA Electrical, Plumbing and Appliance upgrades residential panels from 100A to 200A across all of Calgary — permits included, done to code.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {[

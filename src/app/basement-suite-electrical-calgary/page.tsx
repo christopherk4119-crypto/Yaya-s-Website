@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Basement Suite Electrical Calgary | Legal Suite Wiring | YAYA General Contractor Inc.",
-  description: "Basement suite electrical wiring in Calgary. Legal suite rough-in, panel upgrades, permits pulled. Done to code. Call YAYA General Contractor Inc. (403) 400-3055.",
+  title: "Basement Suite Electrical Calgary | Legal Suite Wiring | YAYA Electrical, Plumbing and Appliance",
+  description: "Basement suite electrical wiring in Calgary. Legal suite rough-in, panel upgrades, permits pulled. Done to code. Call YAYA Electrical, Plumbing and Appliance (403) 400-3055.",
   alternates: { canonical: "https://www.yayageneralservice.com/basement-suite-electrical-calgary" },
   openGraph: {
-    title: "Basement Suite Electrical Calgary | YAYA General Contractor Inc.",
+    title: "Basement Suite Electrical Calgary | YAYA Electrical, Plumbing and Appliance",
     description: "Legal basement suite electrical wiring in Calgary. Permits included, done to code. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com/basement-suite-electrical-calgary",
   },
@@ -18,7 +18,7 @@ export default function BasementSuiteElectricalPage() {
       <div className="mb-4 text-sm text-gray-500"><Link href="/electrical" style={{ color: "#FFD700" }}>← Electrical Services</Link></div>
       <h1 className="text-5xl font-black text-white mb-6">Basement Suite Electrical Calgary</h1>
       <p className="text-gray-300 text-xl mb-8 leading-relaxed">
-        Building a legal basement suite in Calgary requires electrical work done to code with proper permits. YAYA General Contractor Inc. handles the full electrical rough-in, panel upgrades, and suite separation — everything the City of Calgary requires for a legal secondary suite.
+        Building a legal basement suite in Calgary requires electrical work done to code with proper permits. YAYA Electrical, Plumbing and Appliance handles the full electrical rough-in, panel upgrades, and suite separation — everything the City of Calgary requires for a legal secondary suite.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {[

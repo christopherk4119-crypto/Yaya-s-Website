@@ -194,7 +194,7 @@ export default function HomePage() {
       <section className="section" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <h1 className="section-heading">Calgary Electrician, Plumber <span>&amp; Appliance Repair</span></h1>
+            <h2 className="section-heading">Calgary Electrician, Plumber <span>&amp; Appliance Repair</span></h2>
             <p className="section-subheading">Three trades, one expert. Serving Calgary, Airdrie, Cochrane, Okotoks & Chestermere.</p>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
