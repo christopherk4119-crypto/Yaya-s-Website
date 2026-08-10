@@ -6,7 +6,7 @@ export default function LocalBusinessSchema() {
     name: "YAYA General Contractor Incorporated",
     alternateName: ["Yaya Contractor", "YAYA Electrical, Plumbing and Appliance"],
     description:
-      "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available Mon–Fri 4:30PM–6AM and 24hrs on weekends. Call (403) 400-3055.",
+      "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available 24 hours a day, 7 days a week. Call (403) 400-3055.",
     url: "https://www.yayageneralservice.com",
     logo: "https://www.yayageneralservice.com/icon.png",
     image: "https://www.yayageneralservice.com/icon.png",
@@ -34,13 +34,7 @@ export default function LocalBusinessSchema() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "16:30",
-        closes: "06:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday", "Sunday"],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         opens: "00:00",
         closes: "23:59",
       },

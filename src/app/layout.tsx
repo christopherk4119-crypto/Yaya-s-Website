@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | YAYA General Contractor Incorporated",
   },
   description:
-    "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available Mon–Fri 4:30PM–6AM and 24hrs on weekends. Call (403) 400-3055.",
+    "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available 24 hours a day, 7 days a week. Call (403) 400-3055.",
   keywords: [
     "electrician Calgary",
     "plumber Calgary",

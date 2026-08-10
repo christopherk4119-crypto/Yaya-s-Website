@@ -172,7 +172,7 @@ export default function HomePage() {
       {/* SEO: visually hidden NAP */}
       <div className="sr-only" aria-hidden="false">
         <h2>YAYA General Contractor Incorporated — Calgary Electrician, Plumber &amp; Appliance Repair</h2>
-        <p>Experienced electrician, licensed plumber and appliance technician serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available Monday to Friday 4:30 PM to 6:00 AM and 24 hours on Saturday and Sunday.</p>
+        <p>Experienced electrician, licensed plumber and appliance technician serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available 24 hours a day, 7 days a week.</p>
         <address>
           <span itemProp="name">YAYA General Contractor Incorporated</span><br />
           <span itemProp="addressLocality">Calgary</span>, <span itemProp="addressRegion">AB</span>, <span itemProp="addressCountry">Canada</span><br />
@@ -366,13 +366,11 @@ export default function HomePage() {
           <FadeIn delay={100}>
             <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid rgba(255,215,0,0.2)" }}>
               {[
-                { day: "Monday – Friday", hours: "4:30 PM – 6:00 AM", highlight: false },
-                { day: "Saturday", hours: "24 Hours", highlight: false },
-                { day: "Sunday", hours: "24 Hours", highlight: false },
+                { day: "Monday – Sunday", hours: "24 Hours", highlight: false },
                 { day: "Emergency Calls", hours: "Always Welcome — No Extra Fee", highlight: true },
               ].map((row, i) => (
                 <div key={row.day} className="flex justify-between items-center px-8 py-5"
-                  style={{ background: row.highlight ? "rgba(255,215,0,0.08)" : i % 2 === 0 ? "#111" : "#0d0d0d", borderBottom: i < 3 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
+                  style={{ background: row.highlight ? "rgba(255,215,0,0.08)" : i % 2 === 0 ? "#111" : "#0d0d0d", borderBottom: i < 1 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
                   <div className="flex items-center gap-3">
                     <Clock size={18} style={{ color: "#FFD700" }} />
                     <span className={`font-bold ${row.highlight ? "text-yellow-400" : "text-white"}`}>{row.day}</span>
@@ -435,8 +433,7 @@ export default function HomePage() {
                     <span className="text-gray-400 text-sm uppercase tracking-widest font-semibold">Hours</span>
                   </div>
                   <div className="space-y-1 text-sm text-gray-300">
-                    <p>Mon–Fri: <span className="text-white font-semibold">4:30 PM – 6:00 AM</span></p>
-                    <p>Sat–Sun: <span className="text-white font-semibold">24 Hours</span></p>
+                    <p>Monday – Sunday: <span className="text-white font-semibold">24 Hours</span></p>
                     <p className="font-bold" style={{ color: "#FFD700" }}>No extra charge for after-hours or emergencies</p>
                   </div>
                 </div>

@@ -17,36 +17,12 @@ const formatHour = (h: number): string => {
 
 const getTimeSlots = (date: string): { slot: string; disabled: boolean }[] => {
   if (!date) return [];
-  const d = new Date(date + "T12:00:00");
-  const day = d.getDay();
-  const isWeekend = day === 0 || day === 6;
 
+  // Open 24 hours, every day of the week — 8 AM to 10 PM booking window
   const results: { slot: string; disabled: boolean }[] = [];
-
-  if (isWeekend) {
-    // Saturday & Sunday: 8 AM to 10 PM
-    for (let h = 8; h <= 22; h++) {
-      results.push({ slot: formatHour(h), disabled: false });
-    }
-  } else {
-    // Monday to Friday: show 8 AM to 10 PM but grey out before 4:30 PM
-    results.push({ slot: "8:00 AM", disabled: true });
-    results.push({ slot: "9:00 AM", disabled: true });
-    results.push({ slot: "10:00 AM", disabled: true });
-    results.push({ slot: "11:00 AM", disabled: true });
-    results.push({ slot: "12:00 PM", disabled: true });
-    results.push({ slot: "1:00 PM", disabled: true });
-    results.push({ slot: "2:00 PM", disabled: true });
-    results.push({ slot: "3:00 PM", disabled: true });
-    results.push({ slot: "4:00 PM", disabled: true });
-    results.push({ slot: "4:30 PM", disabled: false });
-    results.push({ slot: "5:30 PM", disabled: false });
-    results.push({ slot: "6:30 PM", disabled: false });
-    results.push({ slot: "7:30 PM", disabled: false });
-    results.push({ slot: "8:30 PM", disabled: false });
-    results.push({ slot: "9:30 PM", disabled: false });
+  for (let h = 8; h <= 22; h++) {
+    results.push({ slot: formatHour(h), disabled: false });
   }
-
   return results;
 };
 
@@ -173,11 +149,7 @@ export default function BookingForm({ defaultService = "Electrical" }: BookingFo
           <div className="flex items-center gap-2 mb-3">
             <Clock size={18} style={{ color: "#FFD700" }} />
             <span className="text-white font-semibold text-sm">Select Time</span>
-            <span className="text-gray-500 text-xs ml-2">
-              {new Date(form.appointment_date + "T12:00:00").getDay() === 0 || new Date(form.appointment_date + "T12:00:00").getDay() === 6
-                ? "8:00 AM – 10:00 PM"
-                : "4:30 PM – 10:00 PM (Mon–Fri)"}
-            </span>
+            <span className="text-gray-500 text-xs ml-2">8:00 AM – 10:00 PM</span>
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 max-h-48 overflow-y-auto pr-1">
             {slots.map(({ slot, disabled: unavailable }) => {

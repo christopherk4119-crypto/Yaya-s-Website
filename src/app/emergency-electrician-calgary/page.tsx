@@ -18,7 +18,7 @@ export default function EmergencyElectricianPage() {
       <div className="mb-4 text-sm text-gray-500"><Link href="/electrical" style={{ color: "#FFD700" }}>← Electrical Services</Link></div>
       <h1 className="text-5xl font-black text-white mb-6">Emergency Electrician Calgary</h1>
       <p className="text-gray-300 text-xl mb-8 leading-relaxed">
-        Electrical emergencies don&apos;t wait for business hours. YAYA General Contractor Incorporated takes emergency calls in Calgary Monday to Friday from 4:30 PM to 6:00 AM, and 24 hours on weekends — with no after-hours surcharge.
+        Electrical emergencies don&apos;t wait for business hours. YAYA General Contractor Incorporated takes emergency calls in Calgary 24 hours a day, 7 days a week — with no after-hours surcharge.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {[
