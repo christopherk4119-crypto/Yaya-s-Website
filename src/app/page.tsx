@@ -169,7 +169,7 @@ export default function HomePage() {
         }}
       />
 
-      {/* SEO: visually hidden h1 and NAP */}
+      {/* SEO: visually hidden NAP */}
       <div className="sr-only" aria-hidden="false">
         <h1>YAYA Electrical, Plumbing and Appliance — Calgary Electrician, Plumber &amp; Appliance Repair</h1>
         <p>Experienced electrician, licensed plumber and appliance technician serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available Monday to Friday 4:30 PM to 6:00 AM and 24 hours on Saturday and Sunday.</p>
@@ -194,8 +194,8 @@ export default function HomePage() {
       <section className="section" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <h2 className="section-heading">What We <span>Do</span></h2>
-            <p className="section-subheading">Three trades, one expert. Yaya handles it all.</p>
+            <h1 className="section-heading">Calgary Electrician, Plumber <span>&amp; Appliance Repair</span></h1>
+            <p className="section-subheading">Three trades, one expert. Serving Calgary, Airdrie, Cochrane, Okotoks & Chestermere.</p>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((s, i) => (
@@ -296,7 +296,7 @@ export default function HomePage() {
                 <div className="grid grid-cols-3 gap-4 mt-8">
                   {[
                     { number: "17+", label: "Years Experience" },
-                    { number: "3", label: "Certifications" },
+                    { number: "3", label: "Trades Covered" },
                     { number: "0", label: "After-Hours Fee" },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center p-4 rounded-xl" style={{ background: "#111", border: "1px solid rgba(255,215,0,0.15)" }}>

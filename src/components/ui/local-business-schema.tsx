@@ -1,7 +1,7 @@
 export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Electrician"],
     "@id": "https://www.yayageneralservice.com",
     name: "YAYA Electrical, Plumbing and Appliance",
     alternateName: "Yaya Contractor",
@@ -17,7 +17,13 @@ export default function LocalBusinessSchema() {
     priceRange: "$$",
     currenciesAccepted: "CAD",
     paymentAccepted: "Cash, Credit Card, Debit",
-    areaServed: { "@type": "City", name: "Calgary", addressRegion: "AB", addressCountry: "CA" },
+    areaServed: [
+      { "@type": "City", name: "Calgary", addressRegion: "AB", addressCountry: "CA" },
+      { "@type": "City", name: "Airdrie", addressRegion: "AB", addressCountry: "CA" },
+      { "@type": "City", name: "Cochrane", addressRegion: "AB", addressCountry: "CA" },
+      { "@type": "City", name: "Okotoks", addressRegion: "AB", addressCountry: "CA" },
+      { "@type": "City", name: "Chestermere", addressRegion: "AB", addressCountry: "CA" },
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Calgary",
