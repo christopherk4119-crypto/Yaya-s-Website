@@ -36,7 +36,7 @@ export default function Navbar() {
             <Image src="/logo.png" alt="YAYA General Contractor Incorporated" width={52} height={52} className="rounded-lg" style={{ background: "#FFD700" }} priority />
             <div>
               <div className="font-black text-xl leading-tight" style={{ color: "#FFD700" }}>YAYA</div>
-              <div className="text-xs text-gray-400 leading-tight">General Contractor</div>
+              <div className="text-xs text-gray-400 leading-tight">General Contractor Incorporated</div>
             </div>
           </Link>
 
