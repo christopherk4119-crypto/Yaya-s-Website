@@ -14,7 +14,7 @@ const siteUrl = "https://www.yayageneralservice.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "YAYA General Contractor Inc. | Electrician, Plumber & Appliance Repair Calgary",
+    default: "YAYA General Contractor Inc. | Calgary AB | Electrician, Plumber & Appliance Repair",
     template: "%s | YAYA General Contractor Inc.",
   },
   description:
