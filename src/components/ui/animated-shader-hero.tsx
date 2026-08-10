@@ -167,16 +167,16 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
         )}
 
         <div className="text-center space-y-6 max-w-5xl mx-auto">
-          <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black hero-fade-up delay-200"
+          <h1 className="space-y-2">
+            <div className="text-5xl md:text-7xl lg:text-8xl font-black hero-fade-up delay-200"
               style={{ background: "linear-gradient(to right, #FFD700, #FFA500, #FFD700)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               {headline.line1}
-            </h1>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black hero-fade-up delay-400"
+            </div>
+            <div className="text-5xl md:text-7xl lg:text-8xl font-black hero-fade-up delay-400"
               style={{ background: "linear-gradient(to right, #FFFFFF, #FFD700, #FFFFFF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               {headline.line2}
-            </h1>
-          </div>
+            </div>
+          </h1>
 
           <div className="max-w-3xl mx-auto hero-fade-up delay-600">
             <p className="text-lg md:text-xl lg:text-2xl text-gray-200 font-light leading-relaxed">

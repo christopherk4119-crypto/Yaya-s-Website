@@ -171,7 +171,7 @@ export default function HomePage() {
 
       {/* SEO: visually hidden NAP */}
       <div className="sr-only" aria-hidden="false">
-        <h1>YAYA Electrical, Plumbing and Appliance — Calgary Electrician, Plumber &amp; Appliance Repair</h1>
+        <h2>YAYA Electrical, Plumbing and Appliance — Calgary Electrician, Plumber &amp; Appliance Repair</h2>
         <p>Experienced electrician, licensed plumber and appliance technician serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available Monday to Friday 4:30 PM to 6:00 AM and 24 hours on Saturday and Sunday.</p>
         <address>
           <span itemProp="name">YAYA Electrical, Plumbing and Appliance</span><br />
