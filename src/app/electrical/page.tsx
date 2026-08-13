@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ui/service-page-layout";
 import FAQSection from "@/components/ui/faq-section";
-import RelatedServices from "@/components/ui/related-services";
 import TradeOverview from "@/components/ui/trade-overview";
 
 export const metadata: Metadata = {
@@ -18,11 +17,12 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Panel Upgrade", desc: "", bullets: ["★ 100A to 200A Upgrades", "★ All Permits Pulled", "★ Done to Code", "★ No Hidden Fees"], bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=95", alt: "Electrical panel upgrade service in Calgary" },
-  { title: "Electrical Installation", desc: "", bullets: ["★ New Wiring", "★ Outlets & Switches", "★ EV Charger Install", "★ Full Installations"], bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&q=95", alt: "Electrical wiring installation Calgary" },
-  { title: "Ceiling Lights & Fans", desc: "", bullets: ["★ All Light Fixtures", "★ Ceiling Fan Install", "★ LED Upgrades", "★ Any Room"], bg: "https://images.unsplash.com/photo-1513506003901-1e6a35596f78?w=1920&q=95", alt: "Ceiling light and fan installation Calgary" },
-  { title: "Smoke Alarm Installation", desc: "", bullets: ["★ Code-Compliant", "★ All Brands", "★ Tested & Certified", "★ Fast Install"], bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95", alt: "Smoke alarm installation Calgary" },
-  { title: "Any Electrical Work", desc: "", bullets: ["★ No Job Too Small", "★ Residential & Commercial", "★ Emergency Calls", "★ Same Price Always"], bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=95", alt: "General electrical work Calgary contractor" },
+  { title: "Emergency Electrician", desc: "", bullets: ["★ 24/7 Response", "★ No After-Hours Fee", "★ Power Loss & Sparking", "★ Same Price Always"], bg: "/images/gallery/electrical/calgary-electrician-wiring-repair-multimeter-testing-8.jpg", alt: "Emergency electrician wiring repair in Calgary", href: "/electrical/emergency-electrician" },
+  { title: "Panel Upgrades", desc: "", bullets: ["★ 100A to 200A Upgrades", "★ Federal Pacific & Zinsco", "★ Permits Included", "★ One-Day Install"], bg: "/images/gallery/electrical/calgary-electrician-breaker-panel-upgrade-before-6.jpg", alt: "Electrical panel upgrade service in Calgary", href: "/electrical/panel-upgrades" },
+  { title: "Home Rewiring", desc: "", bullets: ["★ Aluminum Wiring", "★ Knob & Tube Replacement", "★ Insurance Documentation", "★ Renovation Rewiring"], bg: "/images/gallery/electrical/calgary-electrician-breaker-panel-housepower-7.jpg", alt: "Home rewiring and wiring repair in Calgary", href: "/electrical/home-rewiring" },
+  { title: "Commercial Electrical", desc: "", bullets: ["★ Restaurant Kitchen Equipment", "★ Tenant Improvements", "★ Retail & Office", "★ 24/7 Response"], bg: "/images/gallery/appliance/calgary-appliance-repair-commercial-oven-us-range-13.jpg", alt: "Commercial electrical service for Calgary businesses", href: "/electrical/commercial-electrical" },
+  { title: "Renovation Electrical", desc: "", bullets: ["★ Basement Development", "★ Kitchen & Bath Reno", "★ Pot Light Layout", "★ Garage Wiring"], bg: "/images/gallery/electrical/calgary-electrician-hexagon-led-ceiling-completed-5.jpg", alt: "Renovation electrical and pot light installation in Calgary", href: "/electrical/renovation-electrical" },
+  { title: "Basement Suite Electrical", desc: "", bullets: ["★ Full Rough-In Wiring", "★ Panel Upgrade Included", "★ Permits Pulled", "★ Suite Separation"], bg: "/images/gallery/electrical/calgary-electrician-ceiling-light-fixture-install-2.jpg", alt: "Legal basement suite electrical wiring in Calgary", href: "/basement-suite-electrical-calgary" },
 ];
 
 const galleryPhotos = [
@@ -74,16 +74,6 @@ export default function ElectricalPage() {
         paragraphs={[
           "Yaya has been doing electrical work in Calgary since 2007 — panel upgrades, rewiring, new circuits, lighting, and everything in between, for homes across the city and the surrounding communities. Most calls fall into a handful of categories: something's broken and needs fixing now, a renovation needs electrical planned around it, or an older home's wiring needs to be brought up to a standard modern insurance and code require.",
           "The five pages below go into real detail on the most common jobs — what's actually involved, what it costs to expect in permits and timeline, and what to do before Yaya arrives. If your situation doesn't fit neatly into one of them, that's fine too — call and describe what's going on, and you'll get a straight answer about what it takes to fix it.",
-        ]}
-      />
-      <RelatedServices
-        items={[
-          { href: "/electrical/emergency-electrician", label: "Emergency Electrician" },
-          { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
-          { href: "/electrical/home-rewiring", label: "Home Rewiring" },
-          { href: "/electrical/commercial-electrical", label: "Commercial Electrical" },
-          { href: "/electrical/renovation-electrical", label: "Renovation Electrical" },
-          { href: "/basement-suite-electrical-calgary", label: "Basement Suite Electrical" },
         ]}
       />
       <FAQSection faqs={faqs} heading="Electrical FAQ" />

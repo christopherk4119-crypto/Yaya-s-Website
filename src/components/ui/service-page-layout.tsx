@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import BookingForm from "@/components/ui/booking-form";
 import Gallery, { GalleryPhoto } from "@/components/ui/gallery";
 
@@ -9,6 +10,7 @@ interface ServiceItem {
   bullets?: string[];
   bg: string;
   alt?: string;
+  href?: string;
 }
 
 interface ServicePageLayoutProps {
@@ -94,9 +96,9 @@ export default function ServicePageLayout({
             <p className="section-subheading">Everything you need, done right the first time.</p>
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <FadeIn key={s.title} delay={i * 80}>
-                <div className="service-card h-80 group">
+            {services.map((s, i) => {
+              const cardInner = (
+                <>
                   <div className="service-card-bg absolute inset-0"
                     style={{ backgroundImage: `url(${s.bg})`, backgroundSize: "cover", backgroundPosition: "center" }} />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.4) 100%)" }} />
@@ -109,13 +111,32 @@ export default function ServicePageLayout({
                     ) : (
                       <p className="text-gray-400 text-sm mb-4 leading-relaxed">{s.desc}</p>
                     )}
-                    <a href="#booking" className="inline-flex items-center gap-1 text-sm font-bold" style={{ color: "#FFD700" }}>
-                      Get a Quote <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-                    </a>
+                    {s.href ? (
+                      <span className="inline-flex items-center gap-1 text-sm font-bold" style={{ color: "#FFD700" }}>
+                        View Details <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                      </span>
+                    ) : (
+                      <a href="#booking" className="inline-flex items-center gap-1 text-sm font-bold" style={{ color: "#FFD700" }}>
+                        Get a Quote <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                      </a>
+                    )}
                   </div>
-                </div>
-              </FadeIn>
-            ))}
+                </>
+              );
+              return (
+                <FadeIn key={s.title} delay={i * 80}>
+                  {s.href ? (
+                    <Link href={s.href} className="service-card h-80 group block">
+                      {cardInner}
+                    </Link>
+                  ) : (
+                    <div className="service-card h-80 group">
+                      {cardInner}
+                    </div>
+                  )}
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </section>
