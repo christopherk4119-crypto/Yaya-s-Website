@@ -7,6 +7,7 @@ import Gallery from "@/components/ui/gallery";
 import BookingForm from "@/components/ui/booking-form";
 import { Phone, Mail, Clock, Zap, Wrench, Settings, Shield, CheckCircle, Star } from "lucide-react";
 import KijijiMark from "@/components/ui/kijiji-mark";
+import CredentialsBanner from "@/components/ui/credentials-banner";
 
 const FORMSPREE = "https://formspree.io/f/mjgqynvj";
 
@@ -190,6 +191,8 @@ export default function HomePage() {
           Email: <a href="mailto:electricianyaya@gmail.com" itemProp="email">electricianyaya@gmail.com</a>
         </address>
       </div>
+
+      <CredentialsBanner />
 
       {/* TRUST BAR */}
       <div style={{ background: "#111", borderTop: "1px solid rgba(255,215,0,0.15)", borderBottom: "1px solid rgba(255,215,0,0.15)" }}>

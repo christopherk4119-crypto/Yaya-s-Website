@@ -77,9 +77,9 @@ export default function CommercialElectricalPage() {
       faqs={faqs}
       faqHeading="Commercial Electrical FAQ"
       relatedLinks={[
+        { href: "/appliance/commercial-appliance-repair", label: "Commercial Appliance Repair" },
         { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
         { href: "/electrical/emergency-electrician", label: "Emergency Electrician" },
-        { href: "/appliance", label: "Appliance Services" },
       ]}
       serviceName="Commercial Electrical"
       serviceDescription="Commercial electrical services in Calgary — restaurant kitchen equipment wiring, tenant improvements, retail and office electrical, available 24/7."

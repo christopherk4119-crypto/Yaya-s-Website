@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Water Line Installation", desc: "", bullets: ["★ Residential & Commercial", "★ Copper & PVC", "★ Fast Install", "★ No Mess Left Behind"], bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95", alt: "Water line installation Calgary plumber" },
-  { title: "Drain Line Installation", desc: "", bullets: ["★ Done Right First Time", "★ All Drain Types", "★ Proper Slope & Venting", "★ Residential & Commercial"], bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=95", alt: "Drain line installation Calgary" },
-  { title: "Faucet Replacement", desc: "", bullets: ["★ Kitchen & Bathroom", "★ All Brands & Styles", "★ Quick & Clean", "★ Same Day Available"], bg: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&q=95", alt: "Faucet replacement Calgary bathroom kitchen" },
-  { title: "Toilet Replacement", desc: "", bullets: ["★ Full Removal & Install", "★ No Mess Left Behind", "★ All Toilet Types", "★ Fast Turnaround"], bg: "https://images.unsplash.com/photo-1562184552-997c461abbe6?w=1920&q=95", alt: "Toilet replacement installation Calgary" },
+  { title: "Emergency Plumber", desc: "", bullets: ["★ 24/7 Response", "★ No After-Hours Fee", "★ Burst Pipes & Leaks", "★ Same Price Always"], bg: "/images/gallery/plumbing/calgary-plumber-bathtub-faucet-shower-valve-replacement-3.jpg", alt: "Emergency plumbing repair in Calgary", href: "/plumbing/emergency-plumber" },
+  { title: "Frozen Pipes", desc: "", bullets: ["★ Safe Thawing", "★ Burst Pipe Repair", "★ Hose Bib Damage", "★ Prevention"], bg: "/images/gallery/plumbing/calgary-plumber-rough-in-copper-pvc-pipe-wall-4.jpg", alt: "Frozen pipe repair in Calgary", href: "/plumbing/frozen-pipes" },
+  { title: "Drain Cleaning", desc: "", bullets: ["★ Kitchen & Bathroom", "★ Laundry & Floor Drains", "★ Recurring Blockages", "★ Main Line Diagnosis"], bg: "/images/gallery/plumbing/calgary-plumber-commercial-pvc-pipe-valve-system-1.jpg", alt: "Drain cleaning service in Calgary", href: "/plumbing/drain-cleaning" },
+  { title: "Sump Pumps", desc: "", bullets: ["★ Installation & Repair", "★ Basin Sizing", "★ Discharge Routing", "★ Backup Options"], bg: "/images/gallery/plumbing/calgary-plumber-basement-pump-pvc-pipe-system-2.jpg", alt: "Sump pump installation and repair in Calgary", href: "/plumbing/sump-pumps" },
+  { title: "Renovation Plumbing", desc: "", bullets: ["★ Basement Bathroom Rough-In", "★ Kitchen Renovation", "★ Water Line Replacement", "★ Shut-Off Valves"], bg: "/images/gallery/plumbing/calgary-plumber-shower-valve-brass-fitting-rough-in-5.jpg", alt: "Renovation plumbing in Calgary", href: "/plumbing/renovation-plumbing" },
   { title: "Pool Equipment Plumbing", desc: "", bullets: ["★ Filter Tank & Pump Systems", "★ Pipe & Valve Repair", "★ Seasonal Maintenance", "★ Residential Pools"], bg: "/images/gallery/plumbing/calgary-plumber-pool-filter-tank-pipe-system-6.jpg", alt: "Pool equipment plumbing service Calgary" },
-  { title: "Any Plumbing Work", desc: "", bullets: ["★ Emergency Calls Welcome", "★ No After-Hours Fee", "★ Residential & Commercial", "★ Same Price Always"], bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=95", alt: "General plumbing services Calgary contractor" },
 ];
 
 const galleryPhotos = [

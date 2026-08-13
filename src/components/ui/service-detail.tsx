@@ -45,6 +45,7 @@ interface ServiceDetailPageProps {
   serviceName: string;
   serviceDescription: string;
   serviceUrl: string;
+  providerType?: "Electrician" | "Plumber" | "HomeAndConstructionBusiness";
 }
 
 export default function ServiceDetailPage({
@@ -64,10 +65,11 @@ export default function ServiceDetailPage({
   serviceName,
   serviceDescription,
   serviceUrl,
+  providerType = "Electrician",
 }: ServiceDetailPageProps) {
   return (
     <>
-      <ServiceSchema name={serviceName} description={serviceDescription} url={serviceUrl} />
+      <ServiceSchema name={serviceName} description={serviceDescription} url={serviceUrl} providerType={providerType} />
 
       {/* HERO */}
       <section className="section" style={{ paddingTop: 160, paddingBottom: 64 }}>

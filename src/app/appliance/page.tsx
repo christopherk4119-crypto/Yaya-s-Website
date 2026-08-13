@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ui/service-page-layout";
 import FAQSection from "@/components/ui/faq-section";
-import RelatedServices from "@/components/ui/related-services";
 import TradeOverview from "@/components/ui/trade-overview";
 
 export const metadata: Metadata = {
@@ -18,13 +17,12 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Oven & Stove Repair", desc: "", bullets: ["★ All Brands", "★ Gas & Electric", "★ Same Day Available", "★ Fast Diagnostics"], bg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=95", alt: "Oven and stove repair Calgary appliance technician" },
-  { title: "Range Hood & Exhaust Fan", desc: "", bullets: ["★ Range Hood Installation", "★ Repair & Replacement", "★ Kitchen & Bathroom", "★ Quick Install"], bg: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1920&q=95", alt: "Range hood installation and exhaust fan repair Calgary" },
-  { title: "Dishwasher Repair", desc: "", bullets: ["★ Leaks & Drainage", "★ Electrical Faults", "★ All Brands", "★ Fast Fix"], bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95", alt: "Dishwasher repair service Calgary" },
-  { title: "Dryer Repair", desc: "", bullets: ["★ Heating Element", "★ Vent Cleaning", "★ Full Diagnostics", "★ All Brands"], bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=95", alt: "Dryer repair Calgary appliance service" },
-  { title: "HVAC Service", desc: "", bullets: ["★ Furnace Repair", "★ Control Board Replacement", "★ Ventilation Service", "★ Emergency Calls"], bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=95", alt: "HVAC service and repair Calgary" },
-  { title: "Commercial Appliance Service", desc: "", bullets: ["★ Restaurant Kitchen Equipment", "★ Commercial Ovens & Ranges", "★ Tenant Support", "★ Fast Response"], bg: "/images/gallery/appliance/calgary-appliance-repair-commercial-oven-us-range-13.jpg", alt: "Commercial appliance service and repair Calgary" },
-  { title: "Any Appliance", desc: "", bullets: ["★ All Brands Welcome", "★ No After-Hours Fee", "★ Emergency Service", "★ Same Price Always"], bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&q=95", alt: "General appliance repair Calgary contractor" },
+  { title: "Refrigerator Repair", desc: "", bullets: ["★ Not Cooling", "★ Icing Up or Leaking", "★ Failed Ice Maker", "★ Same-Day Available"], bg: "/images/gallery/appliance/calgary-appliance-repair-appliance-wiring-switch-6.jpg", alt: "Refrigerator repair in Calgary", href: "/appliance/refrigerator-repair" },
+  { title: "Washer & Dryer Repair", desc: "", bullets: ["★ Won't Drain or Spin", "★ Won't Heat", "★ Vent Inspection", "★ Stacked & Side-by-Side"], bg: "/images/gallery/appliance/calgary-appliance-repair-dryer-switch-wiring-5.jpg", alt: "Washer and dryer repair in Calgary", href: "/appliance/washer-dryer-repair" },
+  { title: "Stove & Oven Repair", desc: "", bullets: ["★ Elements Won't Heat", "★ Wrong Temperature", "★ Control Board Faults", "★ Range Hood Included"], bg: "/images/gallery/appliance/calgary-appliance-repair-stove-heating-element-burner-8.jpg", alt: "Stove and oven repair in Calgary", href: "/appliance/stove-oven-repair" },
+  { title: "Dishwasher Repair", desc: "", bullets: ["★ Won't Drain or Fill", "★ Leaking", "★ Dishes Not Clean", "★ Installation Available"], bg: "/images/gallery/appliance/calgary-appliance-repair-dishwasher-installation-1.jpg", alt: "Dishwasher repair and installation in Calgary", href: "/appliance/dishwasher-repair" },
+  { title: "Commercial Appliance Repair", desc: "", bullets: ["★ Restaurant Kitchen Equipment", "★ Commercial Ovens & Ranges", "★ Commercial Refrigeration", "★ 24/7 Response"], bg: "/images/gallery/appliance/calgary-appliance-repair-commercial-oven-us-range-13.jpg", alt: "Commercial appliance repair in Calgary", href: "/appliance/commercial-appliance-repair" },
+  { title: "HVAC Service", desc: "", bullets: ["★ Furnace Repair", "★ Control Board Replacement", "★ Ventilation Service", "★ Emergency Calls"], bg: "/images/gallery/appliance/calgary-appliance-repair-hvac-furnace-control-board-10.jpg", alt: "HVAC and furnace service in Calgary" },
 ];
 
 const galleryPhotos = [
@@ -70,12 +68,6 @@ export default function AppliancePage() {
         serviceType="Appliance"
         services={services}
         galleryPhotos={galleryPhotos}
-      />
-      <RelatedServices
-        items={[
-          { href: "/dryer-repair-calgary", label: "Dryer Repair Calgary" },
-          { href: "/dishwasher-repair-calgary", label: "Dishwasher Repair Calgary" },
-        ]}
       />
       <TradeOverview
         heading="Appliance and HVAC Repair, All Brands"

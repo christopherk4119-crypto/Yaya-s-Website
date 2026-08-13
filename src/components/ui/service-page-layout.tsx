@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import BookingForm from "@/components/ui/booking-form";
 import Gallery, { GalleryPhoto } from "@/components/ui/gallery";
+import CredentialsBanner from "@/components/ui/credentials-banner";
 
 interface ServiceItem {
   title: string;
@@ -87,6 +88,8 @@ export default function ServicePageLayout({
           </div>
         </div>
       </section>
+
+      <CredentialsBanner />
 
       {/* SERVICES */}
       <section className="section">

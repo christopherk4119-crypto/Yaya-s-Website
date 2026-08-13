@@ -2,11 +2,12 @@ interface ServiceSchemaProps {
   name: string;
   description: string;
   url: string;
+  providerType?: "Electrician" | "Plumber" | "HomeAndConstructionBusiness";
 }
 
 const AREA_SERVED = ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Chestermere"];
 
-export default function ServiceSchema({ name, description, url }: ServiceSchemaProps) {
+export default function ServiceSchema({ name, description, url, providerType = "Electrician" }: ServiceSchemaProps) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -15,7 +16,7 @@ export default function ServiceSchema({ name, description, url }: ServiceSchemaP
     description,
     url,
     provider: {
-      "@type": "Electrician",
+      "@type": providerType,
       name: "YAYA General Contractor Incorporated",
       telephone: "+14034003055",
       url: "https://www.yayageneralservice.com",

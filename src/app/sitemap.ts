@@ -14,8 +14,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/electrical/home-rewiring`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/electrical/commercial-electrical`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/electrical/renovation-electrical`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
-    { url: `${base}/dryer-repair-calgary`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/dishwasher-repair-calgary`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/basement-suite-electrical-calgary`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/plumbing/emergency-plumber`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/plumbing/frozen-pipes`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/plumbing/drain-cleaning`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/plumbing/sump-pumps`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/plumbing/renovation-plumbing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/appliance/refrigerator-repair`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/appliance/washer-dryer-repair`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/appliance/stove-oven-repair`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/appliance/dishwasher-repair`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/appliance/commercial-appliance-repair`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
   ];
 }
