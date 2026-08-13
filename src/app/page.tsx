@@ -234,6 +234,26 @@ export default function HomePage() {
               </FadeIn>
             ))}
           </div>
+          <FadeIn delay={300}>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+              {[
+                { href: "/electrical/emergency-electrician", label: "Emergency Electrician" },
+                { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
+                { href: "/electrical/home-rewiring", label: "Home Rewiring" },
+                { href: "/electrical/commercial-electrical", label: "Commercial Electrical" },
+                { href: "/electrical/renovation-electrical", label: "Renovation Electrical" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="px-4 py-2 rounded-full text-xs font-semibold transition-colors duration-200"
+                  style={{ border: "1px solid rgba(255,215,0,0.2)", color: "#e5e7eb" }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 

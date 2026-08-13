@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ui/service-page-layout";
 import FAQSection from "@/components/ui/faq-section";
+import TradeOverview from "@/components/ui/trade-overview";
 
 export const metadata: Metadata = {
   title: "Plumber Calgary | Water Lines, Drains, Faucets & More",
@@ -20,6 +21,7 @@ const services = [
   { title: "Drain Line Installation", desc: "", bullets: ["★ Done Right First Time", "★ All Drain Types", "★ Proper Slope & Venting", "★ Residential & Commercial"], bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=95", alt: "Drain line installation Calgary" },
   { title: "Faucet Replacement", desc: "", bullets: ["★ Kitchen & Bathroom", "★ All Brands & Styles", "★ Quick & Clean", "★ Same Day Available"], bg: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&q=95", alt: "Faucet replacement Calgary bathroom kitchen" },
   { title: "Toilet Replacement", desc: "", bullets: ["★ Full Removal & Install", "★ No Mess Left Behind", "★ All Toilet Types", "★ Fast Turnaround"], bg: "https://images.unsplash.com/photo-1562184552-997c461abbe6?w=1920&q=95", alt: "Toilet replacement installation Calgary" },
+  { title: "Pool Equipment Plumbing", desc: "", bullets: ["★ Filter Tank & Pump Systems", "★ Pipe & Valve Repair", "★ Seasonal Maintenance", "★ Residential Pools"], bg: "/images/gallery/plumbing/calgary-plumber-pool-filter-tank-pipe-system-6.jpg", alt: "Pool equipment plumbing service Calgary" },
   { title: "Any Plumbing Work", desc: "", bullets: ["★ Emergency Calls Welcome", "★ No After-Hours Fee", "★ Residential & Commercial", "★ Same Price Always"], bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=95", alt: "General plumbing services Calgary contractor" },
 ];
 
@@ -66,6 +68,13 @@ export default function PlumbingPage() {
         serviceType="Plumbing"
         services={services}
         galleryPhotos={galleryPhotos}
+      />
+      <TradeOverview
+        heading="Licensed Plumbing Work Across Calgary"
+        paragraphs={[
+          "Plumbing calls range from a five-minute faucet fix to a full re-pipe, and Yaya handles both ends of that range — water line and drain line installation, fixture replacement, rough-in for renovations, and pool equipment plumbing (filter tanks, pumps, and the pipe and valve work that keeps a residential pool system running through the season).",
+          "Same rate applies no matter when you call — a burst pipe at midnight costs the same as a scheduled weekday appointment. If you're not sure whether something is a plumbing emergency or can wait, call and describe it; you'll get an honest answer either way.",
+        ]}
       />
       <FAQSection faqs={faqs} heading="Plumbing FAQ" />
     </>

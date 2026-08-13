@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ui/service-page-layout";
 import FAQSection from "@/components/ui/faq-section";
 import RelatedServices from "@/components/ui/related-services";
+import TradeOverview from "@/components/ui/trade-overview";
 
 export const metadata: Metadata = {
   title: "Appliance Repair Calgary | Oven, Dishwasher, Dryer & HVAC",
@@ -18,10 +19,11 @@ export const metadata: Metadata = {
 
 const services = [
   { title: "Oven & Stove Repair", desc: "", bullets: ["★ All Brands", "★ Gas & Electric", "★ Same Day Available", "★ Fast Diagnostics"], bg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=95", alt: "Oven and stove repair Calgary appliance technician" },
-  { title: "Kitchen Exhaust Fan", desc: "", bullets: ["★ Repair & Replacement", "★ Kitchen & Bathroom", "★ All Fan Types", "★ Quick Install"], bg: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1920&q=95", alt: "Kitchen exhaust fan repair Calgary" },
+  { title: "Range Hood & Exhaust Fan", desc: "", bullets: ["★ Range Hood Installation", "★ Repair & Replacement", "★ Kitchen & Bathroom", "★ Quick Install"], bg: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1920&q=95", alt: "Range hood installation and exhaust fan repair Calgary" },
   { title: "Dishwasher Repair", desc: "", bullets: ["★ Leaks & Drainage", "★ Electrical Faults", "★ All Brands", "★ Fast Fix"], bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95", alt: "Dishwasher repair service Calgary" },
   { title: "Dryer Repair", desc: "", bullets: ["★ Heating Element", "★ Vent Cleaning", "★ Full Diagnostics", "★ All Brands"], bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=95", alt: "Dryer repair Calgary appliance service" },
   { title: "HVAC Service", desc: "", bullets: ["★ Furnace Repair", "★ Control Board Replacement", "★ Ventilation Service", "★ Emergency Calls"], bg: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=95", alt: "HVAC service and repair Calgary" },
+  { title: "Commercial Appliance Service", desc: "", bullets: ["★ Restaurant Kitchen Equipment", "★ Commercial Ovens & Ranges", "★ Tenant Support", "★ Fast Response"], bg: "/images/gallery/appliance/calgary-appliance-repair-commercial-oven-us-range-13.jpg", alt: "Commercial appliance service and repair Calgary" },
   { title: "Any Appliance", desc: "", bullets: ["★ All Brands Welcome", "★ No After-Hours Fee", "★ Emergency Service", "★ Same Price Always"], bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&q=95", alt: "General appliance repair Calgary contractor" },
 ];
 
@@ -73,6 +75,13 @@ export default function AppliancePage() {
         items={[
           { href: "/dryer-repair-calgary", label: "Dryer Repair Calgary" },
           { href: "/dishwasher-repair-calgary", label: "Dishwasher Repair Calgary" },
+        ]}
+      />
+      <TradeOverview
+        heading="Appliance and HVAC Repair, All Brands"
+        paragraphs={[
+          "From a dishwasher that won't drain to a furnace that's throwing an error code, Yaya diagnoses the actual fault rather than guessing at a part swap — furnace control board replacement, range hood installation, oven and stove repair, and dryer diagnostics are all regular calls, on residential and commercial equipment alike.",
+          "Commercial kitchen equipment — restaurant ranges, ovens, and other equipment tenants and business owners rely on — is serviced the same way, with the same 24/7 availability, because a broken piece of kitchen equipment on a Friday night is a business problem, not something that can wait until Monday.",
         ]}
       />
       <FAQSection faqs={faqs} heading="Appliance Repair FAQ" />

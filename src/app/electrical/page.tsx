@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ui/service-page-layout";
 import FAQSection from "@/components/ui/faq-section";
 import RelatedServices from "@/components/ui/related-services";
+import TradeOverview from "@/components/ui/trade-overview";
 
 export const metadata: Metadata = {
   title: "Electrician Calgary | Panel Upgrades, Wiring & More",
@@ -68,11 +69,21 @@ export default function ElectricalPage() {
         services={services}
         galleryPhotos={galleryPhotos}
       />
+      <TradeOverview
+        heading="Calgary Electrical Work, Done Right the First Time"
+        paragraphs={[
+          "Yaya has been doing electrical work in Calgary since 2007 — panel upgrades, rewiring, new circuits, lighting, and everything in between, for homes across the city and the surrounding communities. Most calls fall into a handful of categories: something's broken and needs fixing now, a renovation needs electrical planned around it, or an older home's wiring needs to be brought up to a standard modern insurance and code require.",
+          "The five pages below go into real detail on the most common jobs — what's actually involved, what it costs to expect in permits and timeline, and what to do before Yaya arrives. If your situation doesn't fit neatly into one of them, that's fine too — call and describe what's going on, and you'll get a straight answer about what it takes to fix it.",
+        ]}
+      />
       <RelatedServices
         items={[
-          { href: "/panel-upgrade-calgary", label: "Panel Upgrade Calgary" },
-          { href: "/emergency-electrician-calgary", label: "Emergency Electrician Calgary" },
-          { href: "/basement-suite-electrical-calgary", label: "Basement Suite Electrical Calgary" },
+          { href: "/electrical/emergency-electrician", label: "Emergency Electrician" },
+          { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
+          { href: "/electrical/home-rewiring", label: "Home Rewiring" },
+          { href: "/electrical/commercial-electrical", label: "Commercial Electrical" },
+          { href: "/electrical/renovation-electrical", label: "Renovation Electrical" },
+          { href: "/basement-suite-electrical-calgary", label: "Basement Suite Electrical" },
         ]}
       />
       <FAQSection faqs={faqs} heading="Electrical FAQ" />
