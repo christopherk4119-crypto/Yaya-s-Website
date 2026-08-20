@@ -62,7 +62,7 @@ export default function ElectricalPage() {
   return (
     <>
       <ServicePageLayout
-        heroHeadline="Electrician Services Calgary"
+        heroHeadline="Electrician Calgary"
         heroSubheadline="Experienced Electrician Since 2007 | No After-Hours Surcharge | Emergency Welcome"
         heroCta="Book Electrical Service"
         serviceType="Electrical"

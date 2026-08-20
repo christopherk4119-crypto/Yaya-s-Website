@@ -183,7 +183,7 @@ export default function HomePage() {
       {/* SEO: visually hidden NAP */}
       <div className="sr-only" aria-hidden="false">
         <h2>YAYA General Contractor Incorporated — Calgary Electrician, Plumber &amp; Appliance Repair</h2>
-        <p>Experienced electrician, licensed plumber and appliance technician serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available 24 hours a day, 7 days a week.</p>
+        <p>Experienced <Link href="/electrical">electrician Calgary</Link> homeowners trust, plus a licensed plumber and appliance technician, serving Calgary, AB since 2007. No extra charge for after-hours or emergency calls. Available 24 hours a day, 7 days a week.</p>
         <address>
           <span itemProp="name">YAYA General Contractor Incorporated</span><br />
           <span itemProp="addressLocality">Calgary</span>, <span itemProp="addressRegion">AB</span>, <span itemProp="addressCountry">Canada</span><br />
