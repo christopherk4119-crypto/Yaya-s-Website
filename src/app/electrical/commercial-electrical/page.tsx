@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Commercial Electrician Calgary | Restaurant & Retail",
   description: "Commercial electrical in Calgary: restaurant kitchen equipment, tenant improvements, retail & office wiring. 24/7 response. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/electrical/commercial-electrical" },
+  alternates: { canonical: "https://yayageneralservice.com/electrical/commercial-electrical" },
   openGraph: {
     title: "Commercial Electrician Calgary | YAYA General Contractor Incorporated",
     description: "Commercial kitchen, restaurant, retail, and office electrical work in Calgary, available 24/7. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/electrical/commercial-electrical",
+    url: "https://yayageneralservice.com/electrical/commercial-electrical",
   },
 };
 
@@ -83,7 +83,7 @@ export default function CommercialElectricalPage() {
       ]}
       serviceName="Commercial Electrical"
       serviceDescription="Commercial electrical services in Calgary — restaurant kitchen equipment wiring, tenant improvements, retail and office electrical, available 24/7."
-      serviceUrl="https://www.yayageneralservice.com/electrical/commercial-electrical"
+      serviceUrl="https://yayageneralservice.com/electrical/commercial-electrical"
     />
   );
 }

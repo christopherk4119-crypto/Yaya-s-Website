@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Emergency Plumber Calgary | 24/7, No Extra Fee",
   description: "24/7 emergency plumber in Calgary since 2007. Burst pipes, no water, sewage backup, water heater failure. No after-hours fee. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/plumbing/emergency-plumber" },
+  alternates: { canonical: "https://yayageneralservice.com/plumbing/emergency-plumber" },
   openGraph: {
     title: "Emergency Plumber Calgary | YAYA General Contractor Incorporated",
     description: "24/7 emergency plumbing response in Calgary. No after-hours fee. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/plumbing/emergency-plumber",
+    url: "https://yayageneralservice.com/plumbing/emergency-plumber",
   },
 };
 
@@ -86,7 +86,7 @@ export default function EmergencyPlumberPage() {
       ]}
       serviceName="Emergency Plumber"
       serviceDescription="24/7 emergency plumbing repair in Calgary — burst pipes, active leaks, no water, sewage backup, water heater failure. No after-hours surcharge."
-      serviceUrl="https://www.yayageneralservice.com/plumbing/emergency-plumber"
+      serviceUrl="https://yayageneralservice.com/plumbing/emergency-plumber"
       providerType="Plumber"
     />
   );

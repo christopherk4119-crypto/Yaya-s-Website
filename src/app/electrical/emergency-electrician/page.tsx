@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Emergency Electrician Calgary | 24/7, No Extra Fee",
   description: "24/7 emergency electrician in Calgary. No power, sparking outlets, burning smell, tripped breakers. No after-hours surcharge. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/electrical/emergency-electrician" },
+  alternates: { canonical: "https://yayageneralservice.com/electrical/emergency-electrician" },
   openGraph: {
     title: "Emergency Electrician Calgary | YAYA General Contractor Incorporated",
     description: "24/7 emergency electrical response in Calgary. No after-hours fee, ever. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/electrical/emergency-electrician",
+    url: "https://yayageneralservice.com/electrical/emergency-electrician",
   },
 };
 
@@ -88,7 +88,7 @@ export default function EmergencyElectricianPage() {
       ]}
       serviceName="Emergency Electrician"
       serviceDescription="24/7 emergency electrical repair in Calgary — power loss, sparking outlets, burning smell, tripped breakers, panel faults. No after-hours surcharge."
-      serviceUrl="https://www.yayageneralservice.com/electrical/emergency-electrician"
+      serviceUrl="https://yayageneralservice.com/electrical/emergency-electrician"
     />
   );
 }

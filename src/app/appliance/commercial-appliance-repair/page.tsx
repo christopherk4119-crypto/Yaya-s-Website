@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Commercial Appliance Repair Calgary | 24/7",
   description: "Commercial appliance repair in Calgary — ovens, ranges, refrigeration, dishwashers. Restaurant kitchen equipment, 24/7 response. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/appliance/commercial-appliance-repair" },
+  alternates: { canonical: "https://yayageneralservice.com/appliance/commercial-appliance-repair" },
   openGraph: {
     title: "Commercial Appliance Repair Calgary | YAYA General Contractor Incorporated",
     description: "Restaurant equipment down? 24/7 commercial appliance repair in Calgary. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/appliance/commercial-appliance-repair",
+    url: "https://yayageneralservice.com/appliance/commercial-appliance-repair",
   },
 };
 
@@ -93,7 +93,7 @@ export default function CommercialApplianceRepairPage() {
       ]}
       serviceName="Commercial Appliance Repair"
       serviceDescription="Commercial appliance repair in Calgary — ovens, ranges, refrigeration, dishwashers, restaurant kitchen equipment. Available 24/7."
-      serviceUrl="https://www.yayageneralservice.com/appliance/commercial-appliance-repair"
+      serviceUrl="https://yayageneralservice.com/appliance/commercial-appliance-repair"
       providerType="HomeAndConstructionBusiness"
     />
   );

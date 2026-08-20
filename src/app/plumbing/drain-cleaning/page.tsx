@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Drain Cleaning Calgary | Kitchen, Bath & Laundry",
   description: "Drain cleaning in Calgary for kitchen, bathroom, laundry, and floor drains. Recurring blockages diagnosed properly. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/plumbing/drain-cleaning" },
+  alternates: { canonical: "https://yayageneralservice.com/plumbing/drain-cleaning" },
   openGraph: {
     title: "Drain Cleaning Calgary | YAYA General Contractor Incorporated",
     description: "Kitchen, bathroom, laundry, and floor drain cleaning in Calgary. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/plumbing/drain-cleaning",
+    url: "https://yayageneralservice.com/plumbing/drain-cleaning",
   },
 };
 
@@ -88,7 +88,7 @@ export default function DrainCleaningPage() {
       ]}
       serviceName="Drain Cleaning"
       serviceDescription="Kitchen, bathroom, laundry, and floor drain cleaning in Calgary. Main sewer line work referred to a specialist when camera/auger equipment is needed."
-      serviceUrl="https://www.yayageneralservice.com/plumbing/drain-cleaning"
+      serviceUrl="https://yayageneralservice.com/plumbing/drain-cleaning"
       providerType="Plumber"
     />
   );

@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Electrical Panel Upgrades Calgary | 100A to 200A",
   description: "Panel upgrades in Calgary: 60/100A to 200A service, Federal Pacific & Zinsco replacement, sub-panels. Permits included. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/electrical/panel-upgrades" },
+  alternates: { canonical: "https://yayageneralservice.com/electrical/panel-upgrades" },
   openGraph: {
     title: "Electrical Panel Upgrades Calgary | YAYA General Contractor Incorporated",
     description: "100A to 200A panel upgrades in Calgary, done to code with permits included. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/electrical/panel-upgrades",
+    url: "https://yayageneralservice.com/electrical/panel-upgrades",
   },
 };
 
@@ -84,7 +84,7 @@ export default function PanelUpgradesPage() {
       ]}
       serviceName="Electrical Panel Upgrade"
       serviceDescription="Residential electrical panel upgrades in Calgary — 60/100A to 200A service, Federal Pacific and Zinsco replacement, sub-panel installation, permits included."
-      serviceUrl="https://www.yayageneralservice.com/electrical/panel-upgrades"
+      serviceUrl="https://yayageneralservice.com/electrical/panel-upgrades"
     />
   );
 }

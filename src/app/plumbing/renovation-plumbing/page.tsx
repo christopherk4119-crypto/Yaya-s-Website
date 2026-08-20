@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Renovation Plumbing Calgary | Bathroom & Kitchen",
   description: "Plumbing for basement bathrooms, kitchen and bathroom renovations in Calgary. Rough-in to fixture install, water line replacement. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/plumbing/renovation-plumbing" },
+  alternates: { canonical: "https://yayageneralservice.com/plumbing/renovation-plumbing" },
   openGraph: {
     title: "Renovation Plumbing Calgary | YAYA General Contractor Incorporated",
     description: "Basement bathroom rough-in, kitchen and bathroom renovation plumbing in Calgary. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/plumbing/renovation-plumbing",
+    url: "https://yayageneralservice.com/plumbing/renovation-plumbing",
   },
 };
 
@@ -89,7 +89,7 @@ export default function RenovationPlumbingPage() {
       ]}
       serviceName="Renovation Plumbing"
       serviceDescription="Plumbing for basement bathrooms, kitchen and bathroom renovations in Calgary — rough-in through fixture install, water line and valve replacement."
-      serviceUrl="https://www.yayageneralservice.com/plumbing/renovation-plumbing"
+      serviceUrl="https://yayageneralservice.com/plumbing/renovation-plumbing"
       providerType="Plumber"
     />
   );

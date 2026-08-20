@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   description:
     "Experienced appliance technician in Calgary. Oven, stove, dishwasher, dryer, HVAC & exhaust fan repair. All brands. No after-hours fee. Emergency repairs available. Call (403) 400-3055.",
   keywords: ["appliance repair Calgary", "oven repair Calgary", "dishwasher repair Calgary", "dryer repair Calgary", "HVAC service Calgary", "exhaust fan repair Calgary", "emergency appliance repair Calgary"],
-  alternates: { canonical: "https://www.yayageneralservice.com/appliance" },
+  alternates: { canonical: "https://yayageneralservice.com/appliance" },
   openGraph: {
     title: "Appliance Repair Calgary | YAYA General Contractor Incorporated",
     description: "Experienced appliance tech. Oven, dishwasher, dryer, HVAC & more. No after-hours fee. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/appliance",
+    url: "https://yayageneralservice.com/appliance",
   },
 };
 

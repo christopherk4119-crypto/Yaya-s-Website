@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: "FAQ | Electrician, Plumber & Appliance Repair Calgary",
   description:
     "Answers to common questions about electrical, plumbing, and appliance repair in Calgary. Pricing, availability, permits, and more. YAYA General Contractor Incorporated — (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/faq" },
+  alternates: { canonical: "https://yayageneralservice.com/faq" },
   openGraph: {
     title: "FAQ | YAYA General Contractor Incorporated Calgary",
     description: "Common questions about electrical, plumbing, and appliance repair in Calgary. No after-hours fee. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/faq",
+    url: "https://yayageneralservice.com/faq",
   },
 };
 

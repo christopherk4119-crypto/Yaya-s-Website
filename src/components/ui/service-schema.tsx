@@ -19,7 +19,7 @@ export default function ServiceSchema({ name, description, url, providerType = "
       "@type": providerType,
       name: "YAYA General Contractor Incorporated",
       telephone: "+14034003055",
-      url: "https://www.yayageneralservice.com",
+      url: "https://yayageneralservice.com",
     },
     areaServed: AREA_SERVED.map((city) => ({ "@type": "City", name: city, addressRegion: "AB", addressCountry: "CA" })),
   };

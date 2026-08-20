@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Refrigerator Repair Calgary | Same-Day Available",
   description: "Refrigerator repair in Calgary — not cooling, icing up, leaking, failed ice maker. Same-day available. All brands. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/appliance/refrigerator-repair" },
+  alternates: { canonical: "https://yayageneralservice.com/appliance/refrigerator-repair" },
   openGraph: {
     title: "Refrigerator Repair Calgary | YAYA General Contractor Incorporated",
     description: "Fridge not cooling or leaking? Same-day refrigerator repair in Calgary. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/appliance/refrigerator-repair",
+    url: "https://yayageneralservice.com/appliance/refrigerator-repair",
   },
 };
 
@@ -82,7 +82,7 @@ export default function RefrigeratorRepairPage() {
       ]}
       serviceName="Refrigerator Repair"
       serviceDescription="Refrigerator repair in Calgary — not cooling, icing up, leaking, failed ice maker. Same-day service, all brands."
-      serviceUrl="https://www.yayageneralservice.com/appliance/refrigerator-repair"
+      serviceUrl="https://yayageneralservice.com/appliance/refrigerator-repair"
       providerType="HomeAndConstructionBusiness"
     />
   );

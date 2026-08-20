@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Dishwasher Repair & Installation Calgary",
   description: "Dishwasher repair in Calgary — won't drain, won't fill, leaking, dishes not clean. Installation with supply, drain, and circuit. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/appliance/dishwasher-repair" },
+  alternates: { canonical: "https://yayageneralservice.com/appliance/dishwasher-repair" },
   openGraph: {
     title: "Dishwasher Repair Calgary | YAYA General Contractor Incorporated",
     description: "Dishwasher not draining, filling, or cleaning properly? Fast diagnosis in Calgary. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/appliance/dishwasher-repair",
+    url: "https://yayageneralservice.com/appliance/dishwasher-repair",
   },
 };
 
@@ -95,7 +95,7 @@ export default function DishwasherRepairPage() {
       ]}
       serviceName="Dishwasher Repair and Installation"
       serviceDescription="Dishwasher repair and installation in Calgary — drain, fill, leak, and cleaning issues, plus full installation with supply, drain, and dedicated circuit."
-      serviceUrl="https://www.yayageneralservice.com/appliance/dishwasher-repair"
+      serviceUrl="https://yayageneralservice.com/appliance/dishwasher-repair"
       providerType="HomeAndConstructionBusiness"
     />
   );

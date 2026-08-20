@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Stove & Oven Repair Calgary | All Brands",
   description: "Stove and oven repair in Calgary — elements not heating, wrong oven temperature, control board faults, range hood issues. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/appliance/stove-oven-repair" },
+  alternates: { canonical: "https://yayageneralservice.com/appliance/stove-oven-repair" },
   openGraph: {
     title: "Stove & Oven Repair Calgary | YAYA General Contractor Incorporated",
     description: "Stove element not heating or oven running hot/cold? Fast diagnosis in Calgary. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/appliance/stove-oven-repair",
+    url: "https://yayageneralservice.com/appliance/stove-oven-repair",
   },
 };
 
@@ -88,7 +88,7 @@ export default function StoveOvenRepairPage() {
       ]}
       serviceName="Stove and Oven Repair"
       serviceDescription="Stove and oven repair in Calgary — heating elements, temperature accuracy, control boards, range hood and exhaust issues. All brands."
-      serviceUrl="https://www.yayageneralservice.com/appliance/stove-oven-repair"
+      serviceUrl="https://yayageneralservice.com/appliance/stove-oven-repair"
       providerType="HomeAndConstructionBusiness"
     />
   );

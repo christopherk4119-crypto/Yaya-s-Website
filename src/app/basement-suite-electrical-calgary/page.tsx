@@ -4,11 +4,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Basement Suite Electrical Calgary | Legal Suite Wiring | YAYA General Contractor Incorporated",
   description: "Basement suite electrical wiring in Calgary. Legal suite rough-in, panel upgrades, permits pulled. Done to code. Call YAYA General Contractor Incorporated (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/basement-suite-electrical-calgary" },
+  alternates: { canonical: "https://yayageneralservice.com/basement-suite-electrical-calgary" },
   openGraph: {
     title: "Basement Suite Electrical Calgary | YAYA General Contractor Incorporated",
     description: "Legal basement suite electrical wiring in Calgary. Permits included, done to code. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/basement-suite-electrical-calgary",
+    url: "https://yayageneralservice.com/basement-suite-electrical-calgary",
   },
 };
 

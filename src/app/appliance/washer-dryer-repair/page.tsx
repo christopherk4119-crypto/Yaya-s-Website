@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Washer & Dryer Repair Calgary | All Brands",
   description: "Washer and dryer repair in Calgary — won't drain, spin, start, or heat. Vent inspected for fire risk on every dryer call. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/appliance/washer-dryer-repair" },
+  alternates: { canonical: "https://yayageneralservice.com/appliance/washer-dryer-repair" },
   openGraph: {
     title: "Washer & Dryer Repair Calgary | YAYA General Contractor Incorporated",
     description: "Washer won't drain or spin? Dryer won't heat? All brands serviced in Calgary. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/appliance/washer-dryer-repair",
+    url: "https://yayageneralservice.com/appliance/washer-dryer-repair",
   },
 };
 
@@ -90,7 +90,7 @@ export default function WasherDryerRepairPage() {
       ]}
       serviceName="Washer and Dryer Repair"
       serviceDescription="Washer and dryer repair in Calgary — drain, spin, start, and heating issues, plus dryer vent inspection for fire-risk airflow problems. All brands."
-      serviceUrl="https://www.yayageneralservice.com/appliance/washer-dryer-repair"
+      serviceUrl="https://yayageneralservice.com/appliance/washer-dryer-repair"
       providerType="HomeAndConstructionBusiness"
     />
   );

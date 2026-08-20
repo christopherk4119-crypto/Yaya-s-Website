@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Home Rewiring Calgary | Aluminum & Knob-and-Tube",
   description: "Aluminum wiring pigtailing, knob-and-tube replacement, and whole-home rewiring in Calgary. Insurance documentation provided. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/electrical/home-rewiring" },
+  alternates: { canonical: "https://yayageneralservice.com/electrical/home-rewiring" },
   openGraph: {
     title: "Home Rewiring Calgary | YAYA General Contractor Incorporated",
     description: "Aluminum wiring, knob-and-tube, and full home rewiring in Calgary — insurance-ready documentation. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/electrical/home-rewiring",
+    url: "https://yayageneralservice.com/electrical/home-rewiring",
   },
 };
 
@@ -91,7 +91,7 @@ export default function HomeRewiringPage() {
       ]}
       serviceName="Home Rewiring"
       serviceDescription="Aluminum wiring pigtailing, knob-and-tube replacement, and whole-home rewiring in Calgary, with insurance-ready documentation."
-      serviceUrl="https://www.yayageneralservice.com/electrical/home-rewiring"
+      serviceUrl="https://yayageneralservice.com/electrical/home-rewiring"
     />
   );
 }

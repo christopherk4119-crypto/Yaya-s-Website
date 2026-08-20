@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Sump Pump Installation & Repair Calgary",
   description: "Sump pump installation and repair in Calgary. Spring melt flooding, pumps that won't start or run constantly, backup options. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/plumbing/sump-pumps" },
+  alternates: { canonical: "https://yayageneralservice.com/plumbing/sump-pumps" },
   openGraph: {
     title: "Sump Pumps Calgary | YAYA General Contractor Incorporated",
     description: "Sump pump installation, repair, and backup options for Calgary basements. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/plumbing/sump-pumps",
+    url: "https://yayageneralservice.com/plumbing/sump-pumps",
   },
 };
 
@@ -96,7 +96,7 @@ export default function SumpPumpsPage() {
       ]}
       serviceName="Sump Pump Installation and Repair"
       serviceDescription="Sump pump installation, repair, and backup options in Calgary — basin sizing, discharge routing, and flood prevention for spring melt and heavy rain."
-      serviceUrl="https://www.yayageneralservice.com/plumbing/sump-pumps"
+      serviceUrl="https://yayageneralservice.com/plumbing/sump-pumps"
       providerType="Plumber"
     />
   );

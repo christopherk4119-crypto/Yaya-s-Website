@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Renovation Electrician Calgary | Basement & Kitchen",
   description: "Electrical for basement development, kitchen/bath reno, pot lights, and garage wiring in Calgary. Permits handled. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/electrical/renovation-electrical" },
+  alternates: { canonical: "https://yayageneralservice.com/electrical/renovation-electrical" },
   openGraph: {
     title: "Renovation Electrical Calgary | YAYA General Contractor Incorporated",
     description: "Basement development, kitchen/bath renovation, and pot light electrical work in Calgary. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/electrical/renovation-electrical",
+    url: "https://yayageneralservice.com/electrical/renovation-electrical",
   },
 };
 
@@ -89,7 +89,7 @@ export default function RenovationElectricalPage() {
       ]}
       serviceName="Renovation Electrical"
       serviceDescription="Electrical work for basement development, kitchen and bathroom renovations, pot light layouts, and garage wiring in Calgary."
-      serviceUrl="https://www.yayageneralservice.com/electrical/renovation-electrical"
+      serviceUrl="https://yayageneralservice.com/electrical/renovation-electrical"
     />
   );
 }

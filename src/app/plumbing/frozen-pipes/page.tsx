@@ -4,11 +4,11 @@ import ServiceDetailPage from "@/components/ui/service-detail";
 export const metadata: Metadata = {
   title: "Frozen Pipe Repair Calgary | Thawing & Prevention",
   description: "Frozen pipe repair in Calgary — garages, crawl spaces, exterior walls. Safe thawing, burst pipe repair, and freeze prevention. Call (403) 400-3055.",
-  alternates: { canonical: "https://www.yayageneralservice.com/plumbing/frozen-pipes" },
+  alternates: { canonical: "https://yayageneralservice.com/plumbing/frozen-pipes" },
   openGraph: {
     title: "Frozen Pipe Repair Calgary | YAYA General Contractor Incorporated",
     description: "Frozen pipe thawing, burst pipe repair, and prevention for Calgary homes. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/plumbing/frozen-pipes",
+    url: "https://yayageneralservice.com/plumbing/frozen-pipes",
   },
 };
 
@@ -91,7 +91,7 @@ export default function FrozenPipesPage() {
       ]}
       serviceName="Frozen Pipe Repair"
       serviceDescription="Frozen and burst pipe repair in Calgary — garages, crawl spaces, exterior walls, hose bibs. Safe thawing and prevention."
-      serviceUrl="https://www.yayageneralservice.com/plumbing/frozen-pipes"
+      serviceUrl="https://yayageneralservice.com/plumbing/frozen-pipes"
       providerType="Plumber"
     />
   );

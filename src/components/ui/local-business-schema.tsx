@@ -2,14 +2,14 @@ export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Electrician", "GeneralContractor"],
-    "@id": "https://www.yayageneralservice.com",
+    "@id": "https://yayageneralservice.com",
     name: "YAYA General Contractor Incorporated",
     alternateName: ["Yaya Contractor", "YAYA Electrical, Plumbing and Appliance"],
     description:
       "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available 24 hours a day, 7 days a week. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com",
-    logo: "https://www.yayageneralservice.com/icon.png",
-    image: "https://www.yayageneralservice.com/icon.png",
+    url: "https://yayageneralservice.com",
+    logo: "https://yayageneralservice.com/icon.png",
+    image: "https://yayageneralservice.com/icon.png",
     telephone: "+14034003055",
     email: "electricianyaya@gmail.com",
     foundingDate: "2007",
@@ -43,9 +43,9 @@ export default function LocalBusinessSchema() {
       "@type": "OfferCatalog",
       name: "Electrical, Plumbing and Appliance Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Electrical Services", url: "https://www.yayageneralservice.com/electrical" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Plumbing Services", url: "https://www.yayageneralservice.com/plumbing" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Appliance Repair", url: "https://www.yayageneralservice.com/appliance" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Electrical Services", url: "https://yayageneralservice.com/electrical" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Plumbing Services", url: "https://yayageneralservice.com/plumbing" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Appliance Repair", url: "https://yayageneralservice.com/appliance" } },
       ],
     },
     sameAs: [

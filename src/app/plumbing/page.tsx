@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   description:
     "Licensed plumber in Calgary since 2007. Water lines, drain lines, faucet replacement, toilet installation & any plumbing work. Same price day or night. Fast response. Call (403) 400-3055.",
   keywords: ["plumber Calgary", "water line installation Calgary", "drain line Calgary", "faucet replacement Calgary", "toilet installation Calgary", "emergency plumber Calgary", "licensed plumber Calgary"],
-  alternates: { canonical: "https://www.yayageneralservice.com/plumbing" },
+  alternates: { canonical: "https://yayageneralservice.com/plumbing" },
   openGraph: {
     title: "Plumber Calgary | YAYA General Contractor Incorporated",
     description: "Licensed plumber. Water lines, drains, faucets, toilets & more. Same price day or night. Call (403) 400-3055.",
-    url: "https://www.yayageneralservice.com/plumbing",
+    url: "https://yayageneralservice.com/plumbing",
   },
 };
 
