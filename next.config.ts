@@ -9,12 +9,6 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "yayageneralservice.com" }],
-        destination: "https://www.yayageneralservice.com/:path*",
-        permanent: true,
-      },
       { source: "/emergency-electrician-calgary", destination: "/electrical/emergency-electrician", permanent: true },
       { source: "/panel-upgrade-calgary", destination: "/electrical/panel-upgrades", permanent: true },
       { source: "/dryer-repair-calgary", destination: "/appliance/washer-dryer-repair", permanent: true },
