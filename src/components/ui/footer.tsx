@@ -2,13 +2,14 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import KijijiMark from "@/components/ui/kijiji-mark";
+import { TikTokIcon, InstagramIcon, YouTubeIcon, SOCIAL_COLORS } from "@/components/ui/social-icons";
 
 const socials = [
-  { label: "TikTok", href: "https://www.tiktok.com/@yaya.electric_canada", icon: "🎵" },
-  { label: "Instagram", href: "https://www.instagram.com/yayacalgary/", icon: "📷" },
-  { label: "YouTube", href: "https://www.youtube.com/channel/UCNgUCI9MK3DShuf3G_I72fg", icon: "▶️" },
-  { label: "Kijiji — Appliance Repair", href: "https://www.kijiji.ca/v-appliance-repair-installation/calgary/cheaper-price-electrical-plumbing-&-appliance-repair-service/1694676987", icon: <KijijiMark size={40} radius={10} /> },
-  { label: "Kijiji — Electrician", href: "https://www.kijiji.ca/v-electrician/calgary/cheaper-price-plumbing-electrical-and-appliance-maintenance/1697041621", icon: <KijijiMark size={40} radius={10} /> },
+  { label: "TikTok", href: "https://www.tiktok.com/@yaya.electric_canada", color: SOCIAL_COLORS.tiktok, icon: <TikTokIcon size={20} /> },
+  { label: "Instagram", href: "https://www.instagram.com/yayacalgary/", color: SOCIAL_COLORS.instagram, icon: <InstagramIcon size={20} /> },
+  { label: "YouTube", href: "https://www.youtube.com/channel/UCNgUCI9MK3DShuf3G_I72fg", color: SOCIAL_COLORS.youtube, icon: <YouTubeIcon size={20} /> },
+  { label: "Kijiji — Appliance Repair", href: "https://www.kijiji.ca/v-appliance-repair-installation/calgary/cheaper-price-electrical-plumbing-&-appliance-repair-service/1694676987", color: SOCIAL_COLORS.kijiji, icon: <KijijiMark size={38} radius={19} /> },
+  { label: "Kijiji — Electrician", href: "https://www.kijiji.ca/v-electrician/calgary/cheaper-price-plumbing-electrical-and-appliance-maintenance/1697041621", color: SOCIAL_COLORS.kijiji, icon: <KijijiMark size={38} radius={19} /> },
 ];
 
 export default function Footer() {
@@ -57,8 +58,8 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={s.label}
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-all duration-200 hover:scale-110 overflow-hidden"
-                  style={{ background: "#1a1a1a", border: "1px solid rgba(255,215,0,0.2)" }}
+                  className="w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-200 hover:scale-110 overflow-hidden shrink-0"
+                  style={{ background: s.color, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.16)" }}
                 >
                   {s.icon}
                 </a>
