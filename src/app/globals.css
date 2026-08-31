@@ -11,6 +11,11 @@
 
 html { scroll-behavior: smooth; }
 
+/* Anchor targets (#services, #contact, #booking) must clear the fixed navbar,
+   which is taller on mobile because of the always-visible quick-access bar. */
+section[id] { scroll-margin-top: 140px; }
+@media (min-width: 1024px) { section[id] { scroll-margin-top: 88px; } }
+
 body {
   background: #0a0a0a;
   color: #fff;

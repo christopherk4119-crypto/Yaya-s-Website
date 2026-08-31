@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Home, Wrench } from "lucide-react";
+import { Menu, X, Phone, Home, Wrench, CalendarCheck } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,6 +13,10 @@ const navLinks = [
   { href: "/faq", label: "FAQ" },
   { href: "/media", label: "Media" },
 ];
+
+// Booking lives on the homepage (#booking), so it is always linked absolutely —
+// the service detail pages have no booking section of their own.
+const bookingLink = { href: "/#booking", label: "Book an Appointment" };
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -41,7 +45,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-5">
             {navLinks.map((l) => (
               <Link
                 key={l.href}
@@ -55,14 +59,21 @@ export default function Navbar() {
           </div>
 
           {/* Right Side */}
-          <div className="hidden md:flex items-center gap-4">
-            <a href="tel:4034003055" className="flex items-center gap-2 text-white font-bold text-sm">
+          <div className="hidden lg:flex items-center gap-3">
+            <a href="tel:4034003055" className="hidden xl:flex items-center gap-2 whitespace-nowrap text-white font-bold text-sm">
               <Phone size={16} style={{ color: "#FFD700" }} />
               (403) 400-3055
             </a>
+            <Link
+              href={bookingLink.href}
+              className="whitespace-nowrap px-3 xl:px-4 py-2 rounded-full font-bold text-xs xl:text-sm transition-all duration-200 hover:scale-105"
+              style={{ color: "#FFD700", border: "1px solid #FFD700" }}
+            >
+              {bookingLink.label}
+            </Link>
             <a
               href="tel:4034003055"
-              className="px-5 py-2 rounded-full font-bold text-sm text-black transition-all duration-200 hover:scale-105"
+              className="whitespace-nowrap px-4 xl:px-5 py-2 rounded-full font-bold text-xs xl:text-sm text-black transition-all duration-200 hover:scale-105"
               style={{ background: "#FFD700" }}
             >
               Call Now
@@ -70,13 +81,13 @@ export default function Navbar() {
           </div>
 
           {/* Mobile hamburger */}
-          <button onClick={() => setOpen(!open)} className="md:hidden text-white p-2">
+          <button onClick={() => setOpen(!open)} className="lg:hidden text-white p-2">
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile quick-access bar — always visible, no need to open the menu */}
-        <div className="md:hidden flex items-center justify-around pb-2" style={{ borderTop: "1px solid rgba(255,215,0,0.12)" }}>
+        <div className="lg:hidden flex items-center justify-around pb-2" style={{ borderTop: "1px solid rgba(255,215,0,0.12)" }}>
           <Link href="/" className="flex flex-col items-center gap-0.5 px-4 pt-2" style={{ color: pathname === "/" ? "#FFD700" : "#e5e7eb" }}>
             <Home size={18} />
             <span className="text-[11px] font-bold uppercase tracking-wide">Home</span>
@@ -94,7 +105,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden" style={{ background: "#0a0a0a", borderTop: "1px solid rgba(255,215,0,0.2)" }}>
+        <div className="lg:hidden" style={{ background: "#0a0a0a", borderTop: "1px solid rgba(255,215,0,0.2)" }}>
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((l) => (
               <Link
@@ -107,6 +118,15 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
+            <Link
+              href={bookingLink.href}
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2 font-bold text-lg py-2"
+              style={{ color: "#FFD700" }}
+            >
+              <CalendarCheck size={20} />
+              {bookingLink.label}
+            </Link>
             <div className="pt-4 border-t border-gray-800 space-y-3">
               <a href="tel:4034003055" className="flex items-center gap-2 text-white font-bold">
                 <Phone size={16} style={{ color: "#FFD700" }} />

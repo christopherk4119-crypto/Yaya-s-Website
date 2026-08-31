@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-full flex flex-col" style={{ background: "#0a0a0a" }}>
         <Navbar />
-        <main className="flex-1 pt-32 md:pt-20">{children}</main>
+        <main className="flex-1 pt-32 lg:pt-20">{children}</main>
         <Footer />
         <PopupForm />
         <Script
