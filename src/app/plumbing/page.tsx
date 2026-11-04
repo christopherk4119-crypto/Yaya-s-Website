@@ -75,6 +75,32 @@ export default function PlumbingPage() {
           "Plumbing calls range from a five-minute faucet fix to a full re-pipe, and Yaya handles both ends of that range — water line and drain line installation, fixture replacement, rough-in for renovations, and pool equipment plumbing (filter tanks, pumps, and the pipe and valve work that keeps a residential pool system running through the season).",
           "Same rate applies no matter when you call — a burst pipe at midnight costs the same as a scheduled weekday appointment. If you're not sure whether something is a plumbing emergency or can wait, call and describe it; you'll get an honest answer either way.",
         ]}
+        sections={[
+          {
+            heading: "Why Calgary Pipes Freeze, and What to Do First",
+            paragraphs: [
+              "Calgary's chinooks make freezing a different problem here than it is in a city with a steady winter. Temperatures can swing thirty degrees in a day, so pipes go through repeated freeze and thaw cycles rather than one long cold stretch. Each cycle stresses the joint a little more, which is why a pipe often fails not during the cold snap but on the warm afternoon afterward, when the ice plug melts and releases pressure against a fitting that has already been pushed past its limit.",
+              "The vulnerable spots are predictable: supply lines running through exterior walls, anything in an unheated crawl space or an attached garage, and outdoor hose bibs where the shut-off was never closed in the fall. A kitchen sink on an outside wall with the cabinet doors shut is a classic Calgary failure point, because the cabinet keeps household heat away from the pipe.",
+              "If you turn on a tap and get nothing in winter, assume a freeze and act before it thaws. Shut off the main, open the affected tap so there is somewhere for pressure and meltwater to go, and call. Do not use a torch or open flame on a frozen line. If water is already escaping, the main shut-off is the first move and the phone is the second — knowing where that valve is before you need it is the single most useful piece of plumbing knowledge a homeowner can have.",
+            ],
+          },
+          {
+            heading: "Emergency, Urgent, or Monday Morning",
+            paragraphs: [
+              "A true plumbing emergency is water you cannot stop: a burst or split line, a failed water heater dumping its tank, sewage backing up into a floor drain or tub, or a supply line behind a wall you can hear but can't reach. These get a call immediately, at any hour, because the damage is cumulative — flooring, drywall and subfloor keep absorbing water the whole time the problem is unresolved.",
+              "Urgent but controllable is a different category: a toilet that will only flush sometimes in a one-bathroom house, a slow drain that is getting slower, a water heater producing lukewarm water, or a sump pump that is cycling oddly ahead of a thaw or a forecast of heavy rain. These usually hold overnight but genuinely shouldn't wait a week, particularly the sump pump, which you only find out has failed at the exact moment you need it.",
+              "Things that can comfortably be scheduled include a dripping faucet, a running toilet, a fixture you want replaced, and planning the rough-in for a renovation. Because there is no after-hours surcharge, there is no financial reason to downplay a problem to avoid a premium — describe what is actually happening and the triage can be honest.",
+            ],
+          },
+          {
+            heading: "Renovation Plumbing: Sequence and Inspection",
+            paragraphs: [
+              "Renovation plumbing goes wrong far more often from sequencing than from the plumbing itself. Drain and vent lines have to be roughed in and, where a permit applies, inspected before anything closes the walls or the slab. Once drywall is up or tile is down, a change that would have taken an hour costs a demolition day, and a rough-in that was never inspected may have to be reopened.",
+              "That makes the order of operations worth settling before the work starts: confirm fixture locations and the drain layout first, because moving a toilet drain is a structural-floor conversation while moving a vanity's supply lines usually is not. Bathroom and kitchen renovations in particular benefit from deciding on fixtures early, since a wall-hung sink, a freestanding tub and a standard vanity all want different rough-in heights.",
+              "If an electrician is also working on the project, the two trades need to be sequenced against each other rather than booked independently — which is one practical advantage of having the same person handle both. Call before the demolition starts rather than after, and the plumbing portion is usually the least dramatic part of the renovation.",
+            ],
+          },
+        ]}
       />
       <FAQSection faqs={faqs} heading="Plumbing FAQ" />
     </>

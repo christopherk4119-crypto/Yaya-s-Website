@@ -75,6 +75,32 @@ export default function ElectricalPage() {
           "Yaya has been doing electrical work in Calgary since 2007 — panel upgrades, rewiring, new circuits, lighting, and everything in between, for homes across the city and the surrounding communities. Most calls fall into a handful of categories: something's broken and needs fixing now, a renovation needs electrical planned around it, or an older home's wiring needs to be brought up to a standard modern insurance and code require.",
           "The five pages below go into real detail on the most common jobs — what's actually involved, what it costs to expect in permits and timeline, and what to do before Yaya arrives. If your situation doesn't fit neatly into one of them, that's fine too — call and describe what's going on, and you'll get a straight answer about what it takes to fix it.",
         ]}
+        sections={[
+          {
+            heading: "What Counts as an Electrical Emergency",
+            paragraphs: [
+              "Some electrical faults need attention the moment you notice them. A burning or fishy plastic smell near an outlet, panel or fixture, scorch marks or discolouration around a receptacle, an outlet or switch plate that is warm to the touch, buzzing or crackling from the panel, or a breaker that trips again immediately after you reset it — all of these point to heat being generated somewhere it shouldn't be. Shut off the circuit at the panel if you can do it safely and call. Do not keep resetting a breaker that will not hold; it is doing its job.",
+              "Other problems are genuinely urgent but not dangerous: a full loss of power to the house, a dead circuit that takes the furnace or fridge with it, or water that has reached a panel or junction box. In Calgary winters, no power to a furnace becomes a frozen-pipe problem within hours, which is why these get treated as same-night calls rather than next-week appointments.",
+              "Plenty of things can wait for a scheduled visit without any risk: a single dead outlet on an otherwise healthy circuit, a light fixture you want swapped, a dimmer that buzzes, or planning work for a renovation that hasn't started yet. Calling after hours for one of these costs the same as calling on a Tuesday morning, so if you aren't sure which category you're in, describe what you're seeing and you'll get a straight answer rather than an upsell.",
+            ],
+          },
+          {
+            heading: "Permits, Inspections and the Alberta Electrical Code",
+            paragraphs: [
+              "Electrical work in Calgary is governed by the Canadian Electrical Code as adopted in Alberta, and significant work requires a permit from the City of Calgary followed by an inspection. That covers panel upgrades and service changes, new circuits, basement development, and the rough-in for a suite or an addition. Like-for-like repairs — swapping a failed switch or fixture — generally do not.",
+              "The reason this matters beyond compliance is what happens later. Unpermitted electrical work surfaces at the worst possible moment: during a home sale when a buyer's conditions include a review of permit history, or during an insurance claim when the cause of a loss traces back to wiring that was never inspected. Work that was done correctly but never signed off still reads, on paper, as work nobody verified.",
+              "Yaya pulls the permits and coordinates the inspection as part of the job, so the paperwork exists in the City's records under your address. It is worth confirming that whoever does your electrical work is doing the same, regardless of who you hire.",
+            ],
+          },
+          {
+            heading: "Older Calgary Homes: Aluminum Wiring, Knob-and-Tube and Undersized Services",
+            paragraphs: [
+              "Calgary's housing stock spans more than a century, and the era a house was built in tells you most of what you need to know about its wiring. Homes built in the late 1960s and through the 1970s frequently used aluminum branch circuit wiring, which expands and contracts differently from the copper devices it connects to and can loosen at terminations over time. The fix is usually proper remediation at the connections rather than a full rewire, and insurers commonly ask for documentation that it has been addressed.",
+              "Older inner-city homes may still have knob-and-tube in places, often partially replaced during past renovations so that a single house contains three generations of wiring. Those homes also tend to have undersized services — a 60-amp or small 100-amp panel that was adequate for the appliances of its era and is not adequate for central air, an EV charger, a hot tub, or a finished basement.",
+              "If you are buying an older home, planning a renovation, or have been told by an insurer that your wiring needs attention, the useful first step is an assessment of what you actually have rather than an assumption. Some houses need a panel upgrade and nothing else; others need targeted rewiring of specific circuits. Knowing which one you are dealing with changes the budget considerably.",
+            ],
+          },
+        ]}
       />
       <FAQSection faqs={faqs} heading="Electrical FAQ" />
     </>
