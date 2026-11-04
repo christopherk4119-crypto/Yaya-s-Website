@@ -2,10 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "www.jotform.com" },
-    ],
+    // All site imagery is now local job photos; only the Jotform embed
+    // still loads from a remote host.
+    remotePatterns: [{ protocol: "https", hostname: "www.jotform.com" }],
   },
   async redirects() {
     return [

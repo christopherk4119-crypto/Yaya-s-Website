@@ -6,7 +6,7 @@ import TradeOverview from "@/components/ui/trade-overview";
 export const metadata: Metadata = {
   title: "Electrician Calgary | Panel Upgrades, Wiring & More",
   description:
-    "Experienced electrician in Calgary since 2007. Panel upgrades, wiring, outlets, ceiling lights, smoke alarms & more. No after-hours surcharge. Emergency calls welcome. Call (403) 400-3055.",
+    "Electrician in Calgary since 2007. Panel upgrades, rewiring, outlets and lighting. No after-hours surcharge. Call (403) 400-3055.",
   keywords: ["electrician Calgary", "panel upgrade Calgary", "electrical installation Calgary", "ceiling light installation Calgary", "smoke alarm Calgary", "emergency electrician Calgary", "after hours electrician Calgary"],
   alternates: { canonical: "https://yayageneralservice.com/electrical" },
   openGraph: {

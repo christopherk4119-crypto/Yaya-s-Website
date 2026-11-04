@@ -18,21 +18,21 @@ const services = [
     title: "Electrical Services",
     bullets: ["★ Panel Upgrades", "★ Wiring & Outlets", "★ Ceiling Lights", "★ Smoke Alarms & More"],
     href: "/electrical",
-    bg: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&q=95",
+    bg: "/images/gallery/electrical/calgary-electrician-breaker-panel-housepower-7.jpg",
   },
   {
     icon: <Wrench size={28} />,
     title: "Plumbing Services",
     bullets: ["★ Water Lines", "★ Drain Lines", "★ Faucet & Toilet", "★ Any Plumbing Need"],
     href: "/plumbing",
-    bg: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=95",
+    bg: "/images/gallery/plumbing/calgary-plumber-rough-in-copper-pvc-pipe-wall-4.jpg",
   },
   {
     icon: <Settings size={28} />,
     title: "Appliance Services",
     bullets: ["★ Oven & Stove", "★ Dishwasher & Dryer", "★ HVAC & Exhaust Fan", "★ All Brands"],
     href: "/appliance",
-    bg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=95",
+    bg: "/images/gallery/appliance/calgary-appliance-repair-stove-heating-element-burner-8.jpg",
   },
 ];
 

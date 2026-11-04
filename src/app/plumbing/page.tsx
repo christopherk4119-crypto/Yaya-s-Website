@@ -6,7 +6,7 @@ import TradeOverview from "@/components/ui/trade-overview";
 export const metadata: Metadata = {
   title: "Plumber Calgary | Water Lines, Drains & Faucets",
   description:
-    "Licensed plumber in Calgary since 2007. Water lines, drain lines, faucet replacement, toilet installation & any plumbing work. Same price day or night. Fast response. Call (403) 400-3055.",
+    "Licensed plumber in Calgary since 2007. Water lines, drains, faucets and toilets. Same price day or night. Call (403) 400-3055.",
   keywords: ["plumber Calgary", "water line installation Calgary", "drain line Calgary", "faucet replacement Calgary", "toilet installation Calgary", "emergency plumber Calgary", "licensed plumber Calgary"],
   alternates: { canonical: "https://yayageneralservice.com/plumbing" },
   openGraph: {

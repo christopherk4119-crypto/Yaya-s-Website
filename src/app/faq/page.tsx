@@ -4,7 +4,7 @@ import FAQSection from "@/components/ui/faq-section";
 export const metadata: Metadata = {
   title: "FAQ | Calgary Electrician, Plumber & Appliance",
   description:
-    "Answers to common questions about electrical, plumbing, and appliance repair in Calgary. Pricing, availability, permits, and more. YAYA General Contractor Incorporated — (403) 400-3055.",
+    "Common questions about electrical, plumbing and appliance repair in Calgary: pricing, availability and permits. Call (403) 400-3055.",
   alternates: { canonical: "https://yayageneralservice.com/faq" },
   openGraph: {
     title: "FAQ | YAYA General Contractor Incorporated Calgary",

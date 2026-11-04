@@ -1,8 +1,11 @@
+const SITE = "https://yayageneralservice.com";
+const BUSINESS_ID = `${SITE}/#business`;
+const WEBSITE_ID = `${SITE}/#website`;
+
 export default function LocalBusinessSchema() {
-  const schema = {
-    "@context": "https://schema.org",
+  const business = {
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Electrician", "GeneralContractor"],
-    "@id": "https://yayageneralservice.com",
+    "@id": BUSINESS_ID,
     name: "YAYA General Contractor Incorporated",
     alternateName: ["Yaya Contractor", "YAYA Electrical, Plumbing and Appliance"],
     description:
@@ -71,6 +74,22 @@ export default function LocalBusinessSchema() {
       { "@type": "Review", author: { "@type": "Person", name: "Sherilynn Robles" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Yared is a great guy! Highly recommended!" },
       { "@type": "Review", author: { "@type": "Person", name: "Gloria Mutombo" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Nice jog clean and quick according to Alberta regulations" },
     ],
+  };
+
+  // The site itself, as an entity distinct from the business that publishes
+  // it. No SearchAction: the site has no internal search to point one at.
+  const website = {
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    url: SITE,
+    name: "YAYA General Contractor Incorporated",
+    inLanguage: "en-CA",
+    publisher: { "@id": BUSINESS_ID },
+  };
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [business, website],
   };
 
   return (
