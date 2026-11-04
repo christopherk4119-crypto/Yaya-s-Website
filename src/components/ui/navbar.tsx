@@ -3,13 +3,50 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Home, Wrench, CalendarCheck } from "lucide-react";
+import { Menu, X, Phone, Home, Wrench, CalendarCheck, ChevronDown } from "lucide-react";
 
-const navLinks = [
+interface NavLink {
+  href: string;
+  label: string;
+  children?: { href: string; label: string }[];
+}
+
+const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
-  { href: "/electrical", label: "Electrical" },
-  { href: "/plumbing", label: "Plumbing" },
-  { href: "/appliance", label: "Appliance" },
+  {
+    href: "/electrical",
+    label: "Electrical",
+    children: [
+      { href: "/electrical/emergency-electrician", label: "Emergency Electrician" },
+      { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
+      { href: "/electrical/home-rewiring", label: "Home Rewiring" },
+      { href: "/electrical/renovation-electrical", label: "Renovation Electrical" },
+      { href: "/electrical/commercial-electrical", label: "Commercial Electrical" },
+      { href: "/basement-suite-electrical-calgary", label: "Basement Suite Electrical" },
+    ],
+  },
+  {
+    href: "/plumbing",
+    label: "Plumbing",
+    children: [
+      { href: "/plumbing/emergency-plumber", label: "Emergency Plumber" },
+      { href: "/plumbing/frozen-pipes", label: "Frozen Pipe Repair" },
+      { href: "/plumbing/drain-cleaning", label: "Drain Cleaning" },
+      { href: "/plumbing/sump-pumps", label: "Sump Pumps" },
+      { href: "/plumbing/renovation-plumbing", label: "Renovation Plumbing" },
+    ],
+  },
+  {
+    href: "/appliance",
+    label: "Appliance",
+    children: [
+      { href: "/appliance/refrigerator-repair", label: "Refrigerator Repair" },
+      { href: "/appliance/washer-dryer-repair", label: "Washer & Dryer Repair" },
+      { href: "/appliance/stove-oven-repair", label: "Stove & Oven Repair" },
+      { href: "/appliance/dishwasher-repair", label: "Dishwasher Repair" },
+      { href: "/appliance/commercial-appliance-repair", label: "Commercial Appliance Repair" },
+    ],
+  },
   { href: "/faq", label: "FAQ" },
   { href: "/media", label: "Media" },
 ];
@@ -44,17 +81,43 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-4 xl:gap-5">
+          {/* Desktop Nav — trade items open a dropdown of their sub-pages on
+              hover or keyboard focus; the parent itself stays a real link. */}
+          <div className="hidden lg:flex items-center gap-3 xl:gap-4">
             {navLinks.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="font-semibold text-sm uppercase tracking-wide transition-colors duration-200"
-                style={{ color: pathname === l.href ? "#FFD700" : "#e5e7eb" }}
-              >
-                {l.label}
-              </Link>
+              <div key={l.href} className={l.children ? "nav-item relative" : undefined}>
+                <Link
+                  href={l.href}
+                  className="flex items-center gap-1 font-semibold text-sm uppercase tracking-wide transition-colors duration-200"
+                  style={{ color: pathname.startsWith(l.href) && l.href !== "/" || pathname === l.href ? "#FFD700" : "#e5e7eb" }}
+                >
+                  {l.label}
+                  {l.children && <ChevronDown size={12} className="nav-chevron hidden xl:block" />}
+                </Link>
+
+                {l.children && (
+                  <div
+                    className="nav-dropdown absolute left-0 top-full pt-3"
+                    style={{ minWidth: 248 }}
+                  >
+                    <div
+                      className="rounded-xl overflow-hidden py-2"
+                      style={{ background: "#111", border: "1px solid rgba(255,215,0,0.2)", boxShadow: "0 16px 40px rgba(0,0,0,0.5)" }}
+                    >
+                      {l.children.map((c) => (
+                        <Link
+                          key={c.href}
+                          href={c.href}
+                          className="block px-4 py-2.5 text-sm transition-colors duration-150 hover:bg-white/5"
+                          style={{ color: pathname === c.href ? "#FFD700" : "#d1d5db" }}
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
@@ -66,14 +129,14 @@ export default function Navbar() {
             </a>
             <Link
               href={bookingLink.href}
-              className="whitespace-nowrap px-3 xl:px-4 py-2 rounded-full font-bold text-xs xl:text-sm transition-all duration-200 hover:scale-105"
+              className="whitespace-nowrap px-3 py-2 rounded-full font-bold text-xs xl:text-sm transition-all duration-200 hover:scale-105"
               style={{ color: "#FFD700", border: "1px solid #FFD700" }}
             >
               {bookingLink.label}
             </Link>
             <a
               href="tel:+14034003055"
-              className="whitespace-nowrap px-4 xl:px-5 py-2 rounded-full font-bold text-xs xl:text-sm text-black transition-all duration-200 hover:scale-105"
+              className="whitespace-nowrap px-4 py-2 rounded-full font-bold text-xs xl:text-sm text-black transition-all duration-200 hover:scale-105"
               style={{ background: "#FFD700" }}
             >
               Call Now
@@ -108,15 +171,31 @@ export default function Navbar() {
         <div className="lg:hidden" style={{ background: "#0a0a0a", borderTop: "1px solid rgba(255,215,0,0.2)" }}>
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="block font-bold text-lg py-2"
-                style={{ color: pathname === l.href ? "#FFD700" : "#e5e7eb" }}
-              >
-                {l.label}
-              </Link>
+              <div key={l.href}>
+                <Link
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="block font-bold text-lg py-2"
+                  style={{ color: pathname === l.href ? "#FFD700" : "#e5e7eb" }}
+                >
+                  {l.label}
+                </Link>
+                {l.children && (
+                  <div className="pl-4 pb-1 space-y-1" style={{ borderLeft: "1px solid rgba(255,215,0,0.18)" }}>
+                    {l.children.map((c) => (
+                      <Link
+                        key={c.href}
+                        href={c.href}
+                        onClick={() => setOpen(false)}
+                        className="block text-sm py-1.5"
+                        style={{ color: pathname === c.href ? "#FFD700" : "#9ca3af" }}
+                      >
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <Link
               href={bookingLink.href}
