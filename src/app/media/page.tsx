@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Gallery from "@/components/ui/gallery";
 
 export const metadata: Metadata = {
-  title: "Media | YAYA General Contractor Incorporated Calgary",
+  title: "Photo Gallery | Calgary Electrical & Plumbing Work",
   description: "Photo gallery of electrical, plumbing, and appliance repair work by YAYA in Calgary. Real jobs, real results.",
   alternates: { canonical: "https://yayageneralservice.com/media" },
   openGraph: {

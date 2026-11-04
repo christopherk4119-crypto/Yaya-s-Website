@@ -60,7 +60,7 @@ export default function Navbar() {
 
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:4034003055" className="hidden xl:flex items-center gap-2 whitespace-nowrap text-white font-bold text-sm">
+            <a href="tel:+14034003055" className="hidden xl:flex items-center gap-2 whitespace-nowrap text-white font-bold text-sm">
               <Phone size={16} style={{ color: "#FFD700" }} />
               (403) 400-3055
             </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
               {bookingLink.label}
             </Link>
             <a
-              href="tel:4034003055"
+              href="tel:+14034003055"
               className="whitespace-nowrap px-4 xl:px-5 py-2 rounded-full font-bold text-xs xl:text-sm text-black transition-all duration-200 hover:scale-105"
               style={{ background: "#FFD700" }}
             >
@@ -128,12 +128,12 @@ export default function Navbar() {
               {bookingLink.label}
             </Link>
             <div className="pt-4 border-t border-gray-800 space-y-3">
-              <a href="tel:4034003055" className="flex items-center gap-2 text-white font-bold">
+              <a href="tel:+14034003055" className="flex items-center gap-2 text-white font-bold">
                 <Phone size={16} style={{ color: "#FFD700" }} />
                 (403) 400-3055
               </a>
               <a
-                href="tel:4034003055"
+                href="tel:+14034003055"
                 className="block text-center px-5 py-3 rounded-full font-bold text-black"
                 style={{ background: "#FFD700" }}
               >

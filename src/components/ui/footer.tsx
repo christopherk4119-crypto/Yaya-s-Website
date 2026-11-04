@@ -12,11 +12,58 @@ const socials = [
   { label: "Kijiji — Electrician", href: "https://www.kijiji.ca/v-electrician/calgary/cheaper-price-plumbing-electrical-and-appliance-maintenance/1697041621", color: SOCIAL_COLORS.kijiji, icon: <KijijiMark size={38} radius={19} /> },
 ];
 
+const columns = [
+  {
+    heading: "Electrical",
+    href: "/electrical",
+    links: [
+      { href: "/electrical/emergency-electrician", label: "Emergency Electrician" },
+      { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
+      { href: "/electrical/home-rewiring", label: "Home Rewiring" },
+      { href: "/electrical/renovation-electrical", label: "Renovation Electrical" },
+      { href: "/electrical/commercial-electrical", label: "Commercial Electrical" },
+      { href: "/basement-suite-electrical-calgary", label: "Basement Suite Electrical" },
+    ],
+  },
+  {
+    heading: "Plumbing",
+    href: "/plumbing",
+    links: [
+      { href: "/plumbing/emergency-plumber", label: "Emergency Plumber" },
+      { href: "/plumbing/frozen-pipes", label: "Frozen Pipe Repair" },
+      { href: "/plumbing/drain-cleaning", label: "Drain Cleaning" },
+      { href: "/plumbing/sump-pumps", label: "Sump Pumps" },
+      { href: "/plumbing/renovation-plumbing", label: "Renovation Plumbing" },
+    ],
+  },
+  {
+    heading: "Appliance",
+    href: "/appliance",
+    links: [
+      { href: "/appliance/refrigerator-repair", label: "Refrigerator Repair" },
+      { href: "/appliance/washer-dryer-repair", label: "Washer & Dryer Repair" },
+      { href: "/appliance/stove-oven-repair", label: "Stove & Oven Repair" },
+      { href: "/appliance/dishwasher-repair", label: "Dishwasher Repair" },
+      { href: "/appliance/commercial-appliance-repair", label: "Commercial Appliance Repair" },
+    ],
+  },
+  {
+    heading: "Company",
+    links: [
+      { href: "/", label: "Home" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/media", label: "Photo Gallery" },
+      { href: "/#booking", label: "Book an Appointment" },
+      { href: "/#contact", label: "Contact" },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <footer style={{ background: "#0a0a0a", borderTop: "1px solid rgba(255,215,0,0.15)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
           {/* Logo + tagline */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -30,22 +77,25 @@ export default function Footer() {
             <p className="text-gray-500 text-sm">Calgary, AB — Serving the city since 2007</p>
           </div>
 
-          {/* Quick links */}
-          <div>
-            <h4 className="font-bold text-white mb-4 text-sm uppercase tracking-widest">Quick Links</h4>
-            <div className="space-y-2">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/electrical", label: "Electrical Services" },
-                { href: "/plumbing", label: "Plumbing Services" },
-                { href: "/appliance", label: "Appliance Services" },
-              ].map((l) => (
-                <Link key={l.href} href={l.href} className="block text-gray-400 hover:text-yellow-400 text-sm transition-colors">
-                  {l.label}
-                </Link>
-              ))}
+          {/* Full sitemap — every page is reachable from every page */}
+          {columns.map((col) => (
+            <div key={col.heading}>
+              <h4 className="font-bold text-white mb-4 text-sm uppercase tracking-widest">
+                {col.href ? (
+                  <Link href={col.href} className="hover:text-yellow-400 transition-colors">{col.heading}</Link>
+                ) : (
+                  col.heading
+                )}
+              </h4>
+              <div className="space-y-2">
+                {col.links.map((l) => (
+                  <Link key={l.href} href={l.href} className="block text-gray-400 hover:text-yellow-400 text-sm transition-colors">
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
 
           {/* Social */}
           <div>
@@ -66,7 +116,7 @@ export default function Footer() {
               ))}
             </div>
             <div className="mt-6 space-y-1">
-              <a href="tel:4034003055" className="block font-bold text-yellow-400 hover:text-yellow-300">(403) 400-3055</a>
+              <a href="tel:+14034003055" className="block font-bold text-yellow-400 hover:text-yellow-300">(403) 400-3055</a>
               <a href="mailto:electricianyaya@gmail.com" className="block text-gray-400 hover:text-white text-sm">electricianyaya@gmail.com</a>
             </div>
           </div>

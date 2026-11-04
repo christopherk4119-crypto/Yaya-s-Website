@@ -13,9 +13,11 @@ const siteUrl = "https://yayageneralservice.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  // Short brand suffix: the full legal name is 38 characters and pushed every
+  // page title past 85, well beyond what Google renders (~60).
   title: {
-    default: "YAYA General Contractor Incorporated | Electrician, Plumber & Appliance Repair Calgary",
-    template: "%s | YAYA General Contractor Incorporated",
+    default: "Electrician, Plumber & Appliance Repair Calgary | YAYA",
+    template: "%s | YAYA",
   },
   description:
     "Experienced electrician, licensed plumber & appliance technician in Calgary, AB. No extra charge for after-hours or emergency calls. Available 24 hours a day, 7 days a week. Call (403) 400-3055.",
@@ -46,13 +48,13 @@ export const metadata: Metadata = {
     title: "YAYA General Contractor Incorporated | Electrician, Plumber & Appliance Repair Calgary",
     description:
       "On Call for electrical, plumbing AND appliances. Experienced since 2007. No extra charge after hours. Calgary, AB — (403) 400-3055.",
-    images: [{ url: "/icon.png", width: 512, height: 512, alt: "YAYA General Contractor Incorporated logo" }],
+    // og:image comes from app/opengraph-image.tsx (1200x630), not from here.
   },
   twitter: {
     card: "summary_large_image",
     title: "YAYA General Contractor Incorporated — Calgary's All-In-One Contractor",
     description: "Experienced electrician, plumber & appliance tech. No after-hours fee. Call (403) 400-3055.",
-    images: ["/icon.png"],
+    // twitter:image comes from app/twitter-image.tsx.
   },
   alternates: { canonical: siteUrl },
 };

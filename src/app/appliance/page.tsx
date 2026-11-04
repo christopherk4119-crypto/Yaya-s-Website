@@ -4,7 +4,7 @@ import FAQSection from "@/components/ui/faq-section";
 import TradeOverview from "@/components/ui/trade-overview";
 
 export const metadata: Metadata = {
-  title: "Appliance Repair Calgary | Oven, Dishwasher, Dryer & HVAC",
+  title: "Appliance Repair Calgary | Oven, Dryer & Fridge",
   description:
     "Experienced appliance technician in Calgary. Oven, stove, dishwasher, dryer, HVAC & exhaust fan repair. All brands. No after-hours fee. Emergency repairs available. Call (403) 400-3055.",
   keywords: ["appliance repair Calgary", "oven repair Calgary", "dishwasher repair Calgary", "dryer repair Calgary", "HVAC service Calgary", "exhaust fan repair Calgary", "emergency appliance repair Calgary"],

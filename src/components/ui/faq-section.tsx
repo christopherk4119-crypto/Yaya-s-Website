@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 
 export interface FAQItem {
   q: string;
@@ -11,9 +10,12 @@ interface FAQSectionProps {
   heading?: string;
 }
 
+/**
+ * Answers are rendered into the HTML on every request, not injected on click.
+ * Collapsing is done by <details>/<summary> so the text is in the DOM for
+ * crawlers (and for anyone with JS off) while still reading as an accordion.
+ */
 export default function FAQSection({ faqs, heading = "Frequently Asked Questions" }: FAQSectionProps) {
-  const [open, setOpen] = useState<number | null>(null);
-
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -32,24 +34,15 @@ export default function FAQSection({ faqs, heading = "Frequently Asked Questions
         <p className="section-subheading">Honest answers to common questions Calgary homeowners ask.</p>
         <div className="space-y-3">
           {faqs.map((item, i) => (
-            <div
-              key={i}
-              className="rounded-xl overflow-hidden transition-all duration-200"
-              style={{ background: "#111", border: open === i ? "1px solid rgba(255,215,0,0.3)" : "1px solid rgba(255,255,255,0.06)" }}
-            >
-              <button
-                className="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
-                onClick={() => setOpen(open === i ? null : i)}
-              >
+            <details key={i} className="faq-item rounded-xl overflow-hidden">
+              <summary className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 cursor-pointer">
                 <span className="font-bold text-white text-sm leading-snug">{item.q}</span>
-                <span className="text-xl shrink-0 transition-transform duration-200" style={{ color: "#FFD700", transform: open === i ? "rotate(45deg)" : "none" }}>+</span>
-              </button>
-              {open === i && (
-                <div className="px-6 pb-5">
-                  <p className="text-gray-400 text-sm leading-relaxed">{item.a}</p>
-                </div>
-              )}
-            </div>
+                <span className="faq-marker text-xl shrink-0" style={{ color: "#FFD700" }}>+</span>
+              </summary>
+              <div className="px-6 pb-5">
+                <p className="text-gray-400 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            </details>
           ))}
         </div>
       </div>

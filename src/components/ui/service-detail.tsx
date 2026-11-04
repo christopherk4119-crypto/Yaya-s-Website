@@ -67,15 +67,32 @@ export default function ServiceDetailPage({
   serviceUrl,
   providerType = "Electrician",
 }: ServiceDetailPageProps) {
+  // The hub this page sits under, derived from its own URL, so a plumbing page
+  // links back to /plumbing rather than everything pointing at /electrical.
+  const path = new URL(serviceUrl).pathname;
+  const hubHref = path.slice(0, path.lastIndexOf("/")) || "/";
+  const origin = new URL(serviceUrl).origin;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: origin },
+      { "@type": "ListItem", position: 2, name: breadcrumbLabel, item: `${origin}${hubHref}` },
+      { "@type": "ListItem", position: 3, name: serviceName, item: serviceUrl },
+    ],
+  };
+
   return (
     <>
       <ServiceSchema name={serviceName} description={serviceDescription} url={serviceUrl} providerType={providerType} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* HERO */}
       <section className="section" style={{ paddingTop: 160, paddingBottom: 64 }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4 text-sm text-gray-500">
-            <Link href="/electrical" style={{ color: "#FFD700" }}>← {breadcrumbLabel}</Link>
+            <Link href={hubHref} style={{ color: "#FFD700" }}>← {breadcrumbLabel}</Link>
           </div>
           <FadeIn>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight" style={{ letterSpacing: "-0.02em" }}>
@@ -87,7 +104,7 @@ export default function ServiceDetailPage({
               ))}
             </div>
             <a
-              href="tel:4034003055"
+              href="tel:+14034003055"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-black text-black text-lg transition-transform hover:scale-105"
               style={{ background: "linear-gradient(135deg, #FFD700, #FFA500)" }}
             >
@@ -219,7 +236,7 @@ export default function ServiceDetailPage({
             <h2 className="text-2xl md:text-3xl font-black text-white mb-4">Ready to Book?</h2>
             <p className="text-gray-400 mb-8">Call now or send a message — Yaya will call you back to confirm.</p>
             <a
-              href="tel:4034003055"
+              href="tel:+14034003055"
               className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-black text-black text-lg transition-transform hover:scale-105"
               style={{ background: "linear-gradient(135deg, #FFD700, #FFA500)" }}
             >

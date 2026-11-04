@@ -16,6 +16,20 @@ html { scroll-behavior: smooth; }
 section[id] { scroll-margin-top: 140px; }
 @media (min-width: 1024px) { section[id] { scroll-margin-top: 88px; } }
 
+/* ── FAQ ACCORDION ──
+   <details>/<summary> so answers ship in the HTML. The default disclosure
+   triangle is hidden; the "+" rotates into an "x" when the item is open. */
+.faq-item {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.2s ease;
+}
+.faq-item[open] { border-color: rgba(255, 215, 0, 0.3); }
+.faq-item > summary { list-style: none; }
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-marker { transition: transform 0.2s ease; }
+.faq-item[open] .faq-marker { transform: rotate(45deg); }
+
 body {
   background: #0a0a0a;
   color: #fff;

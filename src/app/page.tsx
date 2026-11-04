@@ -178,7 +178,7 @@ export default function HomePage() {
         subtitle="Electrical • Plumbing • Appliance — One call, one expert, zero extra fees after hours."
         buttons={{
           primary: { text: "Book an Appointment", onClick: () => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" }) },
-          secondary: { text: "Call (403) 400-3055", onClick: () => { window.location.href = "tel:4034003055"; } },
+          secondary: { text: "Call (403) 400-3055", onClick: () => { window.location.href = "tel:+14034003055"; } },
         }}
       />
 
@@ -247,6 +247,16 @@ export default function HomePage() {
                 { href: "/electrical/home-rewiring", label: "Home Rewiring" },
                 { href: "/electrical/commercial-electrical", label: "Commercial Electrical" },
                 { href: "/electrical/renovation-electrical", label: "Renovation Electrical" },
+                { href: "/plumbing/emergency-plumber", label: "Emergency Plumber" },
+                { href: "/plumbing/frozen-pipes", label: "Frozen Pipe Repair" },
+                { href: "/plumbing/drain-cleaning", label: "Drain Cleaning" },
+                { href: "/plumbing/sump-pumps", label: "Sump Pumps" },
+                { href: "/plumbing/renovation-plumbing", label: "Renovation Plumbing" },
+                { href: "/appliance/refrigerator-repair", label: "Refrigerator Repair" },
+                { href: "/appliance/washer-dryer-repair", label: "Washer & Dryer Repair" },
+                { href: "/appliance/stove-oven-repair", label: "Stove & Oven Repair" },
+                { href: "/appliance/dishwasher-repair", label: "Dishwasher Repair" },
+                { href: "/appliance/commercial-appliance-repair", label: "Commercial Appliance Repair" },
               ].map((item) => (
                 <Link
                   key={item.href}
@@ -340,7 +350,7 @@ export default function HomePage() {
                     </div>
                   ))}
                 </div>
-                <a href="tel:4034003055" className="inline-block mt-8 px-8 py-4 rounded-full font-black text-black text-lg hover:scale-105 transition-transform duration-200"
+                <a href="tel:+14034003055" className="inline-block mt-8 px-8 py-4 rounded-full font-black text-black text-lg hover:scale-105 transition-transform duration-200"
                   style={{ background: "linear-gradient(135deg, #FFD700, #FFA500)" }}>
                   Call Yaya Now
                 </a>
@@ -485,7 +495,7 @@ export default function HomePage() {
                     <Phone size={24} style={{ color: "#FFD700" }} />
                     <span className="text-gray-400 text-sm uppercase tracking-widest font-semibold">Call Yaya</span>
                   </div>
-                  <a href="tel:4034003055" className="text-3xl font-black text-white hover:text-yellow-400 transition-colors block">(403) 400-3055</a>
+                  <a href="tel:+14034003055" className="text-3xl font-black text-white hover:text-yellow-400 transition-colors block">(403) 400-3055</a>
                 </div>
                 <div className="p-6 rounded-2xl" style={{ background: "#111", border: "1px solid rgba(255,215,0,0.1)" }}>
                   <div className="flex items-center gap-4 mb-2">

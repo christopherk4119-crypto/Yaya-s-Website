@@ -73,7 +73,7 @@ export default function ServicePageLayout({
           <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">{heroSubheadline}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#booking" className="btn-gold inline-block px-10 py-4 text-lg font-black">{heroCta}</a>
-            <a href="tel:4034003055"
+            <a href="tel:+14034003055"
               className="inline-block px-10 py-4 rounded-full font-bold text-white text-lg transition-colors duration-200"
               style={{ border: "1px solid rgba(255,255,255,0.15)" }}>
               Call (403) 400-3055

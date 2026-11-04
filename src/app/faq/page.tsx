@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import FAQSection from "@/components/ui/faq-section";
 
 export const metadata: Metadata = {
-  title: "FAQ | Electrician, Plumber & Appliance Repair Calgary",
+  title: "FAQ | Calgary Electrician, Plumber & Appliance",
   description:
     "Answers to common questions about electrical, plumbing, and appliance repair in Calgary. Pricing, availability, permits, and more. YAYA General Contractor Incorporated — (403) 400-3055.",
   alternates: { canonical: "https://yayageneralservice.com/faq" },
@@ -107,7 +107,7 @@ export default function FAQPage() {
         <div className="text-center max-w-xl mx-auto px-4">
           <h2 className="text-3xl font-black text-white mb-4">Still have a question?</h2>
           <p className="text-gray-400 mb-8">Call or text Yaya directly — he picks up.</p>
-          <a href="tel:4034003055" className="btn-gold inline-block px-10 py-4 text-lg font-black">
+          <a href="tel:+14034003055" className="btn-gold inline-block px-10 py-4 text-lg font-black">
             Call (403) 400-3055
           </a>
         </div>
