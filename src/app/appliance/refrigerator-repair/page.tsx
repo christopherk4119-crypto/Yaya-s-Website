@@ -79,6 +79,7 @@ export default function RefrigeratorRepairPage() {
         { href: "/appliance/washer-dryer-repair", label: "Washer & Dryer Repair" },
         { href: "/appliance/stove-oven-repair", label: "Stove & Oven Repair" },
         { href: "/appliance", label: "All Appliance Services" },
+        { href: "/electrical/emergency-electrician", label: "Emergency Electrician" },
       ]}
       serviceName="Refrigerator Repair"
       serviceDescription="Refrigerator repair in Calgary — not cooling, icing up, leaking, failed ice maker. Same-day service, all brands."

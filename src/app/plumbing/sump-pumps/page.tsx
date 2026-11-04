@@ -93,6 +93,7 @@ export default function SumpPumpsPage() {
         { href: "/plumbing/emergency-plumber", label: "Emergency Plumber" },
         { href: "/plumbing/frozen-pipes", label: "Frozen Pipes" },
         { href: "/plumbing/renovation-plumbing", label: "Renovation Plumbing" },
+        { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
       ]}
       serviceName="Sump Pump Installation and Repair"
       serviceDescription="Sump pump installation, repair, and backup options in Calgary — basin sizing, discharge routing, and flood prevention for spring melt and heavy rain."

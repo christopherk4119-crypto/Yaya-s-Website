@@ -88,6 +88,7 @@ export default function FrozenPipesPage() {
         { href: "/plumbing/emergency-plumber", label: "Emergency Plumber" },
         { href: "/plumbing/sump-pumps", label: "Sump Pumps" },
         { href: "/plumbing/renovation-plumbing", label: "Renovation Plumbing" },
+        { href: "/electrical/emergency-electrician", label: "Emergency Electrician" },
       ]}
       serviceName="Frozen Pipe Repair"
       serviceDescription="Frozen and burst pipe repair in Calgary — garages, crawl spaces, exterior walls, hose bibs. Safe thawing and prevention."

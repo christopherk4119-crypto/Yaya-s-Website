@@ -85,6 +85,7 @@ export default function DrainCleaningPage() {
         { href: "/plumbing/emergency-plumber", label: "Emergency Plumber" },
         { href: "/plumbing/sump-pumps", label: "Sump Pumps" },
         { href: "/plumbing", label: "All Plumbing Services" },
+        { href: "/appliance/washer-dryer-repair", label: "Washer & Dryer Repair" },
       ]}
       serviceName="Drain Cleaning"
       serviceDescription="Kitchen, bathroom, laundry, and floor drain cleaning in Calgary. Main sewer line work referred to a specialist when camera/auger equipment is needed."

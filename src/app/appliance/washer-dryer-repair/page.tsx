@@ -87,6 +87,7 @@ export default function WasherDryerRepairPage() {
         { href: "/appliance/refrigerator-repair", label: "Refrigerator Repair" },
         { href: "/appliance/stove-oven-repair", label: "Stove & Oven Repair" },
         { href: "/appliance", label: "All Appliance Services" },
+        { href: "/plumbing/drain-cleaning", label: "Drain Cleaning" },
       ]}
       serviceName="Washer and Dryer Repair"
       serviceDescription="Washer and dryer repair in Calgary — drain, spin, start, and heating issues, plus dryer vent inspection for fire-risk airflow problems. All brands."

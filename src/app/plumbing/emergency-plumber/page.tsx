@@ -83,6 +83,7 @@ export default function EmergencyPlumberPage() {
         { href: "/plumbing/frozen-pipes", label: "Frozen Pipes" },
         { href: "/plumbing/sump-pumps", label: "Sump Pumps" },
         { href: "/plumbing", label: "All Plumbing Services" },
+        { href: "/electrical/emergency-electrician", label: "Emergency Electrician" },
       ]}
       serviceName="Emergency Plumber"
       serviceDescription="24/7 emergency plumbing repair in Calgary — burst pipes, active leaks, no water, sewage backup, water heater failure. No after-hours surcharge."

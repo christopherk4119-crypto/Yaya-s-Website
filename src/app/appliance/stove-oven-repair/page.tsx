@@ -85,6 +85,7 @@ export default function StoveOvenRepairPage() {
         { href: "/appliance/dishwasher-repair", label: "Dishwasher Repair" },
         { href: "/appliance/refrigerator-repair", label: "Refrigerator Repair" },
         { href: "/appliance", label: "All Appliance Services" },
+        { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
       ]}
       serviceName="Stove and Oven Repair"
       serviceDescription="Stove and oven repair in Calgary — heating elements, temperature accuracy, control boards, range hood and exhaust issues. All brands."

@@ -85,6 +85,7 @@ export default function EmergencyElectricianPage() {
         { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
         { href: "/electrical/home-rewiring", label: "Home Rewiring" },
         { href: "/electrical", label: "All Electrical Services" },
+        { href: "/plumbing/emergency-plumber", label: "Emergency Plumber" },
       ]}
       serviceName="Emergency Electrician"
       serviceDescription="24/7 emergency electrical repair in Calgary — power loss, sparking outlets, burning smell, tripped breakers, panel faults. No after-hours surcharge."

@@ -86,6 +86,7 @@ export default function RenovationElectricalPage() {
         { href: "/basement-suite-electrical-calgary", label: "Basement Suite Electrical" },
         { href: "/electrical/panel-upgrades", label: "Panel Upgrades" },
         { href: "/electrical/home-rewiring", label: "Home Rewiring" },
+        { href: "/plumbing/renovation-plumbing", label: "Renovation Plumbing" },
       ]}
       serviceName="Renovation Electrical"
       serviceDescription="Electrical work for basement development, kitchen and bathroom renovations, pot light layouts, and garage wiring in Calgary."
